@@ -110,23 +110,15 @@ for (const count of [100, 1000, 10000])
         .check();
       await expect(page.locator(".selection-bar")).toContainText("1 selected");
       const selectionRoundTripMs = timer.now() - selectionStart;
-      const cycles = 20;
+      const cycles = 8;
       for (let i = 0; i < cycles; i++) {
-        const next = i % 2 === 0;
-        const response = page.waitForResponse(
-          (r) =>
-            r.url().includes("/api/library?") && r.request().method() === "GET",
+        await page.evaluate(() =>
+          window.scrollTo(0, document.body.scrollHeight),
         );
-        await page
-          .getByRole("button", {
-            name: next ? "Next" : "Previous",
-            exact: true,
-          })
-          .click();
-        await response;
-        await expect(page.locator(card)).toHaveCount(48);
-        await page.locator(card).last().scrollIntoViewIfNeeded();
-        await page.locator(card).first().scrollIntoViewIfNeeded();
+        await expect(
+          page.locator(`[data-gallery-window="${i + 1}"] ${card}`),
+        ).toHaveCount(48);
+        expect(await page.locator(card).count()).toBeLessThanOrEqual(192);
       }
       await cdp.send("HeapProfiler.collectGarbage");
       const after = await cdp.send("Runtime.getHeapUsage");

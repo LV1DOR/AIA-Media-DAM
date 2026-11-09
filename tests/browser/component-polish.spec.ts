@@ -251,6 +251,119 @@ test("attachment selection stays idle, nested preview restores focus and retry s
   ).toHaveCount(0);
   expect(calls).toEqual({ "first.png": 1, "second.png": 2 });
 });
+test("infinite scrolling releases offscreen images, preserves selection and resets on search", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await expect(page.locator(".gallery-card")).toHaveCount(48);
+  await page
+    .getByRole("checkbox", { name: "Select Race weekend 0002", exact: true })
+    .check();
+  await page.mouse.click(1000, 150);
+  await expect(
+    page.getByRole("button", { name: "Next", exact: true }),
+  ).toHaveCount(0);
+  for (let index = 1; index <= 8; index++) {
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+    await expect(
+      page.locator(`[data-gallery-window="${index}"] .gallery-card`),
+    ).toHaveCount(48);
+    expect(await page.locator(".gallery-card").count()).toBeLessThanOrEqual(
+      192,
+    );
+  }
+  await expect(
+    page.locator('[data-gallery-window="0"] .gallery-card'),
+  ).toHaveCount(0);
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await expect(
+    page.getByRole("checkbox", {
+      name: "Select Race weekend 0002",
+      exact: true,
+    }),
+  ).toBeChecked();
+  await page.getByRole("button", { name: "Done", exact: true }).click();
+  await page
+    .getByRole("combobox", { name: "Search your library", exact: true })
+    .fill("0002");
+  await expect(page.locator(".gallery-card")).toHaveCount(1);
+  await expect(page.locator("[data-gallery-window]")).toHaveCount(1);
+  await expect(
+    page.getByText("You have reached the end of these results.", {
+      exact: true,
+    }),
+  ).toBeVisible();
+  await page.screenshot({ path: "docs/infinite-auth/evidence/search-end.png" });
+});
+
+test("a failed infinite-scroll request retries without discarding existing items", async ({
+  page,
+  context,
+}) => {
+  let failed = false;
+  await context.route("**/api/library?**", async (route) => {
+    if (
+      new URL(route.request().url()).searchParams.get("page") === "1" &&
+      !failed
+    ) {
+      failed = true;
+      return route.fulfill({
+        status: 503,
+        contentType: "application/json",
+        body: JSON.stringify({ error: "Synthetic next batch outage" }),
+      });
+    }
+    return route.fallback();
+  });
+  await page.goto("/");
+  await expect(page.locator(".gallery-card")).toHaveCount(48);
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  await expect(
+    page.getByText("Synthetic next batch outage", { exact: true }),
+  ).toBeVisible();
+  await page
+    .getByRole("button", { name: "Retry loading media", exact: true })
+    .click();
+  await expect(
+    page.locator('[data-gallery-window="1"] .gallery-card'),
+  ).toHaveCount(48);
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await expect(
+    page.getByRole("button", { name: "View Race weekend 0002", exact: true }),
+  ).toBeVisible();
+});
+
+test("changing search during a slow next group cannot append stale results", async ({
+  page,
+  context,
+}) => {
+  await context.route("**/api/library?**", async (route) => {
+    if (new URL(route.request().url()).searchParams.get("page") === "1")
+      await new Promise((resolve) => setTimeout(resolve, 600));
+    await route.fallback().catch(() => {});
+  });
+  await page.goto("/");
+  await expect(page.locator(".gallery-card")).toHaveCount(48);
+  const next = page.waitForRequest(
+    (r) =>
+      new URL(r.url()).pathname === "/api/library" &&
+      new URL(r.url()).searchParams.get("page") === "1",
+  );
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  await next;
+  await page
+    .getByRole("combobox", { name: "Search your library", exact: true })
+    .fill("0002");
+  await expect(page.locator(".results-line")).toContainText("1 asset");
+  await expect(page.locator(".gallery-card")).toHaveCount(1);
+  await page.waitForTimeout(700);
+  await expect(page.locator(".gallery-card")).toHaveCount(1);
+  await expect(page.locator("[data-gallery-window]")).toHaveCount(1);
+  await expect(
+    page.getByRole("button", { name: "View Race weekend 0002", exact: true }),
+  ).toBeVisible();
+});
+
 test("Download all uses a local variable font and reacts to pointer proximity", async ({
   page,
   request,

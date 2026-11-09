@@ -71,7 +71,9 @@ test("gallery modes, native filters, range selection, paging and details", async
   await page
     .getByRole("checkbox", { name: "Select Race weekend 0002", exact: true })
     .check();
-  await page.getByRole("button", { name: "Next", exact: true }).click();
+  await page
+    .getByRole("button", { name: "Load more media", exact: true })
+    .click();
   await expect(page.locator(".selection-bar")).toContainText("1 selected");
   await expect(
     page.getByRole("button", {
@@ -79,7 +81,7 @@ test("gallery modes, native filters, range selection, paging and details", async
       exact: true,
     }),
   ).toBeVisible();
-  await page.getByRole("button", { name: "Previous", exact: true }).click();
+  await page.evaluate(() => window.scrollTo(0, 0));
   await expect(
     page.getByRole("checkbox", {
       name: "Select Race weekend 0002",
@@ -820,7 +822,7 @@ test("receiver invalid, expired, normal and slow-network states stay scoped", as
   ).toBeVisible();
 });
 
-test("10k assets: hover stays local, paging remains bounded and keyboard/reduced motion work", async ({
+test("10k assets: infinite scrolling stays bounded and keyboard/reduced motion work", async ({
   page,
   request,
 }) => {
@@ -836,12 +838,14 @@ test("10k assets: hover stays local, paging remains bounded and keyboard/reduced
       .locator(".gallery-card")
       .nth(i % 4)
       .hover();
-    await page.getByRole("button", { name: "Next", exact: true }).click();
-    await expect(page.locator(".pagination")).toContainText(`Page ${i + 2} of`);
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+    await expect(
+      page.locator(`[data-gallery-window="${i + 1}"] .gallery-card`),
+    ).toHaveCount(48);
   }
   await client.send("HeapProfiler.collectGarbage");
   const after = await client.send("Runtime.getHeapUsage");
-  await expect(page.locator(".gallery-card")).toHaveCount(48);
+  expect(await page.locator(".gallery-card").count()).toBeLessThanOrEqual(192);
   expect(
     await page
       .locator(".gallery-card")
@@ -849,8 +853,13 @@ test("10k assets: hover stays local, paging remains bounded and keyboard/reduced
       .evaluate((e) => getComputedStyle(e).filter),
   ).toBe("none");
   const card = page.locator(".gallery-card").nth(1);
+  const title = (await card
+    .getByRole("checkbox")
+    .getAttribute("aria-label"))!.replace(/^Select /, "");
   await card.getByRole("checkbox").check();
-  await card.locator(".gallery-card-open").focus();
+  await page
+    .getByRole("button", { name: "View " + title, exact: true })
+    .focus();
   await page.keyboard.press("Space");
   await expect(page.locator(".selection-bar")).toHaveCount(0);
   const fs = await import("node:fs/promises");
@@ -859,8 +868,8 @@ test("10k assets: hover stays local, paging remains bounded and keyboard/reduced
     JSON.stringify(
       {
         dataset: 10000,
-        rendered: 48,
-        pageCycles: 10,
+        rendered: await page.locator(".gallery-card").count(),
+        infiniteScrollBatches: 10,
         reducedMotion: true,
         heapBefore: before.usedSize,
         heapAfter: after.usedSize,

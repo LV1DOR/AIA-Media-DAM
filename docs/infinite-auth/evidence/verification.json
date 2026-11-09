@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-11-09T15:59:20.107Z",
+  "branch": "feat/infinite-gallery-persistent-accounts",
+  "schemaVersion": 6,
+  "apiModelTests": {
+    "passed": 48,
+    "failed": 0
+  },
+  "browser": {
+    "startTime": "2026-11-09T15:57:01.737Z",
+    "duration": 87737.16,
+    "expected": 34,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "optimizedBuilds": ["media-web", "transfer-web"],
+  "typecheck": true,
+  "formatting": true,
+  "dependencyAudit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0
+  },
+  "secretScan": {
+    "passed": true,
+    "knownPrivateValuesChecked": 11
+  },
+  "identityDirectoryOutsideCheckout": true,
+  "defaultPreviewRestart": "default-identity-restart.json",
+  "isolatedAuthProcessRestart": "auth-process-restart.json",
+  "previewInfiniteScroll": "preview-scroll.json",
+  "maxCardsAssertedInScrollingTests": 192,
+  "dataset": 10000,
+  "nativeNasVerification": false,
+  "productionWrites": false,
+  "pushPerformed": false
+}

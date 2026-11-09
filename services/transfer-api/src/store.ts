@@ -85,6 +85,10 @@ export class Store {
     this.db.exec(
       `CREATE TABLE IF NOT EXISTS invitations(user_id TEXT PRIMARY KEY REFERENCES users(id),hash TEXT UNIQUE,expires INTEGER NOT NULL,version INTEGER NOT NULL,setup_hash TEXT UNIQUE,setup_expires INTEGER,password_hash TEXT,totp_secret TEXT,attempts INTEGER NOT NULL DEFAULT 0); CREATE TABLE IF NOT EXISTS profile_photos(user_id TEXT PRIMARY KEY REFERENCES users(id),data BLOB NOT NULL); CREATE TABLE IF NOT EXISTS background_photos(id TEXT PRIMARY KEY,title TEXT NOT NULL,data BLOB NOT NULL,created_at TEXT NOT NULL); UPDATE schema_version SET version=5;`,
     );
+    this.db
+      .exec(`CREATE TABLE IF NOT EXISTS auth_metadata(name TEXT PRIMARY KEY,value TEXT NOT NULL);
+      CREATE TABLE IF NOT EXISTS totp_steps(user_id TEXT PRIMARY KEY REFERENCES users(id),step INTEGER NOT NULL);
+      UPDATE schema_version SET version=6;`);
   }
   get<T>(sql: string, ...params: (string | number | null)[]) {
     return this.db.prepare(sql).get(...params) as T | undefined;
