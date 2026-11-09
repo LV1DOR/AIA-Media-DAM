@@ -95,7 +95,7 @@ corepack pnpm audit --prod --audit-level high
 
 `check` runs typechecking, API/model tests and both builds. Browser tests use local synthetic sources and exercise the optimised interfaces, including responsive layouts, permissions, search, tags, uploads, invitations and downloads. ZIP tests compare extracted file bytes with the originals. On Linux, Playwright may need `install --with-deps chromium`.
 
-These checks support a review; they do not prove that a particular NAS deployment or public Internet route works. The GitHub Actions workflow runs the same core gates when pushed. Remote CI has not run as part of the local handoff.
+These checks support a review; they do not prove that a particular NAS deployment or public Internet route works. The GitHub Actions workflow runs the same core gates when pushed. Check [GitHub Actions](https://github.com/LV1DOR/AIA-Media-DAM/actions) for remote results; local evidence is recorded separately.
 
 ## Deployment and operating notes
 
@@ -108,6 +108,7 @@ This branch contains the frontend review candidate. Preparing or pushing a commi
 - [Known limitations](docs/KNOWN_LIMITATIONS.md)
 - [Latest search and Git handoff](docs/github-handoff/REVIEW.md)
 - [Infinite gallery, account persistence and security](docs/infinite-auth/REVIEW.md)
+- [Smooth cursor behavior and accessibility](docs/cursor/REVIEW.md)
 
 The current milestone uses local accounts and LAN HTTPS. Corporate single sign-on, automatic invitation email and public Internet ingress are not configured. Administrators send invitation links themselves. Private gallery photos are never automatically published as login backgrounds.
 
