@@ -1,0 +1,113 @@
+{
+  "observedFrom": "2026-11-08T09:50:39Z",
+  "observedThrough": "2026-11-08T09:57:40Z",
+  "access": {
+    "sshAuthenticated": true,
+    "sshHostKeyMatchedCachedKey": true,
+    "initialHostKeyTrust": "first use, not independently verified",
+    "sudoReadOnlyInspection": true,
+    "credentialsSaved": false,
+    "homeDirectoryWarning": true
+  },
+  "host": {
+    "vendor": "UGREEN",
+    "model": "DXP4800 Plus",
+    "osBase": "Debian GNU/Linux 12 (bookworm)",
+    "osVersion": "1.20.0.0142",
+    "kernel": "6.18.15",
+    "architecture": "x86_64",
+    "cpu": "Intel Pentium Gold 8505",
+    "logicalCpus": 6,
+    "memoryTotalMiB": 7706,
+    "memoryAvailableMiBAtSample": 4155,
+    "loadAverageAtSample": [0.23, 0.22, 0.18],
+    "raid": { "device": "md1", "level": "raid1", "members": 2, "healthyMembers": 2, "state": "UU" },
+    "volume": { "mount": "/volume1", "filesystem": "btrfs", "totalKiB": 3890884608, "availableKiBAtPreflight": 3885449336, "snapshotsReportedBySubvolumeList": 0, "snapshotPolicyVerified": false }
+  },
+  "docker": {
+    "context": "default",
+    "engineVersion": "29.6.2",
+    "clientVersion": "29.6.2",
+    "composeVersion": "v5.1.3",
+    "root": "/volume1/@docker",
+    "containers": [
+      {
+        "name": "resourcespace",
+        "imageRef": "resourcespace-resourcespace",
+        "imageId": "sha256:0ab7853ff0b41a2ca2e1bd07092749f12ece4f806ce8bf6866a9b23635ce411f",
+        "imageSizeBytes": 2535659465,
+        "repositoryDigests": [],
+        "state": "running",
+        "restart": "unless-stopped",
+        "dockerHealthcheck": null,
+        "publishedPort": { "hostPort": 8088, "containerPort": 80, "binds": ["0.0.0.0", "::"] },
+        "networks": ["resourcespace_backend", "resourcespace_frontend"],
+        "mounts": [
+          { "type": "volume", "name": "resourcespace_filestore_data", "source": "/volume1/@docker/volumes/resourcespace_filestore_data/_data", "target": "/var/www/html/filestore", "mode": "rw", "directoryMode": "0777", "uid": 0, "gid": 0, "usedKiB": 3296 },
+          { "type": "bind", "source": "/volume1/docker/resourcespace/config.php", "target": "/var/www/html/include/config.php", "mode": "rw", "fileMode": "0600", "uid": 33, "gid": 33 }
+        ]
+      },
+      {
+        "name": "resourcespace-db",
+        "imageRef": "mariadb:11.4",
+        "imageId": "sha256:823a099a93df6416c6c7ed33c79a2d43e92ffbd2ccc0e83973ef045f2dae1ac0",
+        "imageSizeBytes": 326792902,
+        "repositoryDigests": ["mariadb@sha256:250e1609e93c0e6aecf64bfbab2d84d5e89d2481540fe77447ff6c855c3b1873"],
+        "state": "running",
+        "restart": "unless-stopped",
+        "dockerHealthcheck": null,
+        "publishedDatabasePort": false,
+        "networks": ["resourcespace_backend"],
+        "mounts": [
+          { "type": "volume", "name": "resourcespace_mariadb_data", "source": "/volume1/@docker/volumes/resourcespace_mariadb_data/_data", "target": "/var/lib/mysql", "mode": "rw", "directoryMode": "0755", "uid": 999, "gid": 999, "usedKiB": 172108 }
+        ]
+      }
+    ],
+    "applicationNetworksInternalFlag": false,
+    "composeDirectory": "/volume1/docker/resourcespace",
+    "composeFile": "/volume1/docker/resourcespace/docker-compose.yaml",
+    "composeExplicitHealthcheck": false,
+    "composeExplicitResourceLimits": false,
+    "composeExplicitLogRotation": false
+  },
+  "application": {
+    "resourceSpaceRevision": 29907,
+    "resourceSpaceVersionFromPriorApi": "11.0",
+    "phpCliVersion": "8.3.6",
+    "phpCliLimits": { "memory_limit": "-1", "upload_max_filesize": "2M", "post_max_size": "8M", "max_execution_time": "0", "max_input_time": "-1" },
+    "httpPhpLimitsVerified": false,
+    "databaseVersion": "11.4.13-MariaDB-ubu2404",
+    "databaseName": "resourcespace",
+    "databaseTables": { "InnoDB": 66 },
+    "databaseEventScheduler": "OFF",
+    "resourceCounts": [ { "archive": 0, "access": 0, "count": 4 }, { "archive": 3, "access": 0, "count": 1 } ],
+    "externalAccessKeyRows": 0,
+    "userGroups": ["Administrators", "General Users", "Super Admin", "Archivists", "Restricted User - Requests Emailed (manual fulfilment)", "Restricted User - Requests Managed"],
+    "relevantMetadataFields": [
+      { "ref": 8, "name": "title" }, { "ref": 12, "name": "date" }, { "ref": 54, "name": "source" },
+      { "ref": 74, "name": "event" }, { "ref": 88, "name": "year" }, { "ref": 89, "name": "event89" }
+    ],
+    "matchingChampionshipOrRightsNamedFieldReturned": false,
+    "cronProcessRunning": true,
+    "rootAndWwwDataUserCrontabsPresent": false,
+    "resourceSpaceDailyJob": "cron_copy_hitcount.php only",
+    "fullMaintenanceAndPreviewQueueScheduleProven": false,
+    "signedApiAuthmodeDefault": "userkey",
+    "browserSessionApiAuthmode": "native",
+    "externalShareCreationBindingFound": false,
+    "deleteAccessKeysBindingFound": true,
+    "shareMutationRuntimeTested": false
+  },
+  "existingBackupEvidence": {
+    "privateDirectory": "/volume1/docker/resourcespace/private-backup",
+    "configCopies": 3,
+    "completeDatabaseAndFilestoreBackupFound": false,
+    "independentBackupTargetVerified": false,
+    "restorationTested": false
+  },
+  "preflightReadOnlyCompleted": true,
+  "productionAssetOrConfigurationMutations": false,
+  "backupOrImageExportExecuted": false,
+  "containerPauseRestartOrStopExecuted": false,
+  "p0GatePassed": false
+}

@@ -1,0 +1,88 @@
+name: aia-media
+x-runtime: &runtime
+  restart: unless-stopped
+  security_opt: [no-new-privileges:true]
+  cap_drop: [ALL]
+  logging:
+    driver: json-file
+    options: {max-size: "10m", max-file: "3"}
+services:
+  api:
+    <<: *runtime
+    image: aia-media-api:${AIA_RELEASE:?Set immutable release tag}
+    build: {context: ../.., dockerfile: infra/compose/Dockerfile, target: api}
+    container_name: aia-media-api
+    env_file: ["${AIA_ENV_FILE:?Set private runtime config reference}"]
+    environment: {AIA_BIND: 0.0.0.0, AIA_API_PORT: "4100", AIA_DATA_DIR: /data, NODE_OPTIONS: --max-old-space-size=512}
+    volumes: [registry:/data]
+    networks: [private, edge, dam]
+    mem_limit: 768m
+    cpus: 2
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:4100/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    depends_on: {gokapi: {condition: service_started}}
+  media:
+    <<: *runtime
+    image: aia-media-web:${AIA_RELEASE:?Set immutable release tag}
+    build: {context: ../.., dockerfile: infra/compose/Dockerfile, target: media}
+    container_name: aia-media-web
+    networks: [edge]
+    mem_limit: 384m
+    cpus: 1
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:3100/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+  transfer:
+    <<: *runtime
+    image: aia-transfer-web:${AIA_RELEASE:?Set immutable release tag}
+    build: {context: ../.., dockerfile: infra/compose/Dockerfile, target: transfer}
+    container_name: aia-transfer-web
+    networks: [edge]
+    mem_limit: 384m
+    cpus: 1
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:3101/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+  gokapi:
+    <<: *runtime
+    image: f0rc3/gokapi@sha256:43cd93b9e1f02d760923f67f6e74e1c4d4a9cccb9b08fa42ad60770333f231eb
+    container_name: aia-media-gokapi
+    user: "1000:1000"
+    environment: {TZ: UTC, GOKAPI_GUEST_UPLOAD_BY_DEFAULT: "false", GOKAPI_DISABLE_DOCKER_TRUSTED_PROXY: "true"}
+    volumes: [gokapi-config:/app/config, gokapi-data:/app/data]
+    networks: [private]
+    mem_limit: 512m
+    cpus: 2
+    healthcheck:
+      test: [CMD-SHELL, "wget -q --spider http://127.0.0.1:53842/login || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+  gateway:
+    <<: *runtime
+    image: caddy@sha256:ce773ec7a742ce15ee6bf2bb5f65882b9e2a4487b10733e6f1484f86e6b5d8bc
+    container_name: aia-media-gateway
+    ports: ["192.168.250.80:8443:8443", "192.168.250.80:8444:8444"]
+    volumes: ["${AIA_CADDY_CONFIG:-../proxy/Caddyfile}:/etc/caddy/Caddyfile:ro", caddy-data:/data, caddy-config:/config]
+    networks: [edge]
+    mem_limit: 128m
+    cpus: 1
+    depends_on: {api: {condition: service_healthy}, media: {condition: service_healthy}, transfer: {condition: service_healthy}}
+networks:
+  dam: {external: true, name: resourcespace_frontend}
+  private: {internal: true}
+  edge: {}
+volumes:
+  registry: {}
+  gokapi-config: {}
+  gokapi-data: {}
+  caddy-data: {}
+  caddy-config: {}

@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-11-09T12:25:14.136539+00:00",
+  "branch": "frontend/unified-ui-review",
+  "productionDeployed": false,
+  "sourceSha256": {
+    "packages/ui/src/index.tsx": "33871123f720ebbba780afb52b64e3f6823f70f5238b74bb74458cb417ab98b2",
+    "packages/ui/src/unified.css": "9f26ab6e32396af78aecf7bb0d6692c63ee5e7fac89084c9ddd62c5b4cff8981",
+    "packages/ui/src/components/sign-in-background.tsx": "8f78b695b3a72df307349dc96bef7862bc0134400dba46c438df8c1bd21d1a56"
+  },
+  "checks": {
+    "optimizedReviewBuilds": [
+      "media-web: passed",
+      "transfer-web: passed"
+    ],
+    "workspaceTypecheck": "passed",
+    "prettierFormatCheck": "passed",
+    "layoutBrowserChecks": "passed at 1440/768/390, no private media requests or runtime errors",
+    "actualApiInvitationAndMfaBrowser": "passed",
+    "fullBaselineTestSuiteRerun": false
+  },
+  "backgroundMedia": "Crops of existing approved public circuit artwork; no unauthenticated private NAS access",
+  "dependenciesAdded": []
+}

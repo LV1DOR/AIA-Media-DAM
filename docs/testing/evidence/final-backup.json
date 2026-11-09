@@ -1,0 +1,11 @@
+{
+  "backupId": "ecosystem-20261108T155825Z",
+  "completedAt": "2026-11-08T15:58:27.199799+00:00",
+  "freezeSeconds": 0.85,
+  "encryptedBytes": 5433066,
+  "sha256": "65e80ef16b934d5d562985b2cc6bc96c904c2b97cec354a865817722b1214155",
+  "temporaryPayloadsIncluded": false,
+  "independentCopyVerified": true,
+  "authenticatedDecryptionVerified": true,
+  "isolatedRegistryRestoreVerified": true
+}

@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-11-08T14:39:00.525Z",
+  "bytesUploaded": 10737418240,
+  "allChunkOffsetsConfirmed": true,
+  "passed": false,
+  "failure": "Native finalization exceeded the original 180-second upstream deadline; transfer remained unpublished.",
+  "correction": "One-hour bounded native completion request plus durable finalization intent and native inventory recovery by unique server filename and exact size.",
+  "removedOwnedSyntheticObjects": 1,
+  "unrelatedObjectsTouched": false
+}

@@ -1,0 +1,17 @@
+{
+  "startedAt": "2026-11-08T14:45:37.771Z",
+  "bytes": 10737418240,
+  "chunkBytes": 16777216,
+  "certificateValidationEnabled": true,
+  "passed": true,
+  "chunkUploadSeconds": 444.209,
+  "confirmedResumeOffset": 50331648,
+  "nativeFinalizeSeconds": 188.076,
+  "downloadSeconds": 55.678,
+  "downloadSha256": "65c62f901259b542ab5f0aa798dfe1d8ef005df3863e49c22add69a04ceb4fb7",
+  "exactBytesAndHashMatch": true,
+  "cachedLinkDeniedAfterRevoke": true,
+  "sourceCleanupRequested": true,
+  "finishedAt": "2026-11-08T14:57:06.623Z",
+  "environment": "NAS HTTPS gateway/API/native encrypted Gokapi, synthetic repeated random block; not WAN or representative concurrency benchmark"
+}

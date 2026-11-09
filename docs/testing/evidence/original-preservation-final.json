@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-11-08T14:28:24.560739+00:00",
+  "baselineFilestorePaths": 133,
+  "unchangedPaths": 117,
+  "changedTemporaryQueryCachePaths": 15,
+  "expiredTemporaryQueryCachePaths": 1,
+  "allDifferencesUnderTemporaryQueryCache": true,
+  "permanentOriginalsAndPreviewsUnchanged": true,
+  "passed": true
+}

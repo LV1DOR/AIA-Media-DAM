@@ -1,0 +1,95 @@
+{
+  "retrievedAt": "2026-11-09T11:48:25.132307+00:00",
+  "repository": "https://github.com/DavidHDev/react-bits",
+  "repositoryHeadAtVerification": "b0422bb475ac9ec1fe1680290970494ceff5d4eb",
+  "note": "Registry snapshots pinned by SHA-256. Repository head is corroborating metadata; registry build revision is not advertised.",
+  "license": "MIT + Commons Clause License Condition v1.0",
+  "retainedNotice": "packages/ui/licenses/react-bits.txt",
+  "components": [
+    {
+      "name": "GlassSurface",
+      "registry": "https://www.reactbits.dev/r/GlassSurface-TS-CSS",
+      "registrySha256": "d599b7e6f011caf917c1b2942bcf3cc3903a74cef0de8b7c5d39efef7a8b644f",
+      "files": [
+        {
+          "path": "GlassSurface.css",
+          "upstreamSha256": "90cfc3ad54ad7aa92bb2b700696e2d9f2d8704162ba1b94ebf0b6f8dcecc4e61",
+          "adaptedSha256": "b16be7eab2a21c81e2ee26e4d7c2aa36c960588b5b08e46dd448bce446711a45"
+        },
+        {
+          "path": "GlassSurface.tsx",
+          "upstreamSha256": "3cfd551b02c48aab38418a1de724ebba35c276c27bd11dcf032197f5c6d56888",
+          "adaptedSha256": "d398456f6d67760c39eb252ee3e47c3827fb68cbeb4a08c3f83b0a738e4df719"
+        }
+      ]
+    },
+    {
+      "name": "Lanyard",
+      "registry": "https://www.reactbits.dev/r/Lanyard-TS-CSS",
+      "registrySha256": "6f330c2b85a77c7a0dc1a31b1b1b5a954b378a59f8af0301fcad8422ab939d15",
+      "files": [
+        {
+          "path": "Lanyard.css",
+          "upstreamSha256": "25678081ba329fe4f4c8730351e68b023e028a673eda5a4638199f79eec5b463",
+          "adaptedSha256": "25678081ba329fe4f4c8730351e68b023e028a673eda5a4638199f79eec5b463"
+        },
+        {
+          "path": "Lanyard.tsx",
+          "upstreamSha256": "46b9e370fa0c8f1154fc8f85f9420cdcffd7fa0ce9b32c2c11efc0e67e91aea6",
+          "adaptedSha256": "f03bd84b7d590271db88c339f46d46598d07386e650ef03fb0a0232de889ff52"
+        }
+      ]
+    },
+    {
+      "name": "Counter",
+      "registry": "https://www.reactbits.dev/r/Counter-TS-CSS",
+      "registrySha256": "38aaa8213147d0356a7a0e7ec62eeb0166a2101ccc8e2f313ee08fc0eeb17127",
+      "files": [
+        {
+          "path": "Counter.css",
+          "upstreamSha256": "9f224c728e16bb2b4137cd0e5a3ff370043bc9c838450fa8aaed89e190a8a6f8",
+          "adaptedSha256": "9f224c728e16bb2b4137cd0e5a3ff370043bc9c838450fa8aaed89e190a8a6f8"
+        },
+        {
+          "path": "Counter.tsx",
+          "upstreamSha256": "26576e940720dde4069c8283fcb634449d4765505889af2edbda32f2e1bd2809",
+          "adaptedSha256": "86b0e9302a4aea1303bf89b2c5e791a6ec594e2408dea18dad1044dff73a3557"
+        }
+      ]
+    },
+    {
+      "name": "CodeSlots",
+      "registry": "https://www.reactbits.dev/r/CodeSlots-TS-CSS",
+      "registrySha256": "caecd31c16dd7577a2a2b96e65dd06236aac9e8d41b154a9465791d97ce0c8a6",
+      "files": [
+        {
+          "path": "CodeSlots.css",
+          "upstreamSha256": "007ee23eac71c9a1157cb98c4855a94607d280123515a8cbd62672f4a42566c4",
+          "adaptedSha256": "649b39e192f8b4ea2ef0065c53e7699dc4f9b6d6c3d60b81109bf46e081556ed"
+        },
+        {
+          "path": "CodeSlots.tsx",
+          "upstreamSha256": "4b2c73673d3aad43ca1eb32c0b1cfd2d9271437382123f2b4e4214c630e5ad9c",
+          "adaptedSha256": "36a741751244466f6872fa496e8c93f547e95bb02a0ee14621ed398f5f10a1e6"
+        }
+      ]
+    },
+    {
+      "name": "GridMotion",
+      "registry": "https://www.reactbits.dev/r/GridMotion-TS-CSS",
+      "registrySha256": "85bca724db5c82f6e7a0ae005a331ccbc57639b66b29577ec449a429f516b87b",
+      "files": [
+        {
+          "path": "GridMotion.css",
+          "upstreamSha256": "afd25e368ac6fd0962be193928275cef9016c4cd24a083bf37b025d9514a1b3b",
+          "adaptedSha256": "ec4d94818373bfe3b7367d46936fdeab4afbcd423af577212a375dc9269e7583"
+        },
+        {
+          "path": "GridMotion.tsx",
+          "upstreamSha256": "58549965c2444263155ec097c444f93dd8c0758849026b6be6975f6df9e3b541",
+          "adaptedSha256": "bab48be3accecf3859421a9cdf30372cdcf509ef21d4f61bf7466ff15592ecda"
+        }
+      ]
+    }
+  ]
+}

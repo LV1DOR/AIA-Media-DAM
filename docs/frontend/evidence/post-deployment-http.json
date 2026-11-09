@@ -1,0 +1,27 @@
+{
+  "at": "2026-11-08T18:42:41.198351+00:00",
+  "certificateVerifiedWithRetainedCa": true,
+  "origins": [
+    {
+      "url": "https://192.168.250.80:8443",
+      "pageStatus": 200,
+      "staticAssetsVerified": 10,
+      "logoVerified": true,
+      "healthVerified": true,
+      "staffAndPreviewAnonymousDenials": true,
+      "crossOriginMutationDenied": true,
+      "nonceCspWithoutUnsafeEval": true
+    },
+    {
+      "url": "https://192.168.250.80:8444",
+      "pageStatus": 200,
+      "staticAssetsVerified": 10,
+      "logoVerified": true,
+      "healthVerified": true,
+      "staffAndPreviewAnonymousDenials": true,
+      "crossOriginMutationDenied": true,
+      "nonceCspWithoutUnsafeEval": true
+    }
+  ],
+  "passed": true
+}

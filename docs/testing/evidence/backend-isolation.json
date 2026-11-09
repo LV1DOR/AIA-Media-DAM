@@ -1,0 +1,8 @@
+{
+  "checkedAt": "2026-11-08T14:47:40.415Z",
+  "resourceSpaceOutage": true,
+  "gokapiOutage": true,
+  "resourceSpaceShareWhileGokapiStopped": true,
+  "finishedAt": "2026-11-08T15:54:35.374Z",
+  "passed": true
+}

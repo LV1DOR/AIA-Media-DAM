@@ -1,0 +1,150 @@
+{
+  "evidenceVersion": 1,
+  "backupId": "p0-20261108T102833765Z",
+  "capturedAt": "2026-11-08T10:31:25.643116+00:00",
+  "maintenanceApprovedByOwner": true,
+  "engineeringRecoveryChoicesDelegatedByOwner": true,
+  "freezeSeconds": 3,
+  "consistency": "app paused; DB single transaction; filestore/config copied in same freeze",
+  "encryption": "OpenSSL CMS AuthEnvelopedData AES-256-GCM / RSA-3072",
+  "certificateSha256": "3bfa7bf7c8f831d3ab0b701528fa3a04177f46c6df3791c14c030aad7bf9e5db",
+  "appImage": "sha256:0ab7853ff0b41a2ca2e1bd07092749f12ece4f806ce8bf6866a9b23635ce411f",
+  "dbImage": "sha256:823a099a93df6416c6c7ed33c79a2d43e92ffbd2ccc0e83973ef045f2dae1ac0",
+  "archiveBytes": {
+    "encryptedData": 3547066,
+    "encryptedImages": 2844899342,
+    "encryptedPortableSource": 54430850
+  },
+  "independentCopy": {
+    "verifiedAt": "2026-11-08T10:42:34.391Z",
+    "encryptedDataHash": "550c30a5baaf636cc3b797d6169c8f36658adbfc1909619a5fc1330eab840ece",
+    "decryptedTarHash": "075eaa8c16c194ea02f01a310f2d21ea63e89c2324f88fd19bf87d164f9e3ee2",
+    "encryptedCopyOnSeparateMachine": true,
+    "authenticatedDecryptionPassed": true,
+    "immutableImagesIndependentCopyComplete": false
+  },
+  "portableSource": {
+    "verifiedAt": "2026-11-08T10:58:51.588Z",
+    "sha256": "ea4f148368e8229119d4d7f1dbb53137d8b68b5a83cc805833d904c7726d566c",
+    "sourceRevision": 29907,
+    "encryptedPortableSourceOnIndependentMachine": true,
+    "authenticatedDecryptionPassed": true,
+    "completeImmutableImageCopyOffNas": false
+  },
+  "restore": {
+    "restoredAt": "2026-11-08T10:42:34.291129+00:00",
+    "restoredFromIndependentWorkstationCopy": true,
+    "networkInternal": true,
+    "portsPublished": false,
+    "accessMethod": "Private SSH to NAS host; internal container IP; no host listener",
+    "freshDatabaseAndFilestoreVolumes": true,
+    "productionVolumesMounted": false,
+    "exactCachedImagesUsed": true,
+    "filestoreFilesChecksumVerified": 133
+  },
+  "application": {
+    "checkedAt": "2026-11-08T10:52:29.384200+00:00",
+    "isolatedRestore": true,
+    "productionRequestsMade": false,
+    "signedApiAuthenticated": true,
+    "resourceSpaceVersion": "SVN 11.0",
+    "liveResourceCount": 4,
+    "boundedSearchRows": 1,
+    "collectionBrowseVerified": true,
+    "guestSearchDenied": true,
+    "webLoginVerified": true,
+    "originalDownloadVerified": true,
+    "originalBytes": 5509,
+    "thumbnailDownloadVerified": true,
+    "thumbnailBytes": 8553,
+    "unsignedApiDenied": true,
+    "passed": true
+  },
+  "nativeShare": {
+    "creation": {
+      "nativeCollectionShareCreated": true,
+      "selectedAssets": 2,
+      "passwordRequested": true,
+      "expiryDate": "2026-11-09",
+      "sourceCreationRoute": "authenticated native share form",
+      "automaticPublicApiCreationProven": false,
+      "productionModified": false
+    },
+    "revocation": {
+      "passwordGatePresented": true,
+      "wrongPasswordDenied": true,
+      "productionModified": false,
+      "correctPasswordAccepted": true,
+      "nativeDownloadLinkFound": true,
+      "authorizedPagePath": "/pages/search.php",
+      "viewPageFound": true,
+      "sourceDownloadMatchesBackup": true,
+      "testedDownloadKind": "preview",
+      "signedUserkeyRevocationReturnedTrue": true,
+      "cachedNativeDownloadDeniedAfterRevoke": true,
+      "revokedResponseStatus": 200,
+      "checkedAt": "2026-11-08T11:14:33.717274+00:00",
+      "passed": true
+    },
+    "expiry": {
+      "passwordGatePresented": true,
+      "wrongPasswordDenied": true,
+      "productionModified": false,
+      "correctPasswordAccepted": true,
+      "nativeDownloadLinkFound": true,
+      "authorizedPagePath": "/pages/search.php",
+      "viewPageFound": true,
+      "sourceDownloadMatchesBackup": true,
+      "testedDownloadKind": "preview",
+      "cachedNativeDownloadDeniedAfterExpiry": true,
+      "expiryConfiguredThroughNativeUi": true,
+      "expiryGranularity": "calendar date; source rounds to end of day",
+      "signedUserkeyRevocationReturnedTrue": true,
+      "cachedNativeDownloadDeniedAfterRevoke": true,
+      "revokedResponseStatus": 200,
+      "checkedAt": "2026-11-08T11:15:36.743806+00:00",
+      "passed": true
+    }
+  },
+  "originalServicesAfterTests": [
+    {
+      "name": "resourcespace",
+      "status": "running",
+      "paused": false,
+      "publishedPorts": {
+        "80/tcp": [
+          {
+            "HostIp": "0.0.0.0",
+            "HostPort": "8088"
+          },
+          {
+            "HostIp": "::",
+            "HostPort": "8088"
+          }
+        ]
+      },
+      "volumeNames": [
+        "resourcespace_filestore_data"
+      ]
+    },
+    {
+      "name": "resourcespace-db",
+      "status": "running",
+      "paused": false,
+      "publishedPorts": {
+        "3306/tcp": null
+      },
+      "volumeNames": [
+        "resourcespace_mariadb_data"
+      ]
+    }
+  ],
+  "coreP0ExitPassed": true,
+  "remainingBaselineChecks": [
+    "Representative format uploads/preview timings",
+    "Lower privilege identity and visibility denial",
+    "API Test Tool and sanitized screenshots",
+    "Representative working-period load",
+    "Operational recovery owner/RPO/RTO and key escrow"
+  ]
+}

@@ -1,0 +1,24 @@
+# Third-party components
+
+The adapter is original project source. The redesigned UI reuses MIT-era Square UI Files source at `192f96aecf599848cad09118c33afe70f1067ae5` and the owner-supplied gallery adaptation. See [component sources and licenses](../COMPONENT_SOURCES_AND_LICENSES.md) and the retained notices under `packages/ui/licenses/`. Current upstream Square UI has a different custom license; its newer source was not imported. No licensed Media Vault template was purchased, copied or redistributed. The repository is private/local; no permission to publish proprietary assets is implied.
+
+Gokapi 2.2.4 runs as an unchanged separate upstream container. Its source and AGPL-3.0 license are available at [the exact tag](https://github.com/Forceu/Gokapi/tree/v2.2.4) and [license](https://github.com/Forceu/Gokapi/blob/v2.2.4/LICENSE.md). Retain upstream notices/source availability when conveying its images or any future modifications. The [upstream releases](https://github.com/Forceu/Gokapi/releases) and [security advisories](https://github.com/Forceu/Gokapi/security/advisories) must be reviewed before upgrades; current 2.2.4 is the pinned security-fix release checked on 8 November 2026.
+
+ResourceSpace remains its separately installed native application under its [BSD-style license](https://www.resourcespace.com/docs/ResourceSpace_License_Agreement.pdf); preserve the installed LICENSE and copyright notices. The plugin calls native interfaces and does not copy proprietary templates. No claim of legal approval for a future combined distribution is made.
+
+Next.js, React, Fastify, Zod, Lucide, OTPAuth and other npm components retain their package license files inside installed dependencies/images. `pnpm-lock.yaml` records exact resolutions; use `corepack pnpm licenses list --prod --json` to generate the dependency license inventory for the intended release. A sanitized [inventory](testing/evidence/dependency-licenses.json) is included. Caddy and Node container images retain their own upstream notices. Do not remove notices during an image-size optimization.
+
+Current frontend dependency inventory, exact versions and notices are also recorded under [frontend evidence](frontend/evidence/component-dependencies.json), with the full [workspace license inventory](frontend/evidence/dependency-licenses.json). React Photo Album and Yet Another React Lightbox retain their installed MIT notices.
+
+
+Unified UI additions: Arc UsageMeter (Elia Kuratli, MIT), motion 14.10.1, cmdk 1.1.1 and Radix Popover 1.3.1. Full notices are under packages/ui/licenses/. See COMPONENT_SOURCES_AND_LICENSES.md for pinned sources and the unavailable Aceternity registry adaptation. Owner-supplied artwork is not relicensed as open source.
+
+React Bits GlassSurface, Counter, CodeSlots, GridMotion and Lanyard are adapted from the official TypeScript/CSS registries under **MIT + Commons Clause License Condition v1.0**, copyright 2026 David Haz. This is not plain MIT. The complete notice is retained at `packages/ui/licenses/react-bits.txt`; use is within this AIA application, with no standalone component-library redistribution. See [provenance](react-bits/evidence/component-provenance.json) and [upstream license](https://github.com/DavidHDev/react-bits/blob/main/LICENSE.md). CodeSlots reuses the already installed Lucide Check icon instead of adding Hugeicons. Lanyard adds Three.js 0.180.0 (MIT); its type definitions are development-only.
+
+Image upload normalization declares the already resolved sharp 0.35.5 as a direct API dependency (Apache-2.0). Its complete notice is retained at `services/transfer-api/licenses/sharp.txt`; retain installed libvips/native-package notices when building images. No private NAS photos are included in public assets by this integration.
+
+
+Component polish adds beUI AttachmentUpload/MorphingSearchChips (MIT, copyright 2026 Saurabh Chauhan), UI Arc PasswordStrength (MIT, Elia Kuratli), React Bits VariableProximity (MIT + Commons Clause), Roboto Flex (OFL-1.1) and @floating-ui/dom 1.7.6 (MIT). Complete notices are retained under `packages/ui/licenses/` and installed upstream packages. See [exact sources and adaptations](../COMPONENT_SOURCES_AND_LICENSES.md) and [source hashes](component-polish/evidence/component-provenance.json). No example stock photographs or private library thumbnails were imported.
+
+
+9 November original ZIP download support adds Archiver 8.0.0 (MIT, Chris Talkington and contributors). Full notice: `services/transfer-api/licenses/archiver-MIT.txt`. Production uses a streaming ZIP STORE writer; the root development dependency supplies synthetic browser ZIP fixtures. The scoped `readdir-glob>minimatch` override pins patched 11.0.5. Lockfile and installed transitive notices are retained. No image codecs or transcoding are used by ZIP creation. Evidence: `docs/search-zip/REVIEW.md`.

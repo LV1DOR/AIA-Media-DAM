@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-08T19:33:41.626800+00:00",
+  "release": "lan-20261108-16a7b99c",
+  "sourceSha256": "16a7b99cb6b6bcd1aaec6f72d6b8d16cb8a361e719fe07b5364a437a1bce6829",
+  "lockfileSha256": "036ca8d1d046eca6a35cbc8717728438ed941cc9e7f30aae15e6ac8be1c29e1b",
+  "apiModelTests": 25,
+  "browserWorkflows": 12,
+  "nativeVerificationPassed": true,
+  "permanentFilesUnchanged": 121,
+  "rollbackRelease": "lan-20261108-0caea00d",
+  "rollbackImagesRetained": true,
+  "humanAcceptanceCompleted": false,
+  "liveAuthenticatedBrowserCheck": "Passed limited read-only Media/Transfer smoke check after owner manual sign-in; native banner preview corrected and rechecked",
+  "priorHttpsVerificationRelease": "lan-20261108-0caea00d",
+  "currentHealthyContainersVerified": true
+}

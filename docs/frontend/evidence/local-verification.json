@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-08T19:33:41.626800+00:00",
+  "apiAndModelTests": 25,
+  "browserWorkflows": 12,
+  "browserDatasets": [
+    100,
+    1000,
+    10000
+  ],
+  "sourceFingerprint": "3660c43d7ab5cf137a3c4caa7deaf490b46157d442cb4a379a1b1d4b2c81617a",
+  "optimizedFrontendBuildsPassed": true,
+  "humanAcceptanceCompleted": false,
+  "remoteCiRunClaimed": false,
+  "release": "lan-20261108-16a7b99c",
+  "sourceFingerprintScope": "Historical before/after browser performance dataset predates native full-preview availability correction; unchanged gallery path; extra viewer native lookup not benchmarked",
+  "liveAuthenticatedBrowserSmokePassed": true
+}

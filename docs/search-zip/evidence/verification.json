@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-11-09T14:46:44.129Z",
+  "branch": "frontend/unified-ui-review",
+  "productionWrites": false,
+  "schemaVersion": 5,
+  "apiModelTests": {
+    "passed": 46,
+    "failed": 0
+  },
+  "browser": {
+    "startTime": "2026-11-09T14:44:17.749Z",
+    "duration": 73051.23700000001,
+    "expected": 31,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "optimizedBuilds": ["media-web", "transfer-web"],
+  "typecheck": true,
+  "formatting": true,
+  "dependencyAudit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0
+  },
+  "independentExtraction": "zip-extraction.json",
+  "reviewSmoke": "preview-smoke.json",
+  "nativeSearchVerified": false,
+  "nativeReason": "NAS HTTP port unreachable from this machine",
+  "scope": "Local Chromium, synthetic media/original sources; actual API ZIP authorization and streams tested in isolation; no new NAS writes"
+}

@@ -1,0 +1,11 @@
+# Current implementation handoff
+
+Updated 8 November 2026. The prior P1 blockers were resolved by the owner's explicit permission to replace the template and make NAS implementation choices. Read [STATUS](../../STATUS.md), [ADR 001](../decisions/ADR-001-OWNER-DELEGATED-LAN-IMPLEMENTATION.md), [acceptance report](../testing/LAN_ACCEPTANCE.md) and [IT runbook](../operations/IT_RUNBOOK.md). Do not ask again for license/domain/IdP details to finish the LAN milestone.
+
+The NAS runs independent Media and Transfer frontends, API/registry, Caddy and encrypted native Gokapi. Original ResourceSpace/MariaDB images and volumes remain; native HTTP is loopback only. API calls use Docker DNS. Local accounts, admin TOTP, native per-user library scope, grouped recipient authorization and revocation are implemented. Four synthetic format uploads passed native workflow and byte checks; their resources were archived, and their reviewer was disabled in both application and native source.
+
+Current release is selected by NAS /volume1/docker/aia-media-ecosystem/current, with private compose.env and app.env. Private workstation release.json records the immutable archive checksum; public release evidence is in the acceptance report. Owner first-login credentials are in .local/deployment/OWNER_ACCESS.txt; protected runtime reference is .local/deployment/runtime-config-final.dpapi. Never echo credentials. Keep the original master key across registry recovery.
+
+P0 full source restore and an independently copied/decrypted ecosystem registry restore passed. Daily encrypted backups and five-minute local monitoring are installed under the NAS private directory; see the runbook for exact schedules, isolation, recovery and rollback. Offsite key escrow, accepted business RPO/RTO, external alert destination and stable human ownership are not established.
+
+Human/browser acceptance remains open. Computer Use stopped because it could not verify the browser URL confidently enough for access-policy enforcement; no automation bypass was used. The implementation was tested through authenticated HTTP/API, native sources and validated TLS. No public Internet release, remote CI pass or business UAT signoff is claimed. Local Git has no commits/remotes.

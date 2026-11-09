@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-11-09T11:54:28.127009+00:00",
+  "branch": "frontend/unified-ui-review",
+  "productionDeployed": false,
+  "productionWrites": false,
+  "sourceFingerprintSha256": "2d7844bc5429e1550923f5c5808c1e8eda5db9da8ca37725cf76336169d07737",
+  "checks": {
+    "frozenLockfileInstall": "passed",
+    "workspaceTypecheck": "passed",
+    "optimizedBuilds": [
+      "media-web",
+      "transfer-web"
+    ],
+    "format": "passed (Prettier; no separate ESLint script configured)",
+    "apiAndModelTests": {
+      "passed": 38,
+      "failed": 0
+    },
+    "optimizedBrowserWorkflows": {
+      "passed": 26,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0
+    },
+    "additionalRealAuthBrowserFlow": "passed, isolated actual API with in-memory synthetic registry",
+    "secretScan": {
+      "passed": true,
+      "knownPrivateValuesChecked": 10
+    },
+    "nativeReadOnlyThumbnails": "3 JPEG previews, no Preset Gallery collection",
+    "dependencyAudit": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "dependencies": 438,
+      "devDependencies": 0,
+      "optionalDependencies": 0,
+      "totalDependencies": 438
+    }
+  },
+  "newDependencies": {
+    "three": "0.180.0",
+    "@types/three": "0.180.0 (development)"
+  },
+  "notRun": [
+    "Production deployment",
+    "NAS staff provisioning or invitation writes",
+    "Real personal data onboarding",
+    "Safari/Firefox engine verification",
+    "Human acceptance"
+  ],
+  "reviewPreview": {
+    "media": "http://127.0.0.1:3310",
+    "receiver": "http://127.0.0.1:3311/t/ssssssssssssssssssssssssssssssssssssssssss1",
+    "restart": "corepack pnpm preview:review",
+    "mode": "loopback synthetic gallery and ephemeral real authentication/invitation API"
+  }
+}

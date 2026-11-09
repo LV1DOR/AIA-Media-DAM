@@ -1,0 +1,28 @@
+# P0 design draft only. Do not start before P0/P1 gates and staging approval.
+# No existing ResourceSpace/MariaDB volumes or networks are referenced.
+name: aia-media-discovery
+services:
+  gokapi:
+    profiles: [staging-draft]
+    image: ${GOKAPI_IMAGE:?Provide an approved immutable Gokapi image reference}
+    ports:
+      - "127.0.0.1:53842:53842"
+    environment:
+      TZ: UTC
+      GOKAPI_GUEST_UPLOAD_BY_DEFAULT: "false"
+      GOKAPI_DISABLE_DOCKER_TRUSTED_PROXY: "true"
+    volumes:
+      - gokapi-staging-data:/app/data
+      - gokapi-staging-config:/app/config
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks: [transfer-staging]
+volumes:
+  gokapi-staging-data:
+  gokapi-staging-config:
+networks:
+  transfer-staging:

@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-11-08T13:56:53.797Z",
+  "environment": "NAS HTTPS gateway, NAS API/registry, native ResourceSpace, encrypted Gokapi 2.2.4",
+  "certificateValidationEnabled": true,
+  "frontendsHttps200": true,
+  "frameProtectionVerified": true,
+  "secureHttpOnlySessionCookie": true,
+  "mfaAndSessionRotationVerified": true,
+  "librarySearchVerified": true,
+  "previewVerified": true,
+  "nativeAccountProvisioningAndRoleDenialsVerified": true,
+  "libraryOriginalBytesMatch": true,
+  "encryptedTemporaryGroupDeliveredExactBytes": true,
+  "duplicateUnicodeNamesPreserved": true,
+  "sharedDownloadLimitEnforced": true,
+  "cachedNativeGatewayUrlsDeniedAfterRevoke": true,
+  "offboardingSessionDenied": true,
+  "passed": true,
+  "excludedUploadRequestAndEngineRoutesDenied": true
+}

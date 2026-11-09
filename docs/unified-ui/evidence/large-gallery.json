@@ -1,0 +1,9 @@
+{
+  "dataset": 10000,
+  "rendered": 48,
+  "pageCycles": 10,
+  "reducedMotion": true,
+  "heapBefore": 9575112,
+  "heapAfter": 10919156,
+  "scope": "Synthetic Chromium JS heap; no real photography or GPU-memory claim"
+}

@@ -1,0 +1,79 @@
+{
+  "repository": "https://github.com/zerostaticthemes/square-ui",
+  "revision": "192f96aecf599848cad09118c33afe70f1067ae5",
+  "license": "MIT",
+  "files": [
+    {
+      "upstream": "templates/files/components/ui/button.tsx",
+      "local": "packages/ui/src/components/ui/button.tsx",
+      "sourceSHA256": "2df785a50d2d5b1d79dc882bf07e631a163407daf4190126ce974c4705d589a4",
+      "adaptedSHA256": "0e9fcd02dacc05c1403321928f2f7835138bc5c397d9f5d99a8ee3225da7efa9"
+    },
+    {
+      "upstream": "templates/files/components/ui/input.tsx",
+      "local": "packages/ui/src/components/ui/input.tsx",
+      "sourceSHA256": "aca03c716617068c0581b2284b3bddd0d3c3be8d8889bdb4f11168f8f779f1d7",
+      "adaptedSHA256": "86907cdbd68dd83d3ad6fd69d0fe6243497f346ff4abb2a114554198b1a42a81"
+    },
+    {
+      "upstream": "templates/files/components/ui/separator.tsx",
+      "local": "packages/ui/src/components/ui/separator.tsx",
+      "sourceSHA256": "88dbe346a713917624545cfcff1db18a1d6e6f5718aa43ddd9169907ea568f4f",
+      "adaptedSHA256": "e7772b6256bfca464ea17e46e8254c7edddfac65f8c12dfc23083d85fadbc66a"
+    },
+    {
+      "upstream": "templates/files/components/ui/sheet.tsx",
+      "local": "packages/ui/src/components/ui/sheet.tsx",
+      "sourceSHA256": "dd270f5ad2a887963b965eafb13b3989a1674e6fe73c3b7f6cc5348ba77b4692",
+      "adaptedSHA256": "623a1f24b814cdc289cfd00253099203be25e470b8cb603afcc80ec89f43cb28"
+    },
+    {
+      "upstream": "templates/files/components/ui/skeleton.tsx",
+      "local": "packages/ui/src/components/ui/skeleton.tsx",
+      "sourceSHA256": "5e045dc0265a2a7ea183bb689b440068b9b18b59affc7039efd85ad1bd083ad8",
+      "adaptedSHA256": "24c9c9bc28484553169bc1b207f79c87a03553f6c40b8bcd8af46370a97a0bb9"
+    },
+    {
+      "upstream": "templates/files/components/ui/tooltip.tsx",
+      "local": "packages/ui/src/components/ui/tooltip.tsx",
+      "sourceSHA256": "bdc5f2ae8b38efd21615a7f6d16ddd3331fef750efadfed2ff7d14f45edeb271",
+      "adaptedSHA256": "150dcfbdf1edde081a673bbedb28f2345cb899456cbb147cb5410b047444ca9c"
+    },
+    {
+      "upstream": "templates/files/components/ui/sidebar.tsx",
+      "local": "packages/ui/src/components/ui/sidebar.tsx",
+      "sourceSHA256": "064cc8a072110f2b769ee29898f9d707d84ecc4d8e7cf920474773fe691771de",
+      "adaptedSHA256": "cc8eea85221e66b06073e6da7de2cab9399351ca3b9ed360b290df334a4cb056"
+    },
+    {
+      "upstream": "templates/files/components/ui/dropdown-menu.tsx",
+      "local": "packages/ui/src/components/ui/dropdown-menu.tsx",
+      "sourceSHA256": "a404adc97f8444df392331fa571f3a504605faea0ec21e4c90cd0229cb8c0367",
+      "adaptedSHA256": "b7e30b908866f9d5369d330f6273ea95b445c89b6049549aa0f967eafd02e92a"
+    },
+    {
+      "upstream": "templates/files/components/files/sidebar.tsx",
+      "local": "packages/ui/src/components/files/sidebar.tsx",
+      "sourceSHA256": "ba8150cf30c103b5777c26f707e58cd14343cd5af5fd4d19192bbe4599aaf6ce",
+      "adaptedSHA256": "20250fbbd9212bb01de9dae243f532d87e877a75183590252fe348eb582e8d77"
+    },
+    {
+      "upstream": "templates/files/components/files/header.tsx",
+      "local": "packages/ui/src/components/files/header.tsx",
+      "sourceSHA256": "c56dfc4806f7c23c9065a94703b22e17273e728e5e27327bf4032396fbec5704",
+      "adaptedSHA256": "cd48861896f22b5501959f32be37e2b4eed3d8d2c236f289fb9aeecb43135a5c"
+    },
+    {
+      "upstream": "templates/files/hooks/use-mobile.ts",
+      "local": "packages/ui/src/hooks/use-mobile.ts",
+      "sourceSHA256": "d2377fbad5ad2bdf7fa896a68c36ac8bf4aa74a974b2061f77b41ae58d623001",
+      "adaptedSHA256": "738d8e4520edeca7caa2ca56a4923839e30be14a00fc32b5a770f5d5b451a63e"
+    },
+    {
+      "upstream": "templates/files/lib/utils.ts",
+      "local": "packages/ui/src/lib/utils.ts",
+      "sourceSHA256": "29557a5cc01c8d342d0401bc4fb3bbb88ff656b0715f04364178fc336420031d",
+      "adaptedSHA256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27"
+    }
+  ]
+}

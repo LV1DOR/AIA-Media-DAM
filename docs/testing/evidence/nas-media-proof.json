@@ -1,0 +1,45 @@
+{
+  "capturedAt": "2026-11-08T14:44:29.914Z",
+  "formats": [
+    {
+      "extension": "jpg",
+      "originalBytes": 360,
+      "originalHashMatches": true,
+      "pendingApprovalAndMetadata": true,
+      "previewStatus": 200,
+      "elapsedMs": 3420
+    },
+    {
+      "extension": "png",
+      "originalBytes": 167,
+      "originalHashMatches": true,
+      "pendingApprovalAndMetadata": true,
+      "previewStatus": 200,
+      "elapsedMs": 3153
+    },
+    {
+      "extension": "tif",
+      "originalBytes": 37128,
+      "originalHashMatches": true,
+      "pendingApprovalAndMetadata": true,
+      "previewStatus": 200,
+      "elapsedMs": 3204
+    },
+    {
+      "extension": "mp4",
+      "originalBytes": 2275,
+      "originalHashMatches": true,
+      "pendingApprovalAndMetadata": true,
+      "previewStatus": 206,
+      "elapsedMs": 3791
+    }
+  ],
+  "nativeOffboarding": true,
+  "passed": true,
+  "indexedMetadataSearch": true,
+  "bulkNativeKeywords": true,
+  "marketingUploadPendingAndCannotApprove": true,
+  "fixtureAssetsArchived": 5,
+  "disabledNativeApiIdentityDenied": true,
+  "nativeApiOffboardingCheckedAt": "2026-11-08T14:49:49.571Z"
+}

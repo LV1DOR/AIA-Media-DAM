@@ -1,0 +1,49 @@
+{
+  "at": "2026-11-08T18:11:45.078Z",
+  "node": "v22.17.0",
+  "scope": "Synthetic Node HTTP transport and 48-item client model only; no browser, source media, NAS or WAN performance claim",
+  "rows": [
+    {
+      "records": 100,
+      "samples": 20,
+      "maxPageItems": 48,
+      "maxPageJsonBytes": 13192,
+      "loopbackTransport": {
+        "medianMs": 0.633,
+        "p95Ms": 1.22
+      },
+      "pageModel": {
+        "medianMs": 0.698,
+        "p95Ms": 0.817
+      }
+    },
+    {
+      "records": 1000,
+      "samples": 20,
+      "maxPageItems": 48,
+      "maxPageJsonBytes": 13290,
+      "loopbackTransport": {
+        "medianMs": 0.624,
+        "p95Ms": 1
+      },
+      "pageModel": {
+        "medianMs": 0.66,
+        "p95Ms": 0.915
+      }
+    },
+    {
+      "records": 10000,
+      "samples": 20,
+      "maxPageItems": 48,
+      "maxPageJsonBytes": 13309,
+      "loopbackTransport": {
+        "medianMs": 0.798,
+        "p95Ms": 0.995
+      },
+      "pageModel": {
+        "medianMs": 0.698,
+        "p95Ms": 0.843
+      }
+    }
+  ]
+}

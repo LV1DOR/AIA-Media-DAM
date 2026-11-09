@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-11-09T14:12:24.949Z",
+  "branch": "frontend/unified-ui-review",
+  "productionWrites": false,
+  "schemaVersion": 5,
+  "optimizedBuilds": [
+    "media-web",
+    "transfer-web"
+  ],
+  "apiModelTests": {
+    "passed": 42,
+    "failed": 0
+  },
+  "browser": {
+    "startTime": "2026-11-09T14:08:38.785Z",
+    "duration": 71735.673,
+    "expected": 30,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "typecheck": true,
+  "formatting": true,
+  "secretScan": {
+    "passed": true,
+    "filesScanned": 346,
+    "knownPrivateValuesChecked": 10
+  },
+  "dependencyAudit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0
+  },
+  "actualApiBrowser": "settings-browser-real-api.json",
+  "preview": {
+    "media": "http://127.0.0.1:3310",
+    "transfer": "http://127.0.0.1:3311",
+    "ephemeralSyntheticData": true
+  },
+  "limits": [
+    "No production deployment",
+    "No new native NAS write validation",
+    "Chromium local tests only",
+    "Human review pending"
+  ]
+}

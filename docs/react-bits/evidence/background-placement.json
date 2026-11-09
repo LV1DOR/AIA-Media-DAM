@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-11-09T12:29:28.137840+00:00",
+  "branch": "frontend/unified-ui-review",
+  "productionDeployed": false,
+  "ownerMediaDecision": "Keep gallery photos private; use existing public photo tiles",
+  "placement": {
+    "administratorInvitation": "plain; no decorative background or gallery requests",
+    "loginAndRecipientSignup": "shared GridMotion with approved public photo tiles; solid neutral base; no fixed artwork",
+    "transferReceiver": "unchanged"
+  },
+  "checks": {
+    "optimizedMediaBuild": "passed",
+    "optimizedTransferBuild": "passed",
+    "workspaceTypecheck": "passed",
+    "prettier": "passed",
+    "browserWorkflows": 26,
+    "browserFailures": 0,
+    "responsiveLayoutWidths": [
+      1440,
+      768,
+      390
+    ],
+    "realApiInvitationTotpSignIn": "passed",
+    "runtimeErrors": 0
+  },
+  "sourceSha256": {
+    "packages/ui/src/index.tsx": "3c473e83840af5a27c59543753ab61e195eaa6954ee70ee6b964a0ef88f30df5",
+    "packages/ui/src/components/account-creation.tsx": "2804e186faf5764643a13f4687c3962526a6b10eaa514d9b1d65c929918641c0",
+    "packages/ui/src/components/invitation-setup.tsx": "88b409d4be41a5be7adda31f5176c99555c8dc4a4fbaafebb3b0287c4c1243ab",
+    "packages/ui/src/components/sign-in-background.tsx": "8f78b695b3a72df307349dc96bef7862bc0134400dba46c438df8c1bd21d1a56",
+    "packages/ui/src/unified.css": "41cdcd6080145212dd43d09caafbf5caddb7b030eaa730fbf7b7476533384107",
+    "tests/browser/react-bits.spec.ts": "399fad477556c0cdb613d90748b209b755824ef58327cae0097f43e7344a7e7f"
+  }
+}

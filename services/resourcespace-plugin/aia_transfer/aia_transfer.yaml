@@ -1,0 +1,6 @@
+name: aia_transfer
+title: AIA Transfer integration
+author: AIA
+version: 1.0
+desc: Narrow owner-scoped share API for the AIA ecosystem. ResourceSpace r29907 contract.
+category: Integrations

@@ -1,0 +1,3 @@
+# AIA Media implementation
+
+Follow the master plan as amended by ADR 001. Preserve existing ResourceSpace media. No backend-private DB writes; plugin code calls native functions. No external file requests or transfer imports. Keep credentials/native URLs server-side. Use original UI and LAN HTTPS/local accounts for the owner-authorized milestone. Tests must distinguish fixtures, native integrations and human acceptance. Do not claim public Internet delivery, corporate federation or remote CI without evidence. Use pnpm 10.14 and Node 22. Secrets/runtime/real media stay under ignored .local or private NAS config. Each phase updates STATUS, evidence and rollback. Do not spawn agents unless the user requests delegation.

@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-08T11:20:56.465Z",
+  "removedTemporaryPlaintextFiles": 16,
+  "restoreContainersStopped": true,
+  "restoreVolumesPreserved": true,
+  "encryptedBackupsPreserved": true,
+  "originalServices": [
+    {
+      "name": "resourcespace",
+      "running": true,
+      "paused": false
+    },
+    {
+      "name": "resourcespace-db",
+      "running": true,
+      "paused": false
+    }
+  ]
+}

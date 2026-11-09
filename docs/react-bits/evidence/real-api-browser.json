@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-11-09T12:28:57.252Z",
+  "mode": "Optimized Next.js review frontends plus actual Fastify authentication/invitation handlers, in-memory synthetic registry; synthetic gallery/native provisioning only",
+  "invitationCreatedByAdmin": true,
+  "recipientSetsPassword": true,
+  "unauthenticatedDuringSetup": true,
+  "totpValidatedByRealApi": true,
+  "successAfterActivation": true,
+  "authenticatedNameMatches": true,
+  "passwordFirstMfaNoSession": true,
+  "subsequentMfaLogin": true,
+  "runtimeErrors": [],
+  "productionWrites": false
+}

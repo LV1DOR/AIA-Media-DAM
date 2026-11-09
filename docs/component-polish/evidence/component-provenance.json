@@ -1,0 +1,171 @@
+{
+  "recordedAt": "2026-11-09T14:09:40.639Z",
+  "sources": [
+    {
+      "component": "AttachmentUpload and supporting files",
+      "registry": "https://beui.dev/r/attachment-upload.json",
+      "documentation": "https://beui.dev/components/blocks/file-upload",
+      "license": "MIT",
+      "adaptation": "Real controlled upload progress/status/retry; no demo timers; nested accessible preview; relative imports; scoped theme."
+    },
+    {
+      "component": "MorphingSearchChips",
+      "registry": "https://beui.dev/r/morphing-search-chips.json",
+      "documentation": "https://beui.dev/components/blocks/morphing-search",
+      "license": "MIT",
+      "mainSource": "User attachment f1422afc-dea9-49a5-b75e-262bbee0743f; supporting files from registry",
+      "adaptation": "Relative imports and real scoped asset suggestions, recent storage and search chip callbacks."
+    },
+    {
+      "component": "PasswordStrength",
+      "registry": "https://uiarc.dev/r/password-strength.json",
+      "license": "MIT",
+      "mainSource": "User attachment b20a2b71-4b1f-417c-b170-d060ea4a8317; CSS and motion tokens from registry",
+      "adaptation": "Relative imports, scoped theme and existing backend-matching password rules."
+    },
+    {
+      "component": "VariableProximity",
+      "registry": "https://www.reactbits.dev/r/VariableProximity-TS-CSS",
+      "license": "MIT + Commons Clause",
+      "adaptation": "Download All wrapper; self-hosted variable font; existing real download handler retained."
+    },
+    {
+      "component": "Roboto Flex Latin variable font",
+      "source": "https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap",
+      "license": "OFL-1.1",
+      "notice": "packages/ui/licenses/RobotoFlex-OFL.txt",
+      "axes": "wght 100..1000, opsz 8..144",
+      "runtime": "Self-hosted; no Google Fonts runtime request."
+    }
+  ],
+  "newDependency": {
+    "name": "@floating-ui/dom",
+    "version": "1.7.6",
+    "license": "MIT"
+  },
+  "files": [
+    {
+      "path": "packages/ui/src/components/beui/components/motion/attachment-upload.tsx",
+      "sha256": "0f9446d2f076a7b5b93a28397917312245955590895a2ea9f7c31ce82475da1c"
+    },
+    {
+      "path": "packages/ui/src/components/beui/components/motion/morphing-search-chips.tsx",
+      "sha256": "443d2dabc6471a29a74cdb3d24ddce0ec2cc0b02e32e2db59826770f81d79a87"
+    },
+    {
+      "path": "packages/ui/src/components/beui/components/motion/tooltip/grace.ts",
+      "sha256": "d5b0815c728c044775ed591e15bf3485e99f2b3cf1f7b25b5ec207f01daedbfa"
+    },
+    {
+      "path": "packages/ui/src/components/beui/components/motion/tooltip/positioner.tsx",
+      "sha256": "77c2eb6bb0f0b8aeaac51083f636f26be24290bb0891badbaa93ea26d977a48e"
+    },
+    {
+      "path": "packages/ui/src/components/beui/components/motion/tooltip/use-position.ts",
+      "sha256": "5d987afc58718efcced6f6593a9a56bb57fd0a53f4e4fed4d15c63f74f5a99df"
+    },
+    {
+      "path": "packages/ui/src/components/beui/components/motion/tooltip-surface.tsx",
+      "sha256": "dfe920d33ef5a34a16473fde127dcb15a51148698d207023e3896710bbc842ed"
+    },
+    {
+      "path": "packages/ui/src/components/beui/components/motion/tooltip.tsx",
+      "sha256": "15341848cfe932cebc3718f995ee8ce62f57f3af2fd8f5adf199f469f705d413"
+    },
+    {
+      "path": "packages/ui/src/components/beui/lib/ease.ts",
+      "sha256": "cde4ce91ec645335cfa8297d6094c90b6e62ee6a1a021fe2ac0a6ece673c2a8f"
+    },
+    {
+      "path": "packages/ui/src/components/beui/lib/hooks/use-dismiss.ts",
+      "sha256": "b3243c39f363c9f9b33b528a2e720d5d48370e964b8c6c80747da423a4269a2a"
+    },
+    {
+      "path": "packages/ui/src/components/beui/lib/hooks/use-hover-gesture.ts",
+      "sha256": "16b6cda4a726583429e8c11f0ecf1844decb9267daa0c596e969ab80c2d8dba4"
+    },
+    {
+      "path": "packages/ui/src/components/beui/lib/hooks/use-on-open.ts",
+      "sha256": "40fe63a564880b119063066621dac972ad01da73481fc26996377565f82c0083"
+    },
+    {
+      "path": "packages/ui/src/components/beui/lib/hooks/use-row-cursor.ts",
+      "sha256": "95afe34ad19661c405bbec11da7d32a7a84343e660492f46f578ead2aed8c750"
+    },
+    {
+      "path": "packages/ui/src/components/beui/lib/hooks/use-tap-gesture.ts",
+      "sha256": "b91954bf9f1cdc1771b2a6eac815d2f4e2493cb2cde5f508b2d96509dd71aeee"
+    },
+    {
+      "path": "packages/ui/src/components/beui/lib/presence-gate.tsx",
+      "sha256": "f3c3911933dda28679c108281da9acc37e8f98bc28d7bb79ff63bc0e3aaa9c74"
+    },
+    {
+      "path": "packages/ui/src/components/beui/lib/touch.ts",
+      "sha256": "f2a15c243c86c8bd1abb6e2e65a423b3a4c45cc1d797ebd83997f21cd1beadb9"
+    },
+    {
+      "path": "packages/ui/src/components/beui/lib/utils.ts",
+      "sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27"
+    },
+    {
+      "path": "packages/ui/src/components/uiarc/lib/motion-tokens.ts",
+      "sha256": "7ff46713e1fd88aee875db839fd35b8316aa04bdea67443df5415f929c9de0d3"
+    },
+    {
+      "path": "packages/ui/src/components/uiarc/registry/components/password-strength/password-strength.module.css",
+      "sha256": "f5e06b401bcb7c575eb9894f8193dfc4e9588befabf4129d1ce00830acfb40b1"
+    },
+    {
+      "path": "packages/ui/src/components/uiarc/registry/components/password-strength/password-strength.tsx",
+      "sha256": "48a4d2bdbe0d9abe8bee5a6ab750f24ff5d448310c1a920d87084ff3cbd2271b"
+    },
+    {
+      "path": "packages/ui/src/components/uiarc/registry/motion-tokens.ts",
+      "sha256": "506f05422e1357821434296b65b70020fe411452edbe2f7575fdfc588533bc13"
+    },
+    {
+      "path": "packages/ui/src/components/react-bits/VariableProximity.tsx",
+      "sha256": "07394c804f5cab1d8019fea66ee3be43d3de14d9d4df2059f84210d1693c7b9a"
+    },
+    {
+      "path": "packages/ui/src/components/react-bits/VariableProximity.css",
+      "sha256": "abcc5948454b1f3a102a96fc45762097aa783d38696e3d75e05060a95681d26a"
+    },
+    {
+      "path": "apps/media-web/public/fonts/roboto-flex.woff2",
+      "sha256": "6ccf7a9846bd137f4a7355538df60ef177a01fc7cc3edbbabc69413062f72db0"
+    },
+    {
+      "path": "apps/transfer-web/public/fonts/roboto-flex.woff2",
+      "sha256": "6ccf7a9846bd137f4a7355538df60ef177a01fc7cc3edbbabc69413062f72db0"
+    }
+  ],
+  "registrySnapshots": [
+    {
+      "path": ".local/components-polish/upstream/arc-motion-tokens.json",
+      "sha256": "2adf39247da5320283f23c446cea7976572c693bcadf9dc7d9c4e7e4e217b141"
+    },
+    {
+      "path": ".local/components-polish/upstream/attachment-upload.json",
+      "sha256": "422b05956ce241b411a89fe1e29d141b8a9c5b74e49f31d90487463cd4b5cf8d"
+    },
+    {
+      "path": ".local/components-polish/upstream/morphing-search-chips.json",
+      "sha256": "d2ddbd922fbd7d1cf5c114cc29f9852a9b1a29e0c104f2cf0596c3e868d8a194"
+    },
+    {
+      "path": ".local/components-polish/upstream/password-strength.json",
+      "sha256": "bb85f58196d520ef08a12db85f7a0b698c25a6f3cb94aa58f0e63de54e80db58"
+    },
+    {
+      "path": ".local/components-polish/upstream/registries.json",
+      "sha256": "88964164563c4217639809152e78c1d91df48750365d61b204ab5980a8b40653"
+    },
+    {
+      "path": ".local/components-polish/upstream/VariableProximity.json",
+      "sha256": "190a4a711886b644d6b0161c4c17170390ed77d2a334d6f7e16593176d52b00c"
+    }
+  ],
+  "productionWrites": false
+}

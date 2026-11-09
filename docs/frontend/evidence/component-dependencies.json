@@ -1,0 +1,122 @@
+[
+  {
+    "package": "@radix-ui/react-aspect-ratio",
+    "version": "1.2.0",
+    "license": "MIT",
+    "notices": [
+      "packages/ui/licenses/dependencies/radix-ui-react-aspect-ratio-LICENSE"
+    ]
+  },
+  {
+    "package": "@radix-ui/react-dialog",
+    "version": "1.3.1",
+    "license": "MIT",
+    "notices": [
+      "packages/ui/licenses/dependencies/radix-ui-react-dialog-LICENSE"
+    ]
+  },
+  {
+    "package": "@radix-ui/react-dropdown-menu",
+    "version": "2.2.1",
+    "license": "MIT",
+    "notices": [
+      "packages/ui/licenses/dependencies/radix-ui-react-dropdown-menu-LICENSE"
+    ]
+  },
+  {
+    "package": "@radix-ui/react-separator",
+    "version": "1.2.0",
+    "license": "MIT",
+    "notices": [
+      "packages/ui/licenses/dependencies/radix-ui-react-separator-LICENSE"
+    ]
+  },
+  {
+    "package": "@radix-ui/react-slot",
+    "version": "1.5.0",
+    "license": "MIT",
+    "notices": [
+      "packages/ui/licenses/dependencies/radix-ui-react-slot-LICENSE"
+    ]
+  },
+  {
+    "package": "@radix-ui/react-tooltip",
+    "version": "1.4.1",
+    "license": "MIT",
+    "notices": [
+      "packages/ui/licenses/dependencies/radix-ui-react-tooltip-LICENSE"
+    ]
+  },
+  {
+    "package": "class-variance-authority",
+    "version": "0.7.1",
+    "license": "Apache-2.0",
+    "notices": [
+      "packages/ui/licenses/dependencies/class-variance-authority-LICENSE"
+    ]
+  },
+  {
+    "package": "clsx",
+    "version": "2.1.1",
+    "license": "MIT",
+    "notices": [
+      "packages/ui/licenses/dependencies/clsx-license"
+    ]
+  },
+  {
+    "package": "framer-motion",
+    "version": "14.10.1",
+    "license": "MIT",
+    "notices": [
+      "packages/ui/licenses/dependencies/framer-motion-LICENSE.md"
+    ]
+  },
+  {
+    "package": "lucide-react",
+    "version": "1.70.0",
+    "license": "ISC",
+    "notices": [
+      "packages/ui/licenses/dependencies/lucide-react-LICENSE"
+    ]
+  },
+  {
+    "package": "qrcode.react",
+    "version": "4.2.0",
+    "license": "ISC",
+    "notices": [
+      "packages/ui/licenses/dependencies/qrcode.react-LICENSE"
+    ]
+  },
+  {
+    "package": "react",
+    "version": "19.3.1",
+    "license": "MIT",
+    "notices": [
+      "packages/ui/licenses/dependencies/react-LICENSE"
+    ]
+  },
+  {
+    "package": "react-photo-album",
+    "version": "3.6.2",
+    "license": "MIT",
+    "notices": [
+      "packages/ui/licenses/dependencies/react-photo-album-LICENSE"
+    ]
+  },
+  {
+    "package": "tailwind-merge",
+    "version": "3.7.0",
+    "license": "MIT",
+    "notices": [
+      "packages/ui/licenses/dependencies/tailwind-merge-LICENSE.md"
+    ]
+  },
+  {
+    "package": "yet-another-react-lightbox",
+    "version": "3.33.0",
+    "license": "MIT",
+    "notices": [
+      "packages/ui/licenses/dependencies/yet-another-react-lightbox-LICENSE"
+    ]
+  }
+]

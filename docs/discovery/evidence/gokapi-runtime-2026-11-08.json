@@ -1,0 +1,69 @@
+{
+  "checkedAt": "2026-11-08T11:16:32.577Z",
+  "environment": "Synthetic only; Windows Docker Desktop, loopback",
+  "release": "2.2.4",
+  "image": "f0rc3/gokapi@sha256:43cd93b9e1f02d760923f67f6e74e1c4d4a9cccb9b08fa42ad60770333f231eb",
+  "single": {
+    "version": "2.2.4",
+    "staffLoginVerified": true,
+    "temporaryUploadVerified": true,
+    "wrongPasswordDenied": true,
+    "directDownloadWithoutPasswordDenied": true,
+    "passwordAuthorizedDownloadMatches": true,
+    "sourceRevokeStatus": 200,
+    "nativeDirectUrlDeniedAfterRevoke": true,
+    "revokedResponseStatus": 200,
+    "temporaryFileImportedToDam": false,
+    "syntheticOnly": true
+  },
+  "batch": {
+    "fileCount": 20,
+    "uniqueNativeLinks": 20,
+    "unicodeNamePreserved": true,
+    "nativePublicGroupLinkReturned": false,
+    "oneUrlPerFileObserved": true
+  },
+  "expiry": {
+    "sourceExpiryUpdateStatus": 200,
+    "expiredMetadataStatus": 404,
+    "expiredNativePayloadDenied": true
+  },
+  "large": {
+    "checkedAt": "2026-11-08T11:07:51.361Z",
+    "version": "2.2.4",
+    "environment": "Windows Docker Desktop, loopback; not NAS/WAN benchmark",
+    "fileBytes": 10737418240,
+    "chunkBytes": 33554432,
+    "confirmedChunks": 320,
+    "clientRestartResumeVerified": true,
+    "downloadedBytes": 10737418240,
+    "downloadSha256Matches": true,
+    "uploadSecondsThisRun": 128.079,
+    "downloadSeconds": 32.645,
+    "sourceDeleteStatus": 200,
+    "sourceMetadataAbsentAfterDelete": true,
+    "syntheticRepeatedRandomBlock": true,
+    "e2eEncryptionTested": false,
+    "passed": true
+  },
+  "nativeOneLinkBatchProven": false,
+  "f2GatePassed": false,
+  "notTested": [
+    "20 mixed formats/duplicate names",
+    "NAS uplink/concurrency/storage-full",
+    "Physical cleanup timing",
+    "Public grouped authorization",
+    "E2E encryption",
+    "Global file-request disablement"
+  ],
+  "cleanup": {
+    "checkedAt": "2026-11-08T11:24:00.788Z",
+    "twentySyntheticFilesDeletedViaSourceApi": true,
+    "largeObjectDeletedViaSourceApi": true,
+    "containerStopped": true,
+    "volumesPreserved": true,
+    "dataVolumeAllocatedKiB": 100,
+    "measuredWithReadOnlyNetworklessHelper": true,
+    "physicalSecureErasureProven": false
+  }
+}

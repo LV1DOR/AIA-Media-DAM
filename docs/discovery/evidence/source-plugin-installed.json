@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-11-08T12:55:09.723Z",
+  "installed": true,
+  "container": "resourcespace",
+  "sourceRevision": 29907,
+  "persistentPluginInFilestore": true,
+  "sourceConfigPreserved": true,
+  "groups": {
+    "marketer": 7,
+    "reviewer": 8
+  },
+  "existingMediaDeleted": false,
+  "containerRestarted": false
+}

@@ -1,0 +1,361 @@
+{
+  "checkedAt": "2026-11-07T18:05:15.346Z",
+  "endpointPath": "/api/",
+  "transport": "http",
+  "authentication": "user-specific key signed POST (default userkey authmode); no credentials or signatures in URL",
+  "authenticationTerminologyCorrectedFromInstalledSourceOn": "2026-11-08",
+  "systemStatus": "OK",
+  "version": "SVN 11.0",
+  "revision": " r29907",
+  "enabledPlugins": [
+    "rse_search_notifications",
+    "rse_version",
+    "rse_workflow",
+    "transform",
+    "brand_guidelines",
+    "consentmanager",
+    "licensemanager",
+    "lightbox_preview"
+  ],
+  "permissions": {
+    "a": false,
+    "s": true,
+    "v": true,
+    "g": true,
+    "t": true,
+    "u": true,
+    "c": true,
+    "d": false,
+    "e0": true,
+    "e-1": true,
+    "noex": false,
+    "exup": false
+  },
+  "resourceTypes": [
+    {
+      "ref": "1",
+      "name": "Photo"
+    },
+    {
+      "ref": "2",
+      "name": "Document"
+    },
+    {
+      "ref": "3",
+      "name": "Video"
+    },
+    {
+      "ref": "4",
+      "name": "Audio"
+    }
+  ],
+  "metadataAdministration": {
+    "httpStatus": 403,
+    "allowed": false
+  },
+  "boundedSearch": {
+    "httpStatus": 200,
+    "structured": true,
+    "rowCount": 1,
+    "totalWasNumeric": true,
+    "sampleKeys": [
+      "score",
+      "ref",
+      "resource_type",
+      "has_image",
+      "is_transcoding",
+      "creation_date",
+      "rating",
+      "user_rating",
+      "user_rating_count",
+      "user_rating_total",
+      "file_extension",
+      "preview_extension",
+      "image_red",
+      "image_green",
+      "image_blue",
+      "thumb_width",
+      "thumb_height",
+      "archive",
+      "access",
+      "colour_key",
+      "created_by",
+      "file_modified",
+      "file_checksum",
+      "request_count",
+      "new_hit_count",
+      "expiry_notification_sent",
+      "preview_tweaks",
+      "file_path",
+      "modified",
+      "file_size",
+      "group_access",
+      "user_access",
+      "resultant_access",
+      "field12",
+      "field8",
+      "field3",
+      "order_by",
+      "total_hit_count"
+    ]
+  },
+  "sampleFieldDefinitions": [
+    {
+      "ref": 8,
+      "name": "title",
+      "title": "Title",
+      "type": 0,
+      "required": 1
+    },
+    {
+      "ref": 18,
+      "name": "caption",
+      "title": "Caption",
+      "type": 1,
+      "required": 0
+    },
+    {
+      "ref": 73,
+      "name": "subject",
+      "title": "Keywords - Subject",
+      "type": 2,
+      "required": 0
+    },
+    {
+      "ref": 75,
+      "name": "emotion",
+      "title": "Keywords - Emotion",
+      "type": 2,
+      "required": 0
+    },
+    {
+      "ref": 74,
+      "name": "event",
+      "title": "Keywords - Event",
+      "type": 2,
+      "required": 0
+    },
+    {
+      "ref": 1,
+      "name": "keywords",
+      "title": "Keywords - Other",
+      "type": 9,
+      "required": 0
+    },
+    {
+      "ref": 29,
+      "name": "person",
+      "title": "Named person(s)",
+      "type": 9,
+      "required": 0
+    },
+    {
+      "ref": 3,
+      "name": "country",
+      "title": "Country",
+      "type": 9,
+      "required": 0
+    },
+    {
+      "ref": 12,
+      "name": "date",
+      "title": "Date",
+      "type": 4,
+      "required": 0
+    },
+    {
+      "ref": 51,
+      "name": "originalfilename",
+      "title": "Original filename",
+      "type": 0,
+      "required": 0
+    },
+    {
+      "ref": 72,
+      "name": "text",
+      "title": "Extracted text",
+      "type": 5,
+      "required": 0
+    },
+    {
+      "ref": 10,
+      "name": "credit",
+      "title": "Credit",
+      "type": 0,
+      "required": 0
+    },
+    {
+      "ref": 25,
+      "name": "notes",
+      "title": "Notes",
+      "type": 1,
+      "required": 0
+    },
+    {
+      "ref": 88,
+      "name": "year",
+      "title": "Year",
+      "type": 3,
+      "required": 0
+    },
+    {
+      "ref": 89,
+      "name": "event89",
+      "title": "Event",
+      "type": 3,
+      "required": 0
+    },
+    {
+      "ref": 84,
+      "name": "recognised",
+      "title": "Keywords - Recognised",
+      "type": 9,
+      "required": 0
+    },
+    {
+      "ref": 85,
+      "name": "landmark",
+      "title": "Keywords - Landmark",
+      "type": 9,
+      "required": 0
+    },
+    {
+      "ref": 86,
+      "name": "accessibilityalttext",
+      "title": "Accessibility - Alt Text",
+      "type": 0,
+      "required": 0
+    },
+    {
+      "ref": 87,
+      "name": "accessibilityextend",
+      "title": "Accessibility - Extended Description",
+      "type": 1,
+      "required": 0
+    },
+    {
+      "ref": 52,
+      "name": "camera",
+      "title": "Camera make / model",
+      "type": 0,
+      "required": 0
+    },
+    {
+      "ref": 54,
+      "name": "source",
+      "title": "Source",
+      "type": 3,
+      "required": 0
+    }
+  ],
+  "calls": [
+    {
+      "function": "get_system_status",
+      "httpStatus": 200,
+      "json": true,
+      "bytes": 718
+    },
+    {
+      "function": "checkperm",
+      "httpStatus": 200,
+      "json": true,
+      "bytes": 5
+    },
+    {
+      "function": "checkperm",
+      "httpStatus": 200,
+      "json": true,
+      "bytes": 4
+    },
+    {
+      "function": "checkperm",
+      "httpStatus": 200,
+      "json": true,
+      "bytes": 4
+    },
+    {
+      "function": "checkperm",
+      "httpStatus": 200,
+      "json": true,
+      "bytes": 4
+    },
+    {
+      "function": "checkperm",
+      "httpStatus": 200,
+      "json": true,
+      "bytes": 4
+    },
+    {
+      "function": "checkperm",
+      "httpStatus": 200,
+      "json": true,
+      "bytes": 4
+    },
+    {
+      "function": "checkperm",
+      "httpStatus": 200,
+      "json": true,
+      "bytes": 4
+    },
+    {
+      "function": "checkperm",
+      "httpStatus": 200,
+      "json": true,
+      "bytes": 5
+    },
+    {
+      "function": "checkperm",
+      "httpStatus": 200,
+      "json": true,
+      "bytes": 4
+    },
+    {
+      "function": "checkperm",
+      "httpStatus": 200,
+      "json": true,
+      "bytes": 4
+    },
+    {
+      "function": "checkperm",
+      "httpStatus": 200,
+      "json": true,
+      "bytes": 5
+    },
+    {
+      "function": "checkperm",
+      "httpStatus": 200,
+      "json": true,
+      "bytes": 5
+    },
+    {
+      "function": "get_resource_types",
+      "httpStatus": 200,
+      "json": true,
+      "bytes": 930
+    },
+    {
+      "function": "get_resource_type_fields",
+      "httpStatus": 403,
+      "json": true,
+      "bytes": 2
+    },
+    {
+      "function": "do_search",
+      "httpStatus": 200,
+      "json": true,
+      "bytes": 808
+    },
+    {
+      "function": "get_resource_field_data",
+      "httpStatus": 200,
+      "json": true,
+      "bytes": 20203
+    }
+  ],
+  "assetValuesSaved": false,
+  "passwordUsed": false,
+  "mutationsExecuted": false,
+  "sourceShareLifecycleProven": false,
+  "backupRestoreProven": false,
+  "p0GatePassed": false
+}

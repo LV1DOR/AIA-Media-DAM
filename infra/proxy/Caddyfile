@@ -1,0 +1,43 @@
+{
+  admin off
+  auto_https disable_redirects
+  default_sni 192.168.250.80
+}
+(security) {
+  tls internal
+  encode zstd gzip
+  header {
+    >X-Content-Type-Options nosniff
+    >Referrer-Policy no-referrer
+    >X-Frame-Options DENY
+    >Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  }
+  request_body {
+    max_size 22GB
+  }
+}
+(api_routes) {
+  @engine path /api/uploadrequest* /uploadrequest* /setup* /auth/token /admin*
+  respond @engine 404
+  handle /api/* {
+    reverse_proxy api:4100
+  }
+}
+https://192.168.250.80:8443 {
+  import security
+  route {
+    import api_routes
+    handle {
+      reverse_proxy media:3100
+    }
+  }
+}
+https://192.168.250.80:8444 {
+  import security
+  route {
+    import api_routes
+    handle {
+      reverse_proxy transfer:3101
+    }
+  }
+}

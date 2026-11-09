@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-11-08T15:57:50.421Z",
+  "mediaStatus": 200,
+  "transferStatus": 200,
+  "apiHealthStatus": 200,
+  "certificateValidationEnabled": true,
+  "excludedEngineStatus": 404,
+  "disabledQaStatus": 401
+}

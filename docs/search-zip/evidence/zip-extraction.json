@@ -1,0 +1,10 @@
+{
+  "independentExtractor": "Python zipfile",
+  "originalBytes": 1802322,
+  "sha256": "e15f835446e17f148f198f269d2107b79d125effb1aa4edd4aac430052e4a400",
+  "entryCount": 2,
+  "extractedBytesEqualOriginal": true,
+  "allEntryCRCsValid": true,
+  "duplicateNamesPreserved": true,
+  "productionWrites": false
+}

@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-08T19:33:41.626800+00:00",
+  "release": "lan-20261108-16a7b99c",
+  "browser": "Existing owner Chrome; Windows Computer Use skill",
+  "authentication": "Owner entered credentials manually; existing sessions retained through correction",
+  "mediaOrigin": "https://192.168.250.80:8443",
+  "transferOrigin": "https://192.168.250.80:8444",
+  "passed": true,
+  "checks": [
+    "Authenticated library shows four native assets and previews",
+    "Banner fullscreen displays actual native standard preview after correction",
+    "Viewer Left navigation loads adjacent native image; Escape dismisses",
+    "Asset details displays native preview, metadata and visible membership state",
+    "Authenticated Transfer history displays nine existing test transfers",
+    "New-transfer composer exposes title/message/expiry/quota/password/file controls; closes without submission"
+  ],
+  "changesSubmittedThroughUi": false,
+  "privateScreenshots": ".local/frontend-qa/live-deployed/",
+  "humanStakeholderAcceptanceCompleted": false,
+  "limitations": [
+    "No role-by-role live marketing/reviewer acceptance",
+    "No new upload/share/recipient mutation in this final live smoke check",
+    "No realistic-media performance benchmark",
+    "Chrome displays existing untrusted local CA indicator; no security bypass was automated"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "environment": "isolated NAS restore clone",
+  "sourceRevision": 29907,
+  "pluginVersion": 1,
+  "automaticNativeShareCreated": true,
+  "selectedResources": 2,
+  "nativeDatabaseFunctionsOnly": true,
+  "manifestMatchesSelection": true,
+  "wrongKeyDenied": true,
+  "outsideResourceDenied": true,
+  "nativeOriginalPasswordGate": true,
+  "nativeOriginalMatchesBackup": true,
+  "restrictionChangeDeniesManifest": true,
+  "unapprovedChangeDeniesManifest": true,
+  "restoredApprovalAllowsManifest": true,
+  "revokeSucceeded": true,
+  "revokedManifestDenied": true,
+  "cachedNativeOriginalDeniedAfterRevoke": true,
+  "checkedAt": "2026-11-08T12:16:01.502843+00:00",
+  "passed": true
+}

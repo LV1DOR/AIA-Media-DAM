@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-11-08T16:00:17.862176+00:00",
+  "serviceHealth": {
+    "aia-media-api": "healthy",
+    "aia-media-web": "healthy",
+    "aia-transfer-web": "healthy",
+    "aia-media-gokapi": "healthy",
+    "aia-media-gateway": "running",
+    "resourcespace": "healthy",
+    "resourcespace-db": "healthy"
+  },
+  "freeBytes": 3974043238400,
+  "backupAgeSeconds": 110.662377,
+  "problems": [],
+  "externalAlertDestinationConfigured": false
+}

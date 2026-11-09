@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-11-08T16:00:18.930Z",
+  "release": "lan-20261108-e45cafcc",
+  "sourceArchiveSha256": "e45cafcc035f1ba66e78ccda4e340712983b21f5c8437bf64a080f17a328326d",
+  "registrySchema": 3,
+  "activeStaff": 1,
+  "pendingSourceCleanup": 0,
+  "pendingFinalizations": 0,
+  "activeTransfers": 0,
+  "enabledQaAccounts": 0,
+  "nativeTemporaryObjects": 0,
+  "containers": [
+    {
+      "name": "aia-media-api",
+      "imageId": "sha256:f3b15c491e6955bac29b9de13cf57318ef482c994555775bd219a2ff11a55ca7",
+      "running": true,
+      "paused": false,
+      "health": "healthy",
+      "hostPorts": {}
+    },
+    {
+      "name": "aia-media-web",
+      "imageId": "sha256:78be665adff9991cd057bfcec0921805c06c55985437d92c922c1d1ce8dafb96",
+      "running": true,
+      "paused": false,
+      "health": "healthy",
+      "hostPorts": {}
+    },
+    {
+      "name": "aia-transfer-web",
+      "imageId": "sha256:2fe4ce6dcbd8313dd7bd0bcfa3a4484647921fa28665185899a240eba2214534",
+      "running": true,
+      "paused": false,
+      "health": "healthy",
+      "hostPorts": {}
+    },
+    {
+      "name": "aia-media-gokapi",
+      "imageId": "sha256:55195950a4c4e3b787b0bb75b1140d937d187b2fd32c348cbf4c64a3f13c3110",
+      "running": true,
+      "paused": false,
+      "health": "healthy",
+      "hostPorts": {}
+    },
+    {
+      "name": "aia-media-gateway",
+      "imageId": "sha256:5813f7eb9b94fac4970f9f576695fe1ed1d53d41586fd3eaa350caf7c4627d9c",
+      "running": true,
+      "paused": false,
+      "health": null,
+      "hostPorts": {
+        "8443/tcp": [
+          {
+            "HostIp": "192.168.250.80",
+            "HostPort": "8443"
+          }
+        ],
+        "8444/tcp": [
+          {
+            "HostIp": "192.168.250.80",
+            "HostPort": "8444"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resourcespace",
+      "imageId": "sha256:0ab7853ff0b41a2ca2e1bd07092749f12ece4f806ce8bf6866a9b23635ce411f",
+      "running": true,
+      "paused": false,
+      "health": "healthy",
+      "hostPorts": {
+        "80/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "8088"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resourcespace-db",
+      "imageId": "sha256:823a099a93df6416c6c7ed33c79a2d43e92ffbd2ccc0e83973ef045f2dae1ac0",
+      "running": true,
+      "paused": false,
+      "health": "healthy",
+      "hostPorts": {}
+    }
+  ],
+  "localGitInitialized": true,
+  "gitCommitCreated": false,
+  "remoteCiExecuted": false,
+  "ownerAccessVerified": true,
+  "ownerAuthenticatorEnrollmentRequired": true,
+  "visualBrowserVerificationCompleted": false,
+  "computerUseStoppedReason": "Browser URL could not be verified confidently for access-policy enforcement",
+  "currentSymlinkVerified": true
+}

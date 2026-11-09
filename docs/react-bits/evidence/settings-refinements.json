@@ -1,0 +1,84 @@
+{
+  "checkedAt": "2026-11-09T13:02:30.312523+00:00",
+  "branch": "frontend/unified-ui-review",
+  "productionDeployed": false,
+  "productionWrites": false,
+  "schemaVersion": 5,
+  "newDirectDependency": {
+    "sharp": "0.35.5 (already resolved by Next.js; Apache-2.0)"
+  },
+  "checks": {
+    "frozenLockfileInstall": "passed",
+    "optimizedBuilds": [
+      "media-web",
+      "transfer-web"
+    ],
+    "workspaceTypecheck": "passed",
+    "format": "passed (Prettier)",
+    "apiAndModelTests": {
+      "passed": 42,
+      "failed": 0
+    },
+    "optimizedBrowserWorkflows": {
+      "passed": 26,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0
+    },
+    "actualApiBrowser": "passed; see settings-browser-real-api.json",
+    "secretScan": {
+      "passed": true,
+      "knownPrivateValuesChecked": 10
+    },
+    "dependencyAudit": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "dependencies": 438,
+      "devDependencies": 0,
+      "optionalDependencies": 0,
+      "totalDependencies": 438
+    }
+  },
+  "behavior": {
+    "newPasswords": "8-128 characters, uppercase letter, number and symbol; existing sign-in credentials preserved",
+    "profilePhoto": "required new-signup image; authenticated-owner read; normalized private registry blob",
+    "backgroundPhotos": "admin-only upload/remove; explicitly public normalized image endpoint; no private NAS gallery access",
+    "textAndAlignment": "login welcome label removed; staff notice centered; white visible centered MFA digits on dark grey; lanyard instruction bold centered; requested badge/welcome footers removed"
+  },
+  "notRun": [
+    "Production deployment or migration",
+    "NAS staff provisioning writes",
+    "Real personal data onboarding",
+    "Safari/Firefox engines",
+    "Linux container runtime of the new image normalization path"
+  ],
+  "sourceSha256": {
+    "packages/contracts/src/index.ts": "d7c3895e47e14c73d7645cd90867c630cb4a3afd1f6db536bfc6fc67b2a13df5",
+    "packages/ui/src/index.tsx": "bffa6ff52aeb671a47ead9aa408624c0448ea15258a8d0c20ad2fa0451d4fac8",
+    "packages/ui/src/unified.css": "7f7976b9b079debbcbeb5437bb50fdd42cc29e150221770cff60a63151b1d106",
+    "packages/ui/src/components/account-success.tsx": "8089f3fee8b4c3980fe4361a283f1329bbc606b00eeeabc8037ff9a6c8adbf69",
+    "packages/ui/src/components/background-settings.tsx": "0691f312eb6a26b46bbae9e290a0766a1bb99cf554bbd48a53f0c383854c5031",
+    "packages/ui/src/components/invitation-setup.tsx": "965a8ab92f23259becf895ea827e541de7ca6badeb74826909df489558de887c",
+    "packages/ui/src/components/mfa-challenge.tsx": "74561beaf9da02711576adbbbd951fa28ad7aa2053115b08ba8876aab9dc83d8",
+    "packages/ui/src/components/sign-in-background.tsx": "23f557de66f359a08bdc045b39b8cce67210169e5fb539398fc49f56da8ea489",
+    "packages/ui/src/components/react-bits/CodeSlots.tsx": "36a741751244466f6872fa496e8c93f547e95bb02a0ee14621ed398f5f10a1e6",
+    "packages/ui/src/lib/badge-images.ts": "3159f7b96fb76152fda309b6f0cc0b2f4a7155073e8c65652326b6fb452f7b86",
+    "services/transfer-api/src/app.ts": "f26fe3a4e086f6387a3aafea2c224dea9d1c5b46b69f7a67806573d564684792",
+    "services/transfer-api/src/store.ts": "9617c2f254227e144dbd97395c790e12d157c655fa1a4e535ffd667a127d8603",
+    "services/transfer-api/src/backgrounds.ts": "caf82cf914f88f3c657f1d932f7564c33ce6462f5dba02e8aa43f83fc7309248",
+    "services/transfer-api/package.json": "291e761cfafe6d52f6f9960e6de5b10196fe5a3456df37c62a1641754de7f0de",
+    "pnpm-lock.yaml": "f808a767bb5c2a42fd45ab6ab80ece03102b919c23ee84e2d26bcf7d1785b3cf",
+    "scripts/test/frontend-fixtures.mjs": "0d451145296a6a5aa9779a40f672267b4ae14d76412369ca923733283484b5af",
+    "scripts/test/native-integration.mts": "7d04c95a5b77873a6ddd84dbd52130e4a52168ceb345c4dc2f66ab23b26eff38",
+    "scripts/test/nas-media-proof.mjs": "6cf170757886ac1e9a61539a61fcb999d6be05a70d7aee9012028c0c26f01c6c",
+    "tests/security.test.ts": "ec1b849080a55e6f20f29cbfa374ca57caad42995b5cc84257369341a416fc1c",
+    "tests/react-bits.test.ts": "dff1dd6e720ccb070ec4837f8700f9f9f878cea74f436f39ba22e5dba014e47f",
+    "tests/browser/react-bits.spec.ts": "9d7493fa4ceebc08237b3811b8feaf669c94a7c5439a69efb5c745374c80118e",
+    "tests/fixtures/profile.png": "db6e1f8322dd0739b76f6100b38f00cb75cb1c89a0fcb1711f2f56c2bc250871"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-11-08T16:01:40.452Z",
+  "workspaceTypechecksPassed": true,
+  "securityTestsPassed": 17,
+  "productionBuildsPassedOnNas": true,
+  "formatCheckPassed": true,
+  "knownSecretScanPassed": true,
+  "knownPrivateValuesChecked": 10,
+  "discoveryChecksPassed": 12,
+  "productionDependencyVulnerabilities": 0,
+  "remoteCiExecuted": false,
+  "browserVisualVerificationCompleted": false
+}

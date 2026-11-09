@@ -1,0 +1,34 @@
+# Local evidence can contain private infrastructure paths and identities.
+.local/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+*.sql
+*.sqlite*
+*.db*
+node_modules/
+.next/
+coverage/
+# Keep purchased source out until the repository and licence scope are approved.
+vendor-private/
+*.tsbuildinfo
+next-env.d.ts
+*.log
+dist/
+.private/
+
+# Isolated unified UI review output and generated Python bytecode.
+.next-review/
+__pycache__/
+
+# Local visual/test captures are review artifacts. README images are curated
+# separately under docs/images using synthetic media and public artwork.
+docs/**/evidence/**/*.png
+docs/**/evidence/**/*.jpg
+docs/**/evidence/**/*.jpeg
+docs/**/evidence/**/*.webp
+docs/**/evidence/**/*.zip

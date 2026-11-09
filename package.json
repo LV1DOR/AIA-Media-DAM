@@ -1,0 +1,39 @@
+{
+  "name": "aia-media-ecosystem",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.14.0",
+  "engines": {
+    "node": ">=22.17 <23"
+  },
+  "pnpm": {
+    "overrides": {
+      "readdir-glob>minimatch": "11.0.5"
+    }
+  },
+  "scripts": {
+    "typecheck": "corepack pnpm -r typecheck",
+    "test": "tsx --test tests/*.test.ts",
+    "build": "corepack pnpm --filter @aia/media-web build && corepack pnpm --filter @aia/transfer-web build && node scripts/dev/prepare-standalone.mjs",
+    "check": "corepack pnpm typecheck && corepack pnpm test && corepack pnpm build",
+    "dev": "node scripts/dev/start.mjs",
+    "scan:secrets": "node scripts/test/scan-secrets.mjs",
+    "format:check": "prettier --check \"apps/**/*.{ts,tsx,mjs,json}\" \"packages/**/*.{ts,tsx,css,json}\" \"services/transfer-api/**/*.{ts,json}\" \"tests/**/*.ts\" \"playwright.config.ts\"",
+    "test:browser": "node scripts/test/run-browser.mjs",
+    "test:performance": "tsx scripts/test/frontend-performance.mts",
+    "preview:review": "node scripts/dev/unified-preview.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0",
+    "@types/archiver": "8.0.0",
+    "@types/node": "^22.19.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "archiver": "8.0.0",
+    "lighthouse": "13.6.0",
+    "otpauth": "9.6.0",
+    "prettier": "3.9.10",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}

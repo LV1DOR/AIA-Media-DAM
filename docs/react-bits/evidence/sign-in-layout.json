@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-09T13:01:23.699Z",
+  "previewOnly": true,
+  "layouts": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "centered": true,
+      "overflow": false,
+      "runtimeErrors": [],
+      "privateLibraryRequests": 0
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "centered": true,
+      "overflow": false,
+      "runtimeErrors": [],
+      "privateLibraryRequests": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "centered": true,
+      "overflow": false,
+      "runtimeErrors": [],
+      "privateLibraryRequests": 0
+    }
+  ],
+  "transferSignIn": true
+}

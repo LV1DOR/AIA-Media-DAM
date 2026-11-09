@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-11-08T12:58:36.025Z",
+  "environment": "Local API, owner-authorized NAS ResourceSpace installation; local Gokapi 2.2.4",
+  "syntheticStaffAndTemporaryPayloadsOnly": true,
+  "sourceConfigurationChangedUnderOwnerAuthorization": true,
+  "existingMediaBytesPreserved": true,
+  "administratorMfaVerified": true,
+  "librarySearchVerified": true,
+  "metadataDetailVerified": true,
+  "previewBytes": 95383,
+  "nativeLeastPrivilegeProvisioned": true,
+  "viewerAdministrativeAndReviewDenials": true,
+  "libraryPublicOriginalVerified": true,
+  "libraryOriginalSha256": "23576552881c976c7a76da991bca46095e44f7ff98c8f54bf7fcf45280d57333",
+  "nativeGroupedTemporaryDeliveryVerified": true,
+  "duplicateUnicodeNamesVerified": true,
+  "oneRegistryLandingLinkForTwoNativeObjects": true,
+  "cachedGroupAndFileUrlsDeniedAfterRevoke": true,
+  "disabledStaffSessionDenied": true,
+  "passed": true
+}

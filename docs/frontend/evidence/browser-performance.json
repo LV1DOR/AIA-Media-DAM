@@ -1,0 +1,187 @@
+{
+  "at": "2026-11-08T18:27:53.796Z",
+  "sourceFingerprint": "3660c43d7ab5cf137a3c4caa7deaf490b46157d442cb4a379a1b1d4b2c81617a",
+  "scope": "Local optimized builds, identical lightweight synthetic SVGs, Chromium headless, 1440x1000, reduced motion, unthrottled; one Lighthouse navigation per build/count; not NAS/WAN or real photography throughput",
+  "rows": [
+    {
+      "variant": "baseline",
+      "records": 100,
+      "galleryReadyMs": 194,
+      "selectionRoundTripMs": 50.5,
+      "renderedCards": 48,
+      "resourceRequests": 57,
+      "previewRequests": 48,
+      "previewEncodedBytes": 18604,
+      "previewTransferredBytes": 33004,
+      "observer": {
+        "cls": 0.03352755533854167,
+        "lcp": 220
+      },
+      "memory": {
+        "pageAndScrollCycles": 20,
+        "usedHeapBeforeBytes": 4930040,
+        "usedHeapAfterBytes": 6349604,
+        "deltaBytes": 1419564
+      },
+      "lighthouse": {
+        "version": "13.6.0",
+        "performanceScore": 1,
+        "lcpMs": 238.229,
+        "cls": 0.05194655919958043,
+        "totalBlockingTimeMs": 0,
+        "warnings": []
+      },
+      "consoleErrors": []
+    },
+    {
+      "variant": "redesign",
+      "records": 100,
+      "galleryReadyMs": 220.3,
+      "selectionRoundTripMs": 44.1,
+      "renderedCards": 48,
+      "resourceRequests": 60,
+      "previewRequests": 48,
+      "previewEncodedBytes": 18825,
+      "previewTransferredBytes": 33225,
+      "observer": {
+        "cls": 0,
+        "lcp": 252
+      },
+      "memory": {
+        "pageAndScrollCycles": 20,
+        "usedHeapBeforeBytes": 7567128,
+        "usedHeapAfterBytes": 9277032,
+        "deltaBytes": 1709904
+      },
+      "lighthouse": {
+        "version": "13.6.0",
+        "performanceScore": 1,
+        "lcpMs": 568.626,
+        "cls": 0,
+        "totalBlockingTimeMs": 0,
+        "warnings": []
+      },
+      "consoleErrors": []
+    },
+    {
+      "variant": "baseline",
+      "records": 1000,
+      "galleryReadyMs": 157.5,
+      "selectionRoundTripMs": 51.4,
+      "renderedCards": 48,
+      "resourceRequests": 57,
+      "previewRequests": 48,
+      "previewEncodedBytes": 18604,
+      "previewTransferredBytes": 33004,
+      "observer": {
+        "cls": 0.0024702806712962964,
+        "lcp": 192
+      },
+      "memory": {
+        "pageAndScrollCycles": 20,
+        "usedHeapBeforeBytes": 4886472,
+        "usedHeapAfterBytes": 6306932,
+        "deltaBytes": 1420460
+      },
+      "lighthouse": {
+        "version": "13.6.0",
+        "performanceScore": 1,
+        "lcpMs": 209.322,
+        "cls": 0.05194655919958043,
+        "totalBlockingTimeMs": 0,
+        "warnings": []
+      },
+      "consoleErrors": []
+    },
+    {
+      "variant": "redesign",
+      "records": 1000,
+      "galleryReadyMs": 186.1,
+      "selectionRoundTripMs": 42.8,
+      "renderedCards": 48,
+      "resourceRequests": 60,
+      "previewRequests": 48,
+      "previewEncodedBytes": 18825,
+      "previewTransferredBytes": 33225,
+      "observer": {
+        "cls": 0,
+        "lcp": 220
+      },
+      "memory": {
+        "pageAndScrollCycles": 20,
+        "usedHeapBeforeBytes": 7575740,
+        "usedHeapAfterBytes": 9392216,
+        "deltaBytes": 1816476
+      },
+      "lighthouse": {
+        "version": "13.6.0",
+        "performanceScore": 1,
+        "lcpMs": 543.458,
+        "cls": 0,
+        "totalBlockingTimeMs": 0,
+        "warnings": []
+      },
+      "consoleErrors": []
+    },
+    {
+      "variant": "baseline",
+      "records": 10000,
+      "galleryReadyMs": 159.2,
+      "selectionRoundTripMs": 47.9,
+      "renderedCards": 48,
+      "resourceRequests": 57,
+      "previewRequests": 48,
+      "previewEncodedBytes": 18604,
+      "previewTransferredBytes": 33004,
+      "observer": {
+        "cls": 0.004142028356481481,
+        "lcp": 208
+      },
+      "memory": {
+        "pageAndScrollCycles": 20,
+        "usedHeapBeforeBytes": 4889196,
+        "usedHeapAfterBytes": 6305604,
+        "deltaBytes": 1416408
+      },
+      "lighthouse": {
+        "version": "13.6.0",
+        "performanceScore": 1,
+        "lcpMs": 199.038,
+        "cls": 0,
+        "totalBlockingTimeMs": 0,
+        "warnings": []
+      },
+      "consoleErrors": []
+    },
+    {
+      "variant": "redesign",
+      "records": 10000,
+      "galleryReadyMs": 179.3,
+      "selectionRoundTripMs": 47.7,
+      "renderedCards": 48,
+      "resourceRequests": 60,
+      "previewRequests": 48,
+      "previewEncodedBytes": 18825,
+      "previewTransferredBytes": 33225,
+      "observer": {
+        "cls": 0,
+        "lcp": 216
+      },
+      "memory": {
+        "pageAndScrollCycles": 20,
+        "usedHeapBeforeBytes": 7568456,
+        "usedHeapAfterBytes": 9387968,
+        "deltaBytes": 1819512
+      },
+      "lighthouse": {
+        "version": "13.6.0",
+        "performanceScore": 1,
+        "lcpMs": 621.432,
+        "cls": 0,
+        "totalBlockingTimeMs": 0,
+        "warnings": []
+      },
+      "consoleErrors": []
+    }
+  ]
+}

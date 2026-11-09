@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-09",
+  "syntheticOnly": true,
+  "media": "http://127.0.0.1:3310/",
+  "receiver": "http://127.0.0.1:3311/t/ssssssssssssssssssssssssssssssssssssssssss1",
+  "reviewNavigationRemoved": true,
+  "receiverDisclaimerAndFooterRemoved": true,
+  "inactiveHeadingVerified": true,
+  "javaScriptErrors": [],
+  "productionDeployment": false
+}

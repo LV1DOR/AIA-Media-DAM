@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-09T14:38:29.782Z",
+  "results": [
+    {
+      "search": "MotoGP",
+      "error": true
+    },
+    {
+      "search": "MotoGP 2026",
+      "error": true
+    },
+    {
+      "search": "\"year:2026\"",
+      "error": true
+    },
+    {
+      "search": "Racing",
+      "error": true
+    },
+    {
+      "search": "racing",
+      "error": true
+    },
+    {
+      "search": "\"keywords:racing\"",
+      "error": true
+    }
+  ],
+  "readOnly": true
+}

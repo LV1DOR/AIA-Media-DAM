@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-11-09T13:01:20.776Z",
+  "environment": "Optimized local review with actual API and ephemeral synthetic registry",
+  "adminPublicPhotoUpload": true,
+  "customPhotosOnSignedOutPage": true,
+  "adminRemovalRevokesPublicImage": true,
+  "defaultTilesRestored": true,
+  "mandatoryProfilePhoto": true,
+  "eightCharacterComplexPassword": true,
+  "noSessionBeforeTotp": true,
+  "privateProfilePhotoStored": true,
+  "profilePhotoRequiresAuthentication": true,
+  "nonAdminBackgroundSettingsDenied": true,
+  "whiteVisibleDigits": true,
+  "centeredCodeInput": true,
+  "boldCenteredLanyardInstruction": true,
+  "removedWelcomeAndDisclaimer": true,
+  "runtimeErrors": [],
+  "productionWrites": false
+}

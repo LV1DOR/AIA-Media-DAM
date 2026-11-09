@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-11-09T15:34:26.874Z",
+  "branch": "frontend/unified-ui-review",
+  "remote": "https://github.com/LV1DOR/AIA-Media-DAM.git",
+  "remoteInitiallyEmpty": true,
+  "apiModelTests": {
+    "passed": 47,
+    "failed": 0
+  },
+  "browser": {
+    "startTime": "2026-11-09T15:30:44.201Z",
+    "duration": 73044.001,
+    "expected": 31,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "typecheck": true,
+  "formatting": true,
+  "optimizedBuilds": [
+    "media-web",
+    "transfer-web"
+  ],
+  "dependencyAudit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0
+  },
+  "previewSearch": {
+    "onePill": "motogp 2026",
+    "matches": 3333,
+    "syntheticAssets": 10000
+  },
+  "screenshots": [
+    "docs/images/library.png",
+    "docs/images/search.png",
+    "docs/images/receiver.png"
+  ],
+  "privateGalleryImagesIncluded": false,
+  "productionWrites": false,
+  "pushPerformed": false,
+  "remoteCiRun": false,
+  "nativeNasSearchVerified": false
+}

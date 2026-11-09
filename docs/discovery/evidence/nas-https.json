@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-11-08T13:56:54.367Z",
+  "mediaHttpsStatus": 200,
+  "transferHttpsStatus": 200,
+  "apiHealthStatus": 200,
+  "certificateValidatedAgainstExportedCa": true,
+  "rootCertificateSha256": "A7:7D:35:A6:F9:E4:66:D6:A8:D9:D0:86:CC:4C:CD:FC:A9:C4:F5:5A:AD:84:7B:2D:72:07:B4:74:25:CD:93:97",
+  "cspNoncePresent": true,
+  "inlineScriptsUseMatchingNonce": true,
+  "noIframeEmbedding": true,
+  "ipBasedClientWithoutSniVerified": true
+}

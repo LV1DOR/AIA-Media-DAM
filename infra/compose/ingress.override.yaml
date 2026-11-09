@@ -1,0 +1,4 @@
+services:
+  gateway:
+    volumes:
+      - "${AIA_CADDY_CONFIG:?Set private ingress configuration reference}:/etc/caddy/Caddyfile:ro"

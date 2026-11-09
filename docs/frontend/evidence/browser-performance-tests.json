@@ -1,0 +1,239 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Luke\\AIA-Media\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "C:\\Users\\Luke\\AIA-Media\\playwright.config.ts",
+    "rootDir": "C:/Users/Luke/AIA-Media/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Luke/AIA-Media/.local/frontend-qa/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Luke/AIA-Media/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "performance.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Luke\\AIA-Media\\.local\\frontend-qa\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Luke\\AIA-Media\\tests\\browser",
+        "snapshotDir": "C:\\Users\\Luke\\AIA-Media\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "performance.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3210",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "reducedMotion": "reduce",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/frontend/evidence/browser-performance-tests.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "performance.spec.ts",
+      "file": "performance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "compare baseline and redesign with 100 records",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 40527,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "{\"variant\":\"baseline\",\"records\":100,\"galleryReadyMs\":194,\"selectionRoundTripMs\":50.5,\"renderedCards\":48,\"resourceRequests\":57,\"previewRequests\":48,\"previewEncodedBytes\":18604,\"previewTransferredBytes\":33004,\"observer\":{\"cls\":0.03352755533854167,\"lcp\":220},\"memory\":{\"pageAndScrollCycles\":20,\"usedHeapBeforeBytes\":4930040,\"usedHeapAfterBytes\":6349604,\"deltaBytes\":1419564},\"lighthouse\":{\"version\":\"13.6.0\",\"performanceScore\":1,\"lcpMs\":238.229,\"cls\":0.05194655919958043,\"totalBlockingTimeMs\":0,\"warnings\":[]},\"consoleErrors\":[]}\n"
+                    },
+                    {
+                      "text": "{\"variant\":\"redesign\",\"records\":100,\"galleryReadyMs\":220.3,\"selectionRoundTripMs\":44.1,\"renderedCards\":48,\"resourceRequests\":60,\"previewRequests\":48,\"previewEncodedBytes\":18825,\"previewTransferredBytes\":33225,\"observer\":{\"cls\":0,\"lcp\":252},\"memory\":{\"pageAndScrollCycles\":20,\"usedHeapBeforeBytes\":7567128,\"usedHeapAfterBytes\":9277032,\"deltaBytes\":1709904},\"lighthouse\":{\"version\":\"13.6.0\",\"performanceScore\":1,\"lcpMs\":568.626,\"cls\":0,\"totalBlockingTimeMs\":0,\"warnings\":[]},\"consoleErrors\":[]}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T18:27:53.769Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b15d6361b2fc38288977-5c84babd6b1a362fc7b3",
+          "file": "performance.spec.ts",
+          "line": 39,
+          "column": 3
+        },
+        {
+          "title": "compare baseline and redesign with 1000 records",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 39808,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "{\"variant\":\"baseline\",\"records\":1000,\"galleryReadyMs\":157.5,\"selectionRoundTripMs\":51.4,\"renderedCards\":48,\"resourceRequests\":57,\"previewRequests\":48,\"previewEncodedBytes\":18604,\"previewTransferredBytes\":33004,\"observer\":{\"cls\":0.0024702806712962964,\"lcp\":192},\"memory\":{\"pageAndScrollCycles\":20,\"usedHeapBeforeBytes\":4886472,\"usedHeapAfterBytes\":6306932,\"deltaBytes\":1420460},\"lighthouse\":{\"version\":\"13.6.0\",\"performanceScore\":1,\"lcpMs\":209.322,\"cls\":0.05194655919958043,\"totalBlockingTimeMs\":0,\"warnings\":[]},\"consoleErrors\":[]}\n"
+                    },
+                    {
+                      "text": "{\"variant\":\"redesign\",\"records\":1000,\"galleryReadyMs\":186.1,\"selectionRoundTripMs\":42.8,\"renderedCards\":48,\"resourceRequests\":60,\"previewRequests\":48,\"previewEncodedBytes\":18825,\"previewTransferredBytes\":33225,\"observer\":{\"cls\":0,\"lcp\":220},\"memory\":{\"pageAndScrollCycles\":20,\"usedHeapBeforeBytes\":7575740,\"usedHeapAfterBytes\":9392216,\"deltaBytes\":1816476},\"lighthouse\":{\"version\":\"13.6.0\",\"performanceScore\":1,\"lcpMs\":543.458,\"cls\":0,\"totalBlockingTimeMs\":0,\"warnings\":[]},\"consoleErrors\":[]}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T18:28:34.399Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b15d6361b2fc38288977-200e643e2a39df569fff",
+          "file": "performance.spec.ts",
+          "line": 39,
+          "column": 3
+        },
+        {
+          "title": "compare baseline and redesign with 10000 records",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 39802,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "{\"variant\":\"baseline\",\"records\":10000,\"galleryReadyMs\":159.2,\"selectionRoundTripMs\":47.9,\"renderedCards\":48,\"resourceRequests\":57,\"previewRequests\":48,\"previewEncodedBytes\":18604,\"previewTransferredBytes\":33004,\"observer\":{\"cls\":0.004142028356481481,\"lcp\":208},\"memory\":{\"pageAndScrollCycles\":20,\"usedHeapBeforeBytes\":4889196,\"usedHeapAfterBytes\":6305604,\"deltaBytes\":1416408},\"lighthouse\":{\"version\":\"13.6.0\",\"performanceScore\":1,\"lcpMs\":199.038,\"cls\":0,\"totalBlockingTimeMs\":0,\"warnings\":[]},\"consoleErrors\":[]}\n"
+                    },
+                    {
+                      "text": "{\"variant\":\"redesign\",\"records\":10000,\"galleryReadyMs\":179.3,\"selectionRoundTripMs\":47.7,\"renderedCards\":48,\"resourceRequests\":60,\"previewRequests\":48,\"previewEncodedBytes\":18825,\"previewTransferredBytes\":33225,\"observer\":{\"cls\":0,\"lcp\":216},\"memory\":{\"pageAndScrollCycles\":20,\"usedHeapBeforeBytes\":7568456,\"usedHeapAfterBytes\":9387968,\"deltaBytes\":1819512},\"lighthouse\":{\"version\":\"13.6.0\",\"performanceScore\":1,\"lcpMs\":621.432,\"cls\":0,\"totalBlockingTimeMs\":0,\"warnings\":[]},\"consoleErrors\":[]}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T18:29:14.218Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b15d6361b2fc38288977-001b7e5cc8b329a32cef",
+          "file": "performance.spec.ts",
+          "line": 39,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-08T18:27:49.067Z",
+    "duration": 125562.192,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

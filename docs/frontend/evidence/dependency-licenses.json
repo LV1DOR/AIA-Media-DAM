@@ -1,0 +1,3741 @@
+﻿{
+  "MIT": [
+    {
+      "name": "@alloc/quick-lru",
+      "versions": [
+        "5.3.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@alloc+quick-lru@5.3.0\\node_modules\\@alloc\\quick-lru"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/aleclarson/quick-lru#readme",
+      "description": "Simple “Least Recently Used” (LRU) cache"
+    },
+    {
+      "name": "@borewit/text-codec",
+      "versions": [
+        "0.2.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@borewit+text-codec@0.2.3\\node_modules\\@borewit\\text-codec"
+      ],
+      "license": "MIT",
+      "author": "Borewit",
+      "homepage": "https://github.com/Borewit/text-codec#readme",
+      "description": "Text Decoder"
+    },
+    {
+      "name": "@esbuild/win32-x64",
+      "versions": [
+        "0.28.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@esbuild+win32-x64@0.28.2\\node_modules\\@esbuild\\win32-x64"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/evanw/esbuild#readme",
+      "description": "The Windows 64-bit binary for esbuild, a JavaScript bundler."
+    },
+    {
+      "name": "@fastify/ajv-compiler",
+      "versions": [
+        "4.0.7"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@fastify+ajv-compiler@4.0.7\\node_modules\\@fastify\\ajv-compiler"
+      ],
+      "license": "MIT",
+      "author": "Manuel Spigolon",
+      "homepage": "https://github.com/fastify/ajv-compiler#readme",
+      "description": "Build and manage the AJV instances for the fastify framework"
+    },
+    {
+      "name": "@fastify/busboy",
+      "versions": [
+        "3.2.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@fastify+busboy@3.2.5\\node_modules\\@fastify\\busboy"
+      ],
+      "license": "MIT",
+      "author": "Brian White",
+      "homepage": "https://github.com/fastify/busboy#readme",
+      "description": "A streaming parser for HTML form data for node.js"
+    },
+    {
+      "name": "@fastify/cookie",
+      "versions": [
+        "11.1.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@fastify+cookie@11.1.5\\node_modules\\@fastify\\cookie"
+      ],
+      "license": "MIT",
+      "author": "James Sumners",
+      "homepage": "https://github.com/fastify/fastify-cookie#readme",
+      "description": "Plugin for fastify to add support for cookies"
+    },
+    {
+      "name": "@fastify/deepmerge",
+      "versions": [
+        "3.2.4"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@fastify+deepmerge@3.2.4\\node_modules\\@fastify\\deepmerge"
+      ],
+      "license": "MIT",
+      "author": "Aras Abbasi",
+      "homepage": "https://github.com/fastify/deepmerge#readme",
+      "description": "Merges the enumerable properties of two or more objects deeply."
+    },
+    {
+      "name": "@fastify/error",
+      "versions": [
+        "4.2.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@fastify+error@4.2.1\\node_modules\\@fastify\\error"
+      ],
+      "license": "MIT",
+      "author": "Tomas Della Vedova",
+      "homepage": "https://github.com/fastify/fastify-error#readme",
+      "description": "A small utility, used by Fastify itself, for generating consistent error objects across your codebase and plugins."
+    },
+    {
+      "name": "@fastify/fast-json-stringify-compiler",
+      "versions": [
+        "5.1.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@fastify+fast-json-stringify-compiler@5.1.1\\node_modules\\@fastify\\fast-json-stringify-compiler"
+      ],
+      "license": "MIT",
+      "author": "Manuel Spigolon",
+      "homepage": "https://github.com/fastify/fast-json-stringify-compiler#readme",
+      "description": "Build and manage the fast-json-stringify instances for the fastify framework"
+    },
+    {
+      "name": "@fastify/forwarded",
+      "versions": [
+        "3.1.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@fastify+forwarded@3.1.2\\node_modules\\@fastify\\forwarded"
+      ],
+      "license": "MIT",
+      "author": "Douglas Christopher Wilson",
+      "homepage": "https://github.com/fastify/forwarded#readme",
+      "description": "Parse HTTP X-Forwarded-For header"
+    },
+    {
+      "name": "@fastify/helmet",
+      "versions": [
+        "13.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@fastify+helmet@13.2.0\\node_modules\\@fastify\\helmet"
+      ],
+      "license": "MIT",
+      "author": "Matteo Collina",
+      "homepage": "https://github.com/fastify/fastify-helmet#readme",
+      "description": "Important security headers for Fastify"
+    },
+    {
+      "name": "@fastify/merge-json-schemas",
+      "versions": [
+        "0.2.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@fastify+merge-json-schemas@0.2.2\\node_modules\\@fastify\\merge-json-schemas"
+      ],
+      "license": "MIT",
+      "author": "Ivan Tymoshenko",
+      "homepage": "https://github.com/fastify/merge-json-schemas#readme",
+      "description": "Builds a logical conjunction (AND) of multiple JSON schemas"
+    },
+    {
+      "name": "@fastify/multipart",
+      "versions": [
+        "10.1.8"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@fastify+multipart@10.1.8\\node_modules\\@fastify\\multipart"
+      ],
+      "license": "MIT",
+      "author": "Matteo Collina",
+      "homepage": "https://github.com/fastify/fastify-multipart#readme",
+      "description": "Multipart plugin for Fastify"
+    },
+    {
+      "name": "@fastify/proxy-addr",
+      "versions": [
+        "5.1.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@fastify+proxy-addr@5.1.2\\node_modules\\@fastify\\proxy-addr"
+      ],
+      "license": "MIT",
+      "author": "Douglas Christopher Wilson",
+      "homepage": "https://github.com/fastify/proxy-addr#readme",
+      "description": "Determine the address of a proxied request"
+    },
+    {
+      "name": "@fastify/rate-limit",
+      "versions": [
+        "11.2.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@fastify+rate-limit@11.2.2\\node_modules\\@fastify\\rate-limit"
+      ],
+      "license": "MIT",
+      "author": "Tomas Della Vedova - @delvedor",
+      "homepage": "https://github.com/fastify/fastify-rate-limit#readme",
+      "description": "A low overhead rate limiter for your routes"
+    },
+    {
+      "name": "@floating-ui/core",
+      "versions": [
+        "1.8.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@floating-ui+core@1.8.0\\node_modules\\@floating-ui\\core"
+      ],
+      "license": "MIT",
+      "author": "atomiks",
+      "homepage": "https://floating-ui.com",
+      "description": "Positioning library for floating elements: tooltips, popovers, dropdowns, and more"
+    },
+    {
+      "name": "@floating-ui/dom",
+      "versions": [
+        "1.8.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@floating-ui+dom@1.8.0\\node_modules\\@floating-ui\\dom"
+      ],
+      "license": "MIT",
+      "author": "atomiks",
+      "homepage": "https://floating-ui.com",
+      "description": "Floating UI for the web"
+    },
+    {
+      "name": "@floating-ui/react-dom",
+      "versions": [
+        "2.1.9"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@floating-ui+react-dom@2.1._c645c4d66c08a969d8ea8e3044efd0cf\\node_modules\\@floating-ui\\react-dom"
+      ],
+      "license": "MIT",
+      "author": "atomiks",
+      "homepage": "https://floating-ui.com/docs/react-dom",
+      "description": "Floating UI for React DOM"
+    },
+    {
+      "name": "@floating-ui/utils",
+      "versions": [
+        "0.2.12"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@floating-ui+utils@0.2.12\\node_modules\\@floating-ui\\utils"
+      ],
+      "license": "MIT",
+      "author": "atomiks",
+      "homepage": "https://floating-ui.com",
+      "description": "Utilities for Floating UI"
+    },
+    {
+      "name": "@formatjs/ecma402-abstract",
+      "versions": [
+        "2.3.6"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@formatjs+ecma402-abstract@2.3.6\\node_modules\\@formatjs\\ecma402-abstract"
+      ],
+      "license": "MIT",
+      "author": "Long Ho",
+      "homepage": "https://github.com/formatjs/formatjs",
+      "description": "A collection of implementation for ECMAScript abstract operations"
+    },
+    {
+      "name": "@formatjs/fast-memoize",
+      "versions": [
+        "2.2.7"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@formatjs+fast-memoize@2.2.7\\node_modules\\@formatjs\\fast-memoize"
+      ],
+      "license": "MIT",
+      "author": "Long Ho",
+      "homepage": "https://github.com/formatjs/formatjs#readme",
+      "description": "fork of fast-memoize and support esm"
+    },
+    {
+      "name": "@formatjs/icu-messageformat-parser",
+      "versions": [
+        "2.11.4"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@formatjs+icu-messageformat-parser@2.11.4\\node_modules\\@formatjs\\icu-messageformat-parser"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/formatjs/formatjs#readme"
+    },
+    {
+      "name": "@formatjs/icu-skeleton-parser",
+      "versions": [
+        "1.8.16"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@formatjs+icu-skeleton-parser@1.8.16\\node_modules\\@formatjs\\icu-skeleton-parser"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/formatjs/formatjs#readme"
+    },
+    {
+      "name": "@formatjs/intl-localematcher",
+      "versions": [
+        "0.6.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@formatjs+intl-localematcher@0.6.2\\node_modules\\@formatjs\\intl-localematcher"
+      ],
+      "license": "MIT",
+      "author": "Long Ho",
+      "homepage": "https://github.com/formatjs/formatjs#readme",
+      "description": "Intl.LocaleMatcher ponyfill"
+    },
+    {
+      "name": "@img/colour",
+      "versions": [
+        "1.1.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@img+colour@1.1.0\\node_modules\\@img\\colour"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/lovell/colour#readme",
+      "description": "The ESM-only 'color' package made compatible for use with CommonJS runtimes"
+    },
+    {
+      "name": "@jridgewell/gen-mapping",
+      "versions": [
+        "0.3.13"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@jridgewell+gen-mapping@0.3.13\\node_modules\\@jridgewell\\gen-mapping"
+      ],
+      "license": "MIT",
+      "author": "Justin Ridgewell",
+      "homepage": "https://github.com/jridgewell/sourcemaps/tree/main/packages/gen-mapping",
+      "description": "Generate source maps"
+    },
+    {
+      "name": "@jridgewell/remapping",
+      "versions": [
+        "2.3.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@jridgewell+remapping@2.3.5\\node_modules\\@jridgewell\\remapping"
+      ],
+      "license": "MIT",
+      "author": "Justin Ridgewell",
+      "homepage": "https://github.com/jridgewell/sourcemaps/tree/main/packages/remapping",
+      "description": "Remap sequential sourcemaps through transformations to point at the original source code"
+    },
+    {
+      "name": "@jridgewell/resolve-uri",
+      "versions": [
+        "3.1.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@jridgewell+resolve-uri@3.1.2\\node_modules\\@jridgewell\\resolve-uri"
+      ],
+      "license": "MIT",
+      "author": "Justin Ridgewell",
+      "homepage": "https://github.com/jridgewell/resolve-uri#readme",
+      "description": "Resolve a URI relative to an optional base URI"
+    },
+    {
+      "name": "@jridgewell/sourcemap-codec",
+      "versions": [
+        "1.6.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@jridgewell+sourcemap-codec@1.6.0\\node_modules\\@jridgewell\\sourcemap-codec"
+      ],
+      "license": "MIT",
+      "author": "Justin Ridgewell",
+      "homepage": "https://github.com/jridgewell/sourcemaps/tree/main/packages/sourcemap-codec",
+      "description": "Encode/decode sourcemap mappings"
+    },
+    {
+      "name": "@jridgewell/trace-mapping",
+      "versions": [
+        "0.3.31"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@jridgewell+trace-mapping@0.3.31\\node_modules\\@jridgewell\\trace-mapping"
+      ],
+      "license": "MIT",
+      "author": "Justin Ridgewell",
+      "homepage": "https://github.com/jridgewell/sourcemaps/tree/main/packages/trace-mapping",
+      "description": "Trace the original position through a source map"
+    },
+    {
+      "name": "@lukeed/ms",
+      "versions": [
+        "2.0.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@lukeed+ms@2.0.2\\node_modules\\@lukeed\\ms"
+      ],
+      "license": "MIT",
+      "author": "Luke Edwards",
+      "homepage": "https://github.com/lukeed/ms#readme",
+      "description": "A tiny (414B) and fast utility to convert milliseconds to and from strings."
+    },
+    {
+      "name": "@next/env",
+      "versions": [
+        "16.4.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@next+env@16.4.5\\node_modules\\@next\\env"
+      ],
+      "license": "MIT",
+      "author": "Next.js Team",
+      "homepage": "https://github.com/vercel/next.js#readme",
+      "description": "Next.js dotenv file loading"
+    },
+    {
+      "name": "@next/swc-win32-x64-msvc",
+      "versions": [
+        "16.4.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@next+swc-win32-x64-msvc@16.4.5\\node_modules\\@next\\swc-win32-x64-msvc"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/vercel/next.js#readme"
+    },
+    {
+      "name": "@noble/hashes",
+      "versions": [
+        "2.4.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@noble+hashes@2.4.0\\node_modules\\@noble\\hashes"
+      ],
+      "license": "MIT",
+      "author": "Paul Miller",
+      "homepage": "https://paulmillr.com/noble/",
+      "description": "Audited & minimal 0-dependency JS implementation of SHA, RIPEMD, BLAKE, HMAC, HKDF, PBKDF & Scrypt"
+    },
+    {
+      "name": "@oxc-parser/binding-win32-x64-msvc",
+      "versions": [
+        "0.152.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@oxc-parser+binding-win32-x64-msvc@0.152.0\\node_modules\\@oxc-parser\\binding-win32-x64-msvc"
+      ],
+      "license": "MIT",
+      "author": "Boshen and oxc contributors",
+      "homepage": "https://oxc.rs/docs/guide/usage/parser",
+      "description": "Oxc Parser Node API"
+    },
+    {
+      "name": "@oxc-project/types",
+      "versions": [
+        "0.152.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@oxc-project+types@0.152.0\\node_modules\\@oxc-project\\types"
+      ],
+      "license": "MIT",
+      "author": "Boshen and oxc contributors",
+      "homepage": "https://oxc.rs",
+      "description": "Types for Oxc AST nodes"
+    },
+    {
+      "name": "@pinojs/redact",
+      "versions": [
+        "0.4.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@pinojs+redact@0.4.0\\node_modules\\@pinojs\\redact"
+      ],
+      "license": "MIT",
+      "author": "Matteo Collina",
+      "homepage": "https://github.com/pinojs/redact#readme",
+      "description": "Redact JS objects"
+    },
+    {
+      "name": "@radix-ui/primitive",
+      "versions": [
+        "1.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+primitive@1.2.0\\node_modules\\@radix-ui\\primitive"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-arrow",
+      "versions": [
+        "1.1.17"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-arrow@1.1.1_42c166494782f9339172e39dfcc4494e\\node_modules\\@radix-ui\\react-arrow"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-aspect-ratio",
+      "versions": [
+        "1.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-aspect-rati_e8faf759474a0a2a3885d7a917b9e08f\\node_modules\\@radix-ui\\react-aspect-ratio"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-collection",
+      "versions": [
+        "1.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-collection@_6acb2d8ed0d1a5e2d86fa68fa86b38fc\\node_modules\\@radix-ui\\react-collection"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-compose-refs",
+      "versions": [
+        "1.1.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-compose-ref_b3d765b39c685001f44067d66c248108\\node_modules\\@radix-ui\\react-compose-refs"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-context",
+      "versions": [
+        "1.3.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-context@1.3_f5e7faa335a2377b2de19422090f7bda\\node_modules\\@radix-ui\\react-context"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-dialog",
+      "versions": [
+        "1.3.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-dialog@1.3._4dc34b117641e6b0d7103bbf4056ed99\\node_modules\\@radix-ui\\react-dialog"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-direction",
+      "versions": [
+        "1.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-direction@1_527de58341a1b41b1117c799ae82b79a\\node_modules\\@radix-ui\\react-direction"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-dismissable-layer",
+      "versions": [
+        "1.2.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-dismissable_aa9a2defeade16af3bdfd2945af978c3\\node_modules\\@radix-ui\\react-dismissable-layer"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-dropdown-menu",
+      "versions": [
+        "2.2.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-dropdown-me_59087697bb8d70fe27e0ede367aec154\\node_modules\\@radix-ui\\react-dropdown-menu"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-focus-guards",
+      "versions": [
+        "1.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-focus-guard_c0670c59f51feaa6adb45a3bc8fcd0e3\\node_modules\\@radix-ui\\react-focus-guards"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-focus-scope",
+      "versions": [
+        "1.3.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-focus-scope_6d7db95e6b4b16578fd42789685673fa\\node_modules\\@radix-ui\\react-focus-scope"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-id",
+      "versions": [
+        "1.1.4"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-id@1.1.4_@types+react@19.3.0_react@19.3.1\\node_modules\\@radix-ui\\react-id"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-menu",
+      "versions": [
+        "2.2.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-menu@2.2.1__5b19b71a44c52a23e68bd8126ace118c\\node_modules\\@radix-ui\\react-menu"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-popper",
+      "versions": [
+        "1.4.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-popper@1.4._8afc6f49a39cf3de4250aed01ab9dae8\\node_modules\\@radix-ui\\react-popper"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-portal",
+      "versions": [
+        "1.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-portal@1.2._058d94c3625e9af8e54f0154a66c0818\\node_modules\\@radix-ui\\react-portal"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-presence",
+      "versions": [
+        "1.1.11"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-presence@1._f62c16392ef5c0f7dddc17b4112d7eab\\node_modules\\@radix-ui\\react-presence"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-primitive",
+      "versions": [
+        "2.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-primitive@2_8110221bfe749bbb617b2ef4d8402995\\node_modules\\@radix-ui\\react-primitive"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-roving-focus",
+      "versions": [
+        "1.2.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-roving-focu_bed290ae4c554285fceef8952991064b\\node_modules\\@radix-ui\\react-roving-focus"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-separator",
+      "versions": [
+        "1.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-separator@1_6a3f0072f69e5ed10ca7be85e9ca6c3c\\node_modules\\@radix-ui\\react-separator"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-slot",
+      "versions": [
+        "1.5.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-slot@1.5.0_@types+react@19.3.0_react@19.3.1\\node_modules\\@radix-ui\\react-slot"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-tooltip",
+      "versions": [
+        "1.4.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-tooltip@1.4_29b7207499ca9b573eabeaa0eb3894bd\\node_modules\\@radix-ui\\react-tooltip"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-callback-ref",
+      "versions": [
+        "1.1.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-use-callbac_69a3fb791ef61c6e6ef64d5483eb0094\\node_modules\\@radix-ui\\react-use-callback-ref"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-controllable-state",
+      "versions": [
+        "1.3.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-use-control_d278618b86c81b0639a590dbb168baee\\node_modules\\@radix-ui\\react-use-controllable-state"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-effect-event",
+      "versions": [
+        "0.0.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-use-effect-_9cf9bb6c5dfb7539079d7befafe3de75\\node_modules\\@radix-ui\\react-use-effect-event"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-is-hydrated",
+      "versions": [
+        "0.1.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-use-is-hydr_d5f02d66173c49c68cbede894417d34b\\node_modules\\@radix-ui\\react-use-is-hydrated"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-layout-effect",
+      "versions": [
+        "1.1.4"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-use-layout-_d3987928d2181a5100d43510a878393c\\node_modules\\@radix-ui\\react-use-layout-effect"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-rect",
+      "versions": [
+        "1.1.4"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-use-rect@1._5cea43895ad00bbb9230b6ac56e4df96\\node_modules\\@radix-ui\\react-use-rect"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-use-size",
+      "versions": [
+        "1.1.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-use-size@1._2b848c55b0857f8c7546508027700b89\\node_modules\\@radix-ui\\react-use-size"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/react-visually-hidden",
+      "versions": [
+        "1.2.13"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+react-visually-hi_703f89cfbdd73455c4bf03a3c2fc4305\\node_modules\\@radix-ui\\react-visually-hidden"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@radix-ui/rect",
+      "versions": [
+        "1.1.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@radix-ui+rect@1.1.3\\node_modules\\@radix-ui\\rect"
+      ],
+      "license": "MIT",
+      "homepage": "https://radix-ui.com/primitives"
+    },
+    {
+      "name": "@sentry/bundler-plugins",
+      "versions": [
+        "11.11.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@sentry+bundler-plugins@11.11.0\\node_modules\\@sentry\\bundler-plugins"
+      ],
+      "license": "MIT",
+      "author": "Sentry",
+      "homepage": "https://github.com/getsentry/sentry-javascript/tree/main/packages/bundler-plugins",
+      "description": "Sentry Bundler Plugins"
+    },
+    {
+      "name": "@sentry/conventions",
+      "versions": [
+        "0.30.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@sentry+conventions@0.30.0\\node_modules\\@sentry\\conventions"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/getsentry/sentry-conventions#readme"
+    },
+    {
+      "name": "@sentry/core",
+      "versions": [
+        "11.11.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@sentry+core@11.11.0\\node_modules\\@sentry\\core"
+      ],
+      "license": "MIT",
+      "author": "Sentry",
+      "homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/core",
+      "description": "Base implementation for all Sentry JavaScript SDKs"
+    },
+    {
+      "name": "@sentry/node",
+      "versions": [
+        "11.11.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@sentry+node@11.11.0\\node_modules\\@sentry\\node"
+      ],
+      "license": "MIT",
+      "author": "Sentry",
+      "homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/node",
+      "description": "Sentry Node SDK using OpenTelemetry for performance instrumentation"
+    },
+    {
+      "name": "@sentry/opentelemetry",
+      "versions": [
+        "11.11.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@sentry+opentelemetry@11.11.0_@opentelemetry+api@1.10.0\\node_modules\\@sentry\\opentelemetry"
+      ],
+      "license": "MIT",
+      "author": "Sentry",
+      "homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/opentelemetry",
+      "description": "Official Sentry utilities for OpenTelemetry"
+    },
+    {
+      "name": "@sentry/server-runtime-injection",
+      "versions": [
+        "11.11.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@sentry+server-runtime-injection@11.11.0\\node_modules\\@sentry\\server-runtime-injection"
+      ],
+      "license": "MIT",
+      "author": "Sentry",
+      "homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/server-runtime-injection",
+      "description": "Runtime diagnostics-channel injection hooks for the Sentry JavaScript SDKs. Must be kept external (not bundled) when bundling a server."
+    },
+    {
+      "name": "@sentry/server-utils",
+      "versions": [
+        "11.11.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@sentry+server-utils@11.11.0\\node_modules\\@sentry\\server-utils"
+      ],
+      "license": "MIT",
+      "author": "Sentry",
+      "homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/server-utils",
+      "description": "Server Utilities for all Sentry JavaScript SDKs"
+    },
+    {
+      "name": "@tailwindcss/node",
+      "versions": [
+        "4.3.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@tailwindcss+node@4.3.5\\node_modules\\@tailwindcss\\node"
+      ],
+      "license": "MIT",
+      "homepage": "https://tailwindcss.com",
+      "description": "A utility-first CSS framework for rapidly building custom user interfaces."
+    },
+    {
+      "name": "@tailwindcss/oxide",
+      "versions": [
+        "4.3.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@tailwindcss+oxide@4.3.5\\node_modules\\@tailwindcss\\oxide"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/tailwindlabs/tailwindcss#readme"
+    },
+    {
+      "name": "@tailwindcss/oxide-wasm32-wasi",
+      "versions": [
+        "4.3.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@tailwindcss+oxide-wasm32-wasi@4.3.5\\node_modules\\@tailwindcss\\oxide-wasm32-wasi"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/tailwindlabs/tailwindcss#readme"
+    },
+    {
+      "name": "@tailwindcss/oxide-win32-x64-msvc",
+      "versions": [
+        "4.3.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@tailwindcss+oxide-win32-x64-msvc@4.3.5\\node_modules\\@tailwindcss\\oxide-win32-x64-msvc"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/tailwindlabs/tailwindcss#readme"
+    },
+    {
+      "name": "@tailwindcss/postcss",
+      "versions": [
+        "4.3.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@tailwindcss+postcss@4.3.5\\node_modules\\@tailwindcss\\postcss"
+      ],
+      "license": "MIT",
+      "homepage": "https://tailwindcss.com",
+      "description": "PostCSS plugin for Tailwind CSS, a utility-first CSS framework for rapidly building custom user interfaces"
+    },
+    {
+      "name": "@tokenizer/inflate",
+      "versions": [
+        "0.6.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@tokenizer+inflate@0.6.0\\node_modules\\@tokenizer\\inflate"
+      ],
+      "license": "MIT",
+      "author": "Borewit",
+      "homepage": "https://github.com/Borewit/tokenizer-inflate#readme",
+      "description": "Tokenized zip support"
+    },
+    {
+      "name": "@tokenizer/token",
+      "versions": [
+        "0.3.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@tokenizer+token@0.3.0\\node_modules\\@tokenizer\\token"
+      ],
+      "license": "MIT",
+      "author": "Borewit",
+      "homepage": "https://github.com/Borewit/tokenizer-token#readme",
+      "description": "TypeScript definition for strtok3 token"
+    },
+    {
+      "name": "@types/node",
+      "versions": [
+        "22.20.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@types+node@22.20.5\\node_modules\\@types\\node"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node",
+      "description": "TypeScript definitions for node"
+    },
+    {
+      "name": "@types/react",
+      "versions": [
+        "19.3.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@types+react@19.3.0\\node_modules\\@types\\react"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react",
+      "description": "TypeScript definitions for react"
+    },
+    {
+      "name": "@types/react-dom",
+      "versions": [
+        "19.3.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@types+react-dom@19.3.0_@types+react@19.3.0\\node_modules\\@types\\react-dom"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react-dom",
+      "description": "TypeScript definitions for react-dom"
+    },
+    {
+      "name": "abstract-logging",
+      "versions": [
+        "2.0.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\abstract-logging@2.0.1\\node_modules\\abstract-logging"
+      ],
+      "license": "MIT",
+      "author": "James Sumners",
+      "homepage": "https://github.com/jsumners/abstract-logging#readme",
+      "description": "A noop logger that conforms to the Log4j interface for modules to stub out internal logging"
+    },
+    {
+      "name": "ajv",
+      "versions": [
+        "8.20.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\ajv@8.20.0\\node_modules\\ajv"
+      ],
+      "license": "MIT",
+      "author": "Evgeny Poberezkin",
+      "homepage": "https://ajv.js.org",
+      "description": "Another JSON Schema Validator"
+    },
+    {
+      "name": "ajv-formats",
+      "versions": [
+        "3.0.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\ajv-formats@3.0.1_ajv@8.20.0\\node_modules\\ajv-formats"
+      ],
+      "license": "MIT",
+      "author": "Evgeny Poberezkin",
+      "homepage": "https://github.com/ajv-validator/ajv-formats#readme",
+      "description": "Format validation for Ajv v7+"
+    },
+    {
+      "name": "ansi-colors",
+      "versions": [
+        "4.1.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\ansi-colors@4.1.3\\node_modules\\ansi-colors"
+      ],
+      "license": "MIT",
+      "author": "Brian Woodward",
+      "homepage": "https://github.com/doowb/ansi-colors",
+      "description": "Easily add ANSI colors to your text and symbols in the terminal. A faster drop-in replacement for chalk, kleur and turbocolor (without the dependencies and rendering bugs)."
+    },
+    {
+      "name": "ansi-regex",
+      "versions": [
+        "5.0.1",
+        "6.6.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\ansi-regex@5.0.1\\node_modules\\ansi-regex",
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\ansi-regex@6.6.0\\node_modules\\ansi-regex"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/chalk/ansi-regex#readme",
+      "description": "Regular expression for matching ANSI escape codes"
+    },
+    {
+      "name": "ansi-styles",
+      "versions": [
+        "6.2.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\ansi-styles@6.2.3\\node_modules\\ansi-styles"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/chalk/ansi-styles#readme",
+      "description": "ANSI escape codes for styling strings in the terminal"
+    },
+    {
+      "name": "aria-hidden",
+      "versions": [
+        "1.2.6"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\aria-hidden@1.2.6\\node_modules\\aria-hidden"
+      ],
+      "license": "MIT",
+      "author": "Anton Korzunov",
+      "homepage": "https://github.com/theKashey/aria-hidden#readme",
+      "description": "Cast aria-hidden to everything, except..."
+    },
+    {
+      "name": "atomic-sleep",
+      "versions": [
+        "1.0.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\atomic-sleep@1.0.0\\node_modules\\atomic-sleep"
+      ],
+      "license": "MIT",
+      "author": "David Mark Clements",
+      "homepage": "https://github.com/davidmarkclements/atomic-sleep#readme",
+      "description": "Zero CPU overhead, zero dependency, true event-loop blocking sleep"
+    },
+    {
+      "name": "atomically",
+      "versions": [
+        "2.1.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\atomically@2.1.1\\node_modules\\atomically"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/fabiospampinato/atomically#readme",
+      "description": "Read and write files atomically and reliably."
+    },
+    {
+      "name": "avvio",
+      "versions": [
+        "9.3.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\avvio@9.3.1\\node_modules\\avvio"
+      ],
+      "license": "MIT",
+      "author": "Matteo Collina",
+      "homepage": "https://github.com/fastify/avvio#readme",
+      "description": "Asynchronous bootstrapping of Node applications"
+    },
+    {
+      "name": "balanced-match",
+      "versions": [
+        "4.0.4"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\balanced-match@4.0.4\\node_modules\\balanced-match"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/juliangruber/balanced-match#readme",
+      "description": "Match balanced character pairs, like \"{\" and \"}\""
+    },
+    {
+      "name": "brace-expansion",
+      "versions": [
+        "5.0.12"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\brace-expansion@5.0.12\\node_modules\\brace-expansion"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/juliangruber/brace-expansion#readme",
+      "description": "Brace expansion as known from sh/bash"
+    },
+    {
+      "name": "bundle-name",
+      "versions": [
+        "4.1.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\bundle-name@4.1.1\\node_modules\\bundle-name"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/bundle-name#readme",
+      "description": "Get bundle name from a bundle identifier (macOS): `com.apple.Safari` → `Safari`"
+    },
+    {
+      "name": "cheerio",
+      "versions": [
+        "1.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\cheerio@1.2.0\\node_modules\\cheerio"
+      ],
+      "license": "MIT",
+      "author": "Matt Mueller",
+      "homepage": "https://cheerio.js.org/",
+      "description": "The fast, flexible & elegant library for parsing and manipulating HTML and XML."
+    },
+    {
+      "name": "client-only",
+      "versions": [
+        "0.0.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\client-only@0.0.1\\node_modules\\client-only"
+      ],
+      "license": "MIT",
+      "homepage": "https://reactjs.org/",
+      "description": "This is a marker package to indicate that a module can only be used in Client Components."
+    },
+    {
+      "name": "clsx",
+      "versions": [
+        "2.1.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\clsx@2.1.1\\node_modules\\clsx"
+      ],
+      "license": "MIT",
+      "author": "Luke Edwards",
+      "homepage": "https://github.com/lukeed/clsx#readme",
+      "description": "A tiny (239B) utility for constructing className strings conditionally."
+    },
+    {
+      "name": "cookie",
+      "versions": [
+        "2.0.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\cookie@2.0.2\\node_modules\\cookie"
+      ],
+      "license": "MIT",
+      "author": "Roman Shtylman",
+      "homepage": "https://github.com/jshttp/cookie#readme",
+      "description": "HTTP server cookie parsing and serialization"
+    },
+    {
+      "name": "csstype",
+      "versions": [
+        "3.2.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\csstype@3.2.3\\node_modules\\csstype"
+      ],
+      "license": "MIT",
+      "author": "Fredrik Nicol",
+      "homepage": "https://github.com/frenic/csstype#readme",
+      "description": "Strict TypeScript and Flow types for style based on MDN data"
+    },
+    {
+      "name": "debug",
+      "versions": [
+        "4.4.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\debug@4.4.3\\node_modules\\debug"
+      ],
+      "license": "MIT",
+      "author": "Josh Junon",
+      "homepage": "https://github.com/debug-js/debug#readme",
+      "description": "Lightweight debugging utility for Node.js and the browser"
+    },
+    {
+      "name": "decimal.js",
+      "versions": [
+        "10.6.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\decimal.js@10.6.0\\node_modules\\decimal.js"
+      ],
+      "license": "MIT",
+      "author": "Michael Mclaughlin",
+      "homepage": "https://github.com/MikeMcl/decimal.js#readme",
+      "description": "An arbitrary-precision Decimal type for JavaScript."
+    },
+    {
+      "name": "default-browser",
+      "versions": [
+        "5.5.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\default-browser@5.5.1\\node_modules\\default-browser"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/default-browser#readme",
+      "description": "Get the default browser"
+    },
+    {
+      "name": "default-browser-id",
+      "versions": [
+        "5.0.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\default-browser-id@5.0.1\\node_modules\\default-browser-id"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/default-browser-id#readme",
+      "description": "Get the bundle identifier of the default browser (macOS). Example: com.apple.Safari"
+    },
+    {
+      "name": "define-lazy-prop",
+      "versions": [
+        "3.0.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\define-lazy-prop@3.0.0\\node_modules\\define-lazy-prop"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/define-lazy-prop#readme",
+      "description": "Define a lazily evaluated property on an object"
+    },
+    {
+      "name": "dequal",
+      "versions": [
+        "2.0.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\dequal@2.0.3\\node_modules\\dequal"
+      ],
+      "license": "MIT",
+      "author": "Luke Edwards",
+      "homepage": "https://github.com/lukeed/dequal#readme",
+      "description": "A tiny (304B to 489B) utility for check for deep equality"
+    },
+    {
+      "name": "detect-node-es",
+      "versions": [
+        "1.1.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\detect-node-es@1.1.0\\node_modules\\detect-node-es"
+      ],
+      "license": "MIT",
+      "author": "Ilya Kantor",
+      "homepage": "https://github.com/thekashey/detect-node",
+      "description": "Detect Node.JS (as opposite to browser environment). ESM modification"
+    },
+    {
+      "name": "dom-serializer",
+      "versions": [
+        "2.0.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\dom-serializer@2.0.0\\node_modules\\dom-serializer"
+      ],
+      "license": "MIT",
+      "author": "Felix Boehm",
+      "homepage": "https://github.com/cheeriojs/dom-serializer#readme",
+      "description": "render domhandler DOM nodes to a string"
+    },
+    {
+      "name": "dot-prop",
+      "versions": [
+        "10.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\dot-prop@10.2.0\\node_modules\\dot-prop"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/dot-prop#readme",
+      "description": "Get, set, or delete a property from a nested object using a dot path"
+    },
+    {
+      "name": "emoji-regex",
+      "versions": [
+        "10.6.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\emoji-regex@10.6.0\\node_modules\\emoji-regex"
+      ],
+      "license": "MIT",
+      "author": "Mathias Bynens",
+      "homepage": "https://mths.be/emoji-regex",
+      "description": "A regular expression to match all Emoji-only symbols as per the Unicode Standard."
+    },
+    {
+      "name": "encoding-sniffer",
+      "versions": [
+        "0.2.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\encoding-sniffer@0.2.1\\node_modules\\encoding-sniffer"
+      ],
+      "license": "MIT",
+      "author": "Felix Boehm",
+      "homepage": "https://github.com/fb55/encoding-sniffer#readme",
+      "description": "Implementation of the HTML encoding sniffer algo, with stream support"
+    },
+    {
+      "name": "enhanced-resolve",
+      "versions": [
+        "5.26.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\enhanced-resolve@5.26.1\\node_modules\\enhanced-resolve"
+      ],
+      "license": "MIT",
+      "author": "Tobias Koppers @sokra",
+      "homepage": "https://github.com/webpack/enhanced-resolve#readme",
+      "description": "Offers a async require.resolve function. It's highly configurable."
+    },
+    {
+      "name": "enquirer",
+      "versions": [
+        "2.4.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\enquirer@2.4.1\\node_modules\\enquirer"
+      ],
+      "license": "MIT",
+      "author": "Jon Schlinkert",
+      "homepage": "https://github.com/enquirer/enquirer",
+      "description": "Stylish, intuitive and user-friendly prompt system. Fast and lightweight enough for small projects, powerful and extensible enough for the most advanced use cases."
+    },
+    {
+      "name": "esbuild",
+      "versions": [
+        "0.28.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\esbuild@0.28.2\\node_modules\\esbuild"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/evanw/esbuild#readme",
+      "description": "An extremely fast JavaScript and CSS bundler and minifier."
+    },
+    {
+      "name": "escalade",
+      "versions": [
+        "3.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\escalade@3.2.0\\node_modules\\escalade"
+      ],
+      "license": "MIT",
+      "author": "Luke Edwards",
+      "homepage": "https://github.com/lukeed/escalade#readme",
+      "description": "A tiny (183B to 210B) and fast utility to ascend parent directories"
+    },
+    {
+      "name": "escape-string-regexp",
+      "versions": [
+        "4.0.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\escape-string-regexp@4.0.0\\node_modules\\escape-string-regexp"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/escape-string-regexp#readme",
+      "description": "Escape RegExp special characters"
+    },
+    {
+      "name": "fast-decode-uri-component",
+      "versions": [
+        "1.0.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\fast-decode-uri-component@1.0.1\\node_modules\\fast-decode-uri-component"
+      ],
+      "license": "MIT",
+      "author": "Tomas Della Vedova - @delvedor",
+      "homepage": "https://github.com/delvedor/fast-decode-uri-component#readme",
+      "description": "Fast and safe decodeURIComponent"
+    },
+    {
+      "name": "fast-deep-equal",
+      "versions": [
+        "3.1.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\fast-deep-equal@3.1.3\\node_modules\\fast-deep-equal"
+      ],
+      "license": "MIT",
+      "author": "Evgeny Poberezkin",
+      "homepage": "https://github.com/epoberezkin/fast-deep-equal#readme",
+      "description": "Fast deep equal"
+    },
+    {
+      "name": "fast-json-stringify",
+      "versions": [
+        "7.3.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\fast-json-stringify@7.3.2\\node_modules\\fast-json-stringify"
+      ],
+      "license": "MIT",
+      "author": "Matteo Collina",
+      "homepage": "https://github.com/fastify/fast-json-stringify#readme",
+      "description": "Stringify your JSON at max speed"
+    },
+    {
+      "name": "fast-querystring",
+      "versions": [
+        "1.1.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\fast-querystring@1.1.2\\node_modules\\fast-querystring"
+      ],
+      "license": "MIT",
+      "author": "Yagiz Nizipli",
+      "homepage": "https://github.com/anonrig/fast-querystring#readme",
+      "description": "A fast alternative to legacy querystring module"
+    },
+    {
+      "name": "fastify",
+      "versions": [
+        "5.12.8"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\fastify@5.12.8\\node_modules\\fastify"
+      ],
+      "license": "MIT",
+      "author": "Matteo Collina",
+      "homepage": "https://fastify.dev/",
+      "description": "Fast and low overhead web framework, for Node.js"
+    },
+    {
+      "name": "fastify-plugin",
+      "versions": [
+        "6.0.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\fastify-plugin@6.0.1\\node_modules\\fastify-plugin"
+      ],
+      "license": "MIT",
+      "author": "Tomas Della Vedova - @delvedor",
+      "homepage": "https://github.com/fastify/fastify-plugin#readme",
+      "description": "Plugin helper for Fastify"
+    },
+    {
+      "name": "file-type",
+      "versions": [
+        "22.3.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\file-type@22.3.0\\node_modules\\file-type"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/file-type#readme",
+      "description": "Detect the file type of a file, stream, or data"
+    },
+    {
+      "name": "find-my-way",
+      "versions": [
+        "9.10.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\find-my-way@9.10.0\\node_modules\\find-my-way"
+      ],
+      "license": "MIT",
+      "author": "Tomas Della Vedova - @delvedor",
+      "homepage": "https://github.com/delvedor/find-my-way#readme",
+      "description": "Crazy fast http radix based router"
+    },
+    {
+      "name": "framer-motion",
+      "versions": [
+        "14.10.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\framer-motion@14.10.1_react_41c8c3dcd46b616a0f068ed2c8066be9\\node_modules\\framer-motion"
+      ],
+      "license": "MIT",
+      "author": "Matt Perry",
+      "homepage": "https://github.com/motiondivision/motion#readme",
+      "description": "A simple and powerful JavaScript animation library"
+    },
+    {
+      "name": "get-east-asian-width",
+      "versions": [
+        "1.7.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\get-east-asian-width@1.7.0\\node_modules\\get-east-asian-width"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/get-east-asian-width#readme",
+      "description": "Determine the East Asian Width of a Unicode character"
+    },
+    {
+      "name": "get-nonce",
+      "versions": [
+        "1.0.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\get-nonce@1.0.1\\node_modules\\get-nonce"
+      ],
+      "license": "MIT",
+      "author": "Anton Korzunov",
+      "homepage": "https://github.com/theKashey/get-nonce",
+      "description": "returns nonce"
+    },
+    {
+      "name": "has-flag",
+      "versions": [
+        "4.0.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\has-flag@4.0.0\\node_modules\\has-flag"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/has-flag#readme",
+      "description": "Check if argv has a specific flag"
+    },
+    {
+      "name": "helmet",
+      "versions": [
+        "8.3.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\helmet@8.3.0\\node_modules\\helmet"
+      ],
+      "license": "MIT",
+      "author": "Adam Baldwin",
+      "homepage": "https://helmet.js.org/",
+      "description": "help secure Express/Connect apps with various HTTP headers"
+    },
+    {
+      "name": "htmlparser2",
+      "versions": [
+        "10.1.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\htmlparser2@10.1.0\\node_modules\\htmlparser2"
+      ],
+      "license": "MIT",
+      "author": "Felix Boehm",
+      "homepage": "https://github.com/fb55/htmlparser2#readme",
+      "description": "Fast & forgiving HTML/XML parser"
+    },
+    {
+      "name": "http-link-header",
+      "versions": [
+        "1.1.4"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\http-link-header@1.1.4\\node_modules\\http-link-header"
+      ],
+      "license": "MIT",
+      "author": "Jonas Hermsmeier",
+      "homepage": "https://codeberg.org/jhermsmeier/node-http-link-header",
+      "description": "Parse & format HTTP link headers according to RFC 8288"
+    },
+    {
+      "name": "iconv-lite",
+      "versions": [
+        "0.6.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\iconv-lite@0.6.3\\node_modules\\iconv-lite"
+      ],
+      "license": "MIT",
+      "author": "Alexander Shtuchkin",
+      "homepage": "https://github.com/ashtuchkin/iconv-lite",
+      "description": "Convert character encodings in pure javascript."
+    },
+    {
+      "name": "image-ssim",
+      "versions": [
+        "0.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\image-ssim@0.2.0\\node_modules\\image-ssim"
+      ],
+      "license": "MIT",
+      "author": "Jan Forst",
+      "homepage": "https://github.com/darosh/image-ssim-js/issues",
+      "description": "Image structural similarity (SSIM). In TypeScript/JavaScript. For browser/server."
+    },
+    {
+      "name": "ip-address",
+      "versions": [
+        "10.7.6"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\ip-address@10.7.6\\node_modules\\ip-address"
+      ],
+      "license": "MIT",
+      "author": "Beau Gunderson",
+      "homepage": "https://github.com/beaugunderson/ip-address#readme",
+      "description": "A library for parsing IPv4 and IPv6 IP addresses in node and the browser."
+    },
+    {
+      "name": "ipaddr.js",
+      "versions": [
+        "2.5.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\ipaddr.js@2.5.0\\node_modules\\ipaddr.js"
+      ],
+      "license": "MIT",
+      "author": "whitequark",
+      "homepage": "https://github.com/whitequark/ipaddr.js#readme",
+      "description": "A library for manipulating IPv4 and IPv6 addresses in JavaScript."
+    },
+    {
+      "name": "is-docker",
+      "versions": [
+        "2.2.1",
+        "3.0.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\is-docker@2.2.1\\node_modules\\is-docker",
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\is-docker@3.0.0\\node_modules\\is-docker"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/is-docker#readme",
+      "description": "Check if the process is running inside a Docker container"
+    },
+    {
+      "name": "is-in-ssh",
+      "versions": [
+        "1.0.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\is-in-ssh@1.0.0\\node_modules\\is-in-ssh"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/is-in-ssh#readme",
+      "description": "Check if the process is running in an SSH session"
+    },
+    {
+      "name": "is-inside-container",
+      "versions": [
+        "1.0.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\is-inside-container@1.0.0\\node_modules\\is-inside-container"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/is-inside-container#readme",
+      "description": "Check if the process is running inside a container (Docker/Podman)"
+    },
+    {
+      "name": "is-safe-filename",
+      "versions": [
+        "0.1.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\is-safe-filename@0.1.1\\node_modules\\is-safe-filename"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/is-safe-filename#readme",
+      "description": "Check if a filename is safe to use in a path join operation"
+    },
+    {
+      "name": "is-wsl",
+      "versions": [
+        "2.2.0",
+        "3.1.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\is-wsl@2.2.0\\node_modules\\is-wsl",
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\is-wsl@3.1.1\\node_modules\\is-wsl"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/is-wsl#readme",
+      "description": "Check if the process is running inside Windows Subsystem for Linux (Bash on Windows)"
+    },
+    {
+      "name": "jiti",
+      "versions": [
+        "2.7.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\jiti@2.7.0\\node_modules\\jiti"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/unjs/jiti#readme",
+      "description": "Runtime typescript and ESM support for Node.js"
+    },
+    {
+      "name": "js-library-detector",
+      "versions": [
+        "6.7.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\js-library-detector@6.7.0\\node_modules\\js-library-detector"
+      ],
+      "license": "MIT",
+      "author": "John Michel",
+      "homepage": "https://github.com/johnmichel/Library-Detector-for-Chrome#readme",
+      "description": "Detects the JavaScript libraries running on a page"
+    },
+    {
+      "name": "json-schema-ref-resolver",
+      "versions": [
+        "3.0.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\json-schema-ref-resolver@3.0.1\\node_modules\\json-schema-ref-resolver"
+      ],
+      "license": "MIT",
+      "author": "Ivan Tymoshenko",
+      "homepage": "https://github.com/fastify/json-schema-ref-resolver#readme",
+      "description": "JSON schema reference resolver"
+    },
+    {
+      "name": "json-schema-traverse",
+      "versions": [
+        "1.0.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\json-schema-traverse@1.0.0\\node_modules\\json-schema-traverse"
+      ],
+      "license": "MIT",
+      "author": "Evgeny Poberezkin",
+      "homepage": "https://github.com/epoberezkin/json-schema-traverse#readme",
+      "description": "Traverse JSON Schema passing each schema object to callback"
+    },
+    {
+      "name": "magic-string",
+      "versions": [
+        "1.4.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\magic-string@1.4.5\\node_modules\\magic-string"
+      ],
+      "license": "MIT",
+      "author": "Rich Harris",
+      "homepage": "https://github.com/Rich-Harris/magic-string#readme",
+      "description": "Modify strings, generate sourcemaps"
+    },
+    {
+      "name": "mitt",
+      "versions": [
+        "3.0.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\mitt@3.0.1\\node_modules\\mitt"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/developit/mitt",
+      "description": "Tiny 200b functional Event Emitter / pubsub."
+    },
+    {
+      "name": "modern-tar",
+      "versions": [
+        "0.8.6"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\modern-tar@0.8.6\\node_modules\\modern-tar"
+      ],
+      "license": "MIT",
+      "author": "Ayuhito",
+      "homepage": "https://github.com/ayuhito/modern-tar",
+      "description": "Zero dependency streaming tar parser and writer for JavaScript."
+    },
+    {
+      "name": "motion-dom",
+      "versions": [
+        "14.10.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\motion-dom@14.10.1\\node_modules\\motion-dom"
+      ],
+      "license": "MIT",
+      "author": "Matt Perry",
+      "homepage": "https://github.com/motiondivision/motion#readme"
+    },
+    {
+      "name": "motion-utils",
+      "versions": [
+        "14.7.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\motion-utils@14.7.0\\node_modules\\motion-utils"
+      ],
+      "license": "MIT",
+      "author": "Matt Perry",
+      "homepage": "https://github.com/motiondivision/motion#readme"
+    },
+    {
+      "name": "ms",
+      "versions": [
+        "2.1.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\ms@2.1.3\\node_modules\\ms"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/vercel/ms#readme",
+      "description": "Tiny millisecond conversion utility"
+    },
+    {
+      "name": "nanoid",
+      "versions": [
+        "3.3.20"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\nanoid@3.3.20\\node_modules\\nanoid"
+      ],
+      "license": "MIT",
+      "author": "Andrey Sitnik",
+      "homepage": "https://github.com/ai/nanoid#readme",
+      "description": "A tiny (116 bytes), secure URL-friendly unique string ID generator"
+    },
+    {
+      "name": "next",
+      "versions": [
+        "16.4.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\next@16.4.5_@opentelemetry+_a07d63900f093e2b041a4426528d3e51\\node_modules\\next"
+      ],
+      "license": "MIT",
+      "homepage": "https://nextjs.org",
+      "description": "The React Framework"
+    },
+    {
+      "name": "on-exit-leak-free",
+      "versions": [
+        "2.1.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\on-exit-leak-free@2.1.2\\node_modules\\on-exit-leak-free"
+      ],
+      "license": "MIT",
+      "author": "Matteo Collina",
+      "homepage": "https://github.com/mcollina/on-exit-or-gc#readme",
+      "description": "Execute a function on exit without leaking memory, allowing all objects to be garbage collected"
+    },
+    {
+      "name": "open",
+      "versions": [
+        "11.0.4"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\open@11.0.4\\node_modules\\open"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/open#readme",
+      "description": "Open stuff like URLs, files, executables. Cross-platform."
+    },
+    {
+      "name": "otpauth",
+      "versions": [
+        "9.6.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\otpauth@9.6.0\\node_modules\\otpauth"
+      ],
+      "license": "MIT",
+      "author": "Héctor Molinero Fernández",
+      "homepage": "https://github.com/hectorm/otpauth",
+      "description": "One Time Password (HOTP/TOTP) library for Node.js, Deno, Bun and browsers"
+    },
+    {
+      "name": "oxc-parser",
+      "versions": [
+        "0.152.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\oxc-parser@0.152.0\\node_modules\\oxc-parser"
+      ],
+      "license": "MIT",
+      "author": "Boshen and oxc contributors",
+      "homepage": "https://oxc.rs/docs/guide/usage/parser",
+      "description": "Oxc Parser Node API"
+    },
+    {
+      "name": "parse5",
+      "versions": [
+        "7.3.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\parse5@7.3.0\\node_modules\\parse5"
+      ],
+      "license": "MIT",
+      "author": "Ivan Nikulin",
+      "homepage": "https://parse5.js.org",
+      "description": "HTML parser and serializer."
+    },
+    {
+      "name": "parse5-htmlparser2-tree-adapter",
+      "versions": [
+        "7.1.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\parse5-htmlparser2-tree-adapter@7.1.0\\node_modules\\parse5-htmlparser2-tree-adapter"
+      ],
+      "license": "MIT",
+      "author": "Ivan Nikulin",
+      "homepage": "https://parse5.js.org",
+      "description": "htmlparser2 tree adapter for parse5."
+    },
+    {
+      "name": "parse5-parser-stream",
+      "versions": [
+        "7.1.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\parse5-parser-stream@7.1.2\\node_modules\\parse5-parser-stream"
+      ],
+      "license": "MIT",
+      "author": "Ivan Nikulin",
+      "homepage": "https://github.com/inikulin/parse5",
+      "description": "Streaming HTML parser with scripting support."
+    },
+    {
+      "name": "pino",
+      "versions": [
+        "10.4.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\pino@10.4.0\\node_modules\\pino"
+      ],
+      "license": "MIT",
+      "author": "Matteo Collina",
+      "homepage": "https://getpino.io",
+      "description": "super fast, all natural json logger"
+    },
+    {
+      "name": "pino-abstract-transport",
+      "versions": [
+        "3.0.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\pino-abstract-transport@3.0.0\\node_modules\\pino-abstract-transport"
+      ],
+      "license": "MIT",
+      "author": "Matteo Collina",
+      "homepage": "https://github.com/pinojs/pino-abstract-transport#readme",
+      "description": "Write Pino transports easily"
+    },
+    {
+      "name": "pino-std-serializers",
+      "versions": [
+        "7.1.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\pino-std-serializers@7.1.0\\node_modules\\pino-std-serializers"
+      ],
+      "license": "MIT",
+      "author": "James Sumners",
+      "homepage": "https://github.com/pinojs/pino-std-serializers#readme",
+      "description": "A collection of standard object serializers for Pino"
+    },
+    {
+      "name": "postcss",
+      "versions": [
+        "8.5.23",
+        "8.5.32"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\postcss@8.5.23\\node_modules\\postcss",
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\postcss@8.5.32\\node_modules\\postcss"
+      ],
+      "license": "MIT",
+      "author": "Andrey Sitnik",
+      "homepage": "https://postcss.org/",
+      "description": "Tool for transforming styles with JS plugins"
+    },
+    {
+      "name": "powershell-utils",
+      "versions": [
+        "0.2.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\powershell-utils@0.2.1\\node_modules\\powershell-utils"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/powershell-utils#readme",
+      "description": "Utilities for executing PowerShell commands"
+    },
+    {
+      "name": "prettier",
+      "versions": [
+        "3.9.10"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\prettier@3.9.10\\node_modules\\prettier"
+      ],
+      "license": "MIT",
+      "author": "James Long",
+      "homepage": "https://prettier.io",
+      "description": "Prettier is an opinionated code formatter"
+    },
+    {
+      "name": "process-warning",
+      "versions": [
+        "5.1.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\process-warning@5.1.1\\node_modules\\process-warning"
+      ],
+      "license": "MIT",
+      "author": "Tomas Della Vedova",
+      "homepage": "https://github.com/fastify/fastify-warning#readme",
+      "description": "A small utility for creating warnings and emitting them."
+    },
+    {
+      "name": "quick-format-unescaped",
+      "versions": [
+        "4.0.4"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\quick-format-unescaped@4.0.4\\node_modules\\quick-format-unescaped"
+      ],
+      "license": "MIT",
+      "author": "David Mark Clements",
+      "homepage": "https://github.com/davidmarkclements/quick-format#readme",
+      "description": "Solves a problem with util.format"
+    },
+    {
+      "name": "react",
+      "versions": [
+        "19.3.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\react@19.3.1\\node_modules\\react"
+      ],
+      "license": "MIT",
+      "homepage": "https://react.dev/",
+      "description": "React is a JavaScript library for building user interfaces."
+    },
+    {
+      "name": "react-dom",
+      "versions": [
+        "19.3.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\react-dom@19.3.1_react@19.3.1\\node_modules\\react-dom"
+      ],
+      "license": "MIT",
+      "homepage": "https://react.dev/",
+      "description": "React package for working with the DOM."
+    },
+    {
+      "name": "react-photo-album",
+      "versions": [
+        "3.6.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\react-photo-album@3.6.2_@types+react@19.3.0_react@19.3.1\\node_modules\\react-photo-album"
+      ],
+      "license": "MIT",
+      "author": "Igor Danchenko",
+      "homepage": "https://react-photo-album.com",
+      "description": "Responsive photo gallery component for React"
+    },
+    {
+      "name": "react-remove-scroll",
+      "versions": [
+        "2.7.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\react-remove-scroll@2.7.2_@types+react@19.3.0_react@19.3.1\\node_modules\\react-remove-scroll"
+      ],
+      "license": "MIT",
+      "author": "Anton Korzunov",
+      "homepage": "https://github.com/theKashey/react-remove-scroll#readme",
+      "description": "Disables scroll outside of `children` node."
+    },
+    {
+      "name": "react-remove-scroll-bar",
+      "versions": [
+        "2.3.8"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\react-remove-scroll-bar@2.3_4bc8444c555b29ac9388a23b7e4da306\\node_modules\\react-remove-scroll-bar"
+      ],
+      "license": "MIT",
+      "author": "Anton Korzunov",
+      "homepage": "https://github.com/theKashey/react-remove-scroll-bar#readme",
+      "description": "Removes body scroll without content _shake_"
+    },
+    {
+      "name": "react-style-singleton",
+      "versions": [
+        "2.2.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\react-style-singleton@2.2.3_@types+react@19.3.0_react@19.3.1\\node_modules\\react-style-singleton"
+      ],
+      "license": "MIT",
+      "author": "Anton Korzunov",
+      "homepage": "https://github.com/theKashey/react-style-singleton#readme",
+      "description": "Just create a single stylesheet..."
+    },
+    {
+      "name": "real-require",
+      "versions": [
+        "1.0.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\real-require@1.0.0\\node_modules\\real-require"
+      ],
+      "license": "MIT",
+      "author": "Paolo Insogna",
+      "homepage": "https://github.com/pinojs/real-require",
+      "description": "Keep require and import consistent after bundling or transpiling"
+    },
+    {
+      "name": "require-from-string",
+      "versions": [
+        "2.0.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\require-from-string@2.0.2\\node_modules\\require-from-string"
+      ],
+      "license": "MIT",
+      "author": "Vsevolod Strukchinsky",
+      "homepage": "https://github.com/floatdrop/require-from-string#readme",
+      "description": "Require module from string"
+    },
+    {
+      "name": "ret",
+      "versions": [
+        "0.5.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\ret@0.5.1\\node_modules\\ret"
+      ],
+      "license": "MIT",
+      "author": "fent",
+      "homepage": "https://github.com/fent/ret.js#readme",
+      "description": "Tokenizes a string that represents a regular expression."
+    },
+    {
+      "name": "reusify",
+      "versions": [
+        "1.1.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\reusify@1.1.0\\node_modules\\reusify"
+      ],
+      "license": "MIT",
+      "author": "Matteo Collina",
+      "homepage": "https://github.com/mcollina/reusify#readme",
+      "description": "Reuse objects and functions with style"
+    },
+    {
+      "name": "rfdc",
+      "versions": [
+        "1.4.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\rfdc@1.4.1\\node_modules\\rfdc"
+      ],
+      "license": "MIT",
+      "author": "David Mark Clements",
+      "homepage": "https://github.com/davidmarkclements/rfdc#readme",
+      "description": "Really Fast Deep Clone"
+    },
+    {
+      "name": "robots-parser",
+      "versions": [
+        "3.0.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\robots-parser@3.0.1\\node_modules\\robots-parser"
+      ],
+      "license": "MIT",
+      "author": "Sam Clarke",
+      "homepage": "https://github.com/samclarke/robots-parser",
+      "description": "A specification compliant robots.txt parser with wildcard (*) matching support."
+    },
+    {
+      "name": "run-applescript",
+      "versions": [
+        "7.1.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\run-applescript@7.1.0\\node_modules\\run-applescript"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/run-applescript#readme",
+      "description": "Run AppleScript and get the result"
+    },
+    {
+      "name": "safe-regex2",
+      "versions": [
+        "5.1.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\safe-regex2@5.1.2\\node_modules\\safe-regex2"
+      ],
+      "license": "MIT",
+      "author": "James Halliday",
+      "homepage": "https://github.com/fastify/safe-regex2",
+      "description": "detect possibly catastrophic, exponential-time regular expressions"
+    },
+    {
+      "name": "safe-stable-stringify",
+      "versions": [
+        "2.5.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\safe-stable-stringify@2.5.0\\node_modules\\safe-stable-stringify"
+      ],
+      "license": "MIT",
+      "author": "Ruben Bridgewater",
+      "homepage": "https://github.com/BridgeAR/safe-stable-stringify#readme",
+      "description": "Deterministic and safely JSON.stringify to quickly serialize JavaScript objects"
+    },
+    {
+      "name": "safer-buffer",
+      "versions": [
+        "2.1.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\safer-buffer@2.1.2\\node_modules\\safer-buffer"
+      ],
+      "license": "MIT",
+      "author": "Nikita Skovoroda",
+      "homepage": "https://github.com/ChALkeR/safer-buffer#readme",
+      "description": "Modern Buffer API polyfill without footguns"
+    },
+    {
+      "name": "scheduler",
+      "versions": [
+        "0.28.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\scheduler@0.28.0\\node_modules\\scheduler"
+      ],
+      "license": "MIT",
+      "homepage": "https://react.dev/",
+      "description": "Cooperative scheduler for the browser environment."
+    },
+    {
+      "name": "set-cookie-parser",
+      "versions": [
+        "2.7.3",
+        "3.2.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\set-cookie-parser@2.7.3\\node_modules\\set-cookie-parser",
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\set-cookie-parser@3.2.2\\node_modules\\set-cookie-parser"
+      ],
+      "license": "MIT",
+      "author": "Nathan Friedly",
+      "homepage": "https://github.com/nfriedly/set-cookie-parser",
+      "description": "Parses set-cookie headers into objects"
+    },
+    {
+      "name": "sonic-boom",
+      "versions": [
+        "4.2.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\sonic-boom@4.2.1\\node_modules\\sonic-boom"
+      ],
+      "license": "MIT",
+      "author": "Matteo Collina",
+      "homepage": "https://github.com/pinojs/sonic-boom#readme",
+      "description": "Extremely fast utf8 only stream implementation"
+    },
+    {
+      "name": "speedline-core",
+      "versions": [
+        "1.4.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\speedline-core@1.4.3\\node_modules\\speedline-core"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/paulirish/speedline#readme",
+      "description": "Get the speed index from chrome dev tool timeline files"
+    },
+    {
+      "name": "string-width",
+      "versions": [
+        "7.2.0",
+        "8.3.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\string-width@7.2.0\\node_modules\\string-width",
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\string-width@8.3.0\\node_modules\\string-width"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/string-width#readme",
+      "description": "Get the visual width of a string - the number of columns required to display it"
+    },
+    {
+      "name": "strip-ansi",
+      "versions": [
+        "6.0.1",
+        "7.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\strip-ansi@6.0.1\\node_modules\\strip-ansi",
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\strip-ansi@7.2.0\\node_modules\\strip-ansi"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/chalk/strip-ansi#readme",
+      "description": "Strip ANSI escape codes from a string"
+    },
+    {
+      "name": "strtok3",
+      "versions": [
+        "10.7.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\strtok3@10.7.0\\node_modules\\strtok3"
+      ],
+      "license": "MIT",
+      "author": "Borewit",
+      "homepage": "https://github.com/Borewit/strtok3#readme",
+      "description": "A promise based streaming tokenizer"
+    },
+    {
+      "name": "stubborn-fs",
+      "versions": [
+        "2.0.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\stubborn-fs@2.0.0\\node_modules\\stubborn-fs"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/fabiospampinato/stubborn-fs#readme",
+      "description": "Stubborn versions of Node's fs functions that try really hard to do their job."
+    },
+    {
+      "name": "stubborn-utils",
+      "versions": [
+        "1.0.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\stubborn-utils@1.0.2\\node_modules\\stubborn-utils"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/fabiospampinato/stubborn-utils#readme",
+      "description": "A small collection of utilities for making functions somewhat resilient against errors."
+    },
+    {
+      "name": "styled-jsx",
+      "versions": [
+        "5.1.6"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\styled-jsx@5.1.6_react@19.3.1\\node_modules\\styled-jsx"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/vercel/styled-jsx#readme",
+      "description": "Full CSS support for JSX without compromises"
+    },
+    {
+      "name": "supports-color",
+      "versions": [
+        "8.1.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\supports-color@8.1.1\\node_modules\\supports-color"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/chalk/supports-color#readme",
+      "description": "Detect whether a terminal supports color"
+    },
+    {
+      "name": "tagged-tag",
+      "versions": [
+        "1.0.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\tagged-tag@1.0.0\\node_modules\\tagged-tag"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/tagged-tag#readme",
+      "description": "Unique tag for use in the type-fest Tagged type"
+    },
+    {
+      "name": "tailwind-merge",
+      "versions": [
+        "3.7.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\tailwind-merge@3.7.0\\node_modules\\tailwind-merge"
+      ],
+      "license": "MIT",
+      "author": "Dany Castillo",
+      "homepage": "https://github.com/dcastil/tailwind-merge",
+      "description": "Merge Tailwind CSS classes without style conflicts"
+    },
+    {
+      "name": "tailwindcss",
+      "versions": [
+        "4.3.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\tailwindcss@4.3.5\\node_modules\\tailwindcss"
+      ],
+      "license": "MIT",
+      "homepage": "https://tailwindcss.com",
+      "description": "A utility-first CSS framework for rapidly building custom user interfaces."
+    },
+    {
+      "name": "tapable",
+      "versions": [
+        "2.3.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\tapable@2.3.3\\node_modules\\tapable"
+      ],
+      "license": "MIT",
+      "author": "Tobias Koppers @sokra",
+      "homepage": "https://github.com/webpack/tapable",
+      "description": "Just a little module for plugins."
+    },
+    {
+      "name": "third-party-web",
+      "versions": [
+        "0.30.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\third-party-web@0.30.0\\node_modules\\third-party-web"
+      ],
+      "license": "MIT",
+      "author": "Patrick Hulce",
+      "homepage": "https://github.com/patrickhulce/third-party-web#readme",
+      "description": "Categorized data on third party entities on the web."
+    },
+    {
+      "name": "thread-stream",
+      "versions": [
+        "4.2.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\thread-stream@4.2.1\\node_modules\\thread-stream"
+      ],
+      "license": "MIT",
+      "author": "Matteo Collina",
+      "homepage": "https://github.com/mcollina/thread-stream#readme",
+      "description": "A streaming way to send data to a Node.js Worker Thread"
+    },
+    {
+      "name": "tldts",
+      "versions": [
+        "7.4.19"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\tldts@7.4.19\\node_modules\\tldts"
+      ],
+      "license": "MIT",
+      "author": "Rémi Berson",
+      "homepage": "https://github.com/remusao/tldts#readme",
+      "description": "Library to work against complex domain names, subdomains and URIs."
+    },
+    {
+      "name": "tldts-core",
+      "versions": [
+        "7.4.20"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\tldts-core@7.4.20\\node_modules\\tldts-core"
+      ],
+      "license": "MIT",
+      "author": "Rémi Berson",
+      "homepage": "https://github.com/remusao/tldts#readme",
+      "description": "tldts core primitives (internal module)"
+    },
+    {
+      "name": "tldts-icann",
+      "versions": [
+        "7.4.19"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\tldts-icann@7.4.19\\node_modules\\tldts-icann"
+      ],
+      "license": "MIT",
+      "author": "Rémi Berson",
+      "homepage": "https://github.com/remusao/tldts#readme",
+      "description": "Library to work against complex domain names, subdomains and URIs. Only contains ICANN section."
+    },
+    {
+      "name": "toad-cache",
+      "versions": [
+        "3.7.4"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\toad-cache@3.7.4\\node_modules\\toad-cache"
+      ],
+      "license": "MIT",
+      "author": "Igor Savin",
+      "homepage": "https://github.com/kibertoad/toad-cache",
+      "description": "LRU and FIFO caches for Client or Server"
+    },
+    {
+      "name": "token-types",
+      "versions": [
+        "6.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\token-types@6.2.0\\node_modules\\token-types"
+      ],
+      "license": "MIT",
+      "author": "Borewit",
+      "homepage": "https://github.com/Borewit/token-types#readme",
+      "description": "Common token types for decoding and encoding numeric and string values"
+    },
+    {
+      "name": "tsx",
+      "versions": [
+        "4.23.15"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\tsx@4.23.15\\node_modules\\tsx"
+      ],
+      "license": "MIT",
+      "author": "Hiroki Osame",
+      "homepage": "https://tsx.hirok.io",
+      "description": "TypeScript Execute (tsx): Node.js enhanced with esbuild to run TypeScript & ESM files"
+    },
+    {
+      "name": "typed-query-selector",
+      "versions": [
+        "2.12.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\typed-query-selector@2.12.3\\node_modules\\typed-query-selector"
+      ],
+      "license": "MIT",
+      "author": "Pig Fang",
+      "homepage": "https://github.com/g-plane/typed-query-selector#readme",
+      "description": "Better typed `querySelector` and `querySelectorAll`."
+    },
+    {
+      "name": "uint8array-extras",
+      "versions": [
+        "1.6.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\uint8array-extras@1.6.0\\node_modules\\uint8array-extras"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/uint8array-extras#readme",
+      "description": "Useful utilities for working with Uint8Array (and Buffer)"
+    },
+    {
+      "name": "undici",
+      "versions": [
+        "7.30.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\undici@7.30.2\\node_modules\\undici"
+      ],
+      "license": "MIT",
+      "homepage": "https://undici.nodejs.org",
+      "description": "An HTTP/1.1 client, written from scratch for Node.js"
+    },
+    {
+      "name": "undici-types",
+      "versions": [
+        "6.21.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\undici-types@6.21.0\\node_modules\\undici-types"
+      ],
+      "license": "MIT",
+      "homepage": "https://undici.nodejs.org",
+      "description": "A stand-alone types package for Undici"
+    },
+    {
+      "name": "use-callback-ref",
+      "versions": [
+        "1.3.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\use-callback-ref@1.3.3_@types+react@19.3.0_react@19.3.1\\node_modules\\use-callback-ref"
+      ],
+      "license": "MIT",
+      "author": "theKashey",
+      "homepage": "https://github.com/theKashey/use-callback-ref#readme",
+      "description": "The same useRef, but with callback"
+    },
+    {
+      "name": "use-sidecar",
+      "versions": [
+        "1.1.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\use-sidecar@1.1.3_@types+react@19.3.0_react@19.3.1\\node_modules\\use-sidecar"
+      ],
+      "license": "MIT",
+      "author": "theKashey",
+      "homepage": "https://github.com/theKashey/use-sidecar",
+      "description": "Sidecar code splitting utils"
+    },
+    {
+      "name": "whatwg-encoding",
+      "versions": [
+        "3.1.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\whatwg-encoding@3.1.1\\node_modules\\whatwg-encoding"
+      ],
+      "license": "MIT",
+      "author": "Domenic Denicola",
+      "homepage": "https://github.com/jsdom/whatwg-encoding#readme",
+      "description": "Decode strings according to the WHATWG Encoding Standard"
+    },
+    {
+      "name": "whatwg-mimetype",
+      "versions": [
+        "4.0.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\whatwg-mimetype@4.0.0\\node_modules\\whatwg-mimetype"
+      ],
+      "license": "MIT",
+      "author": "Domenic Denicola",
+      "homepage": "https://github.com/jsdom/whatwg-mimetype#readme",
+      "description": "Parses, serializes, and manipulates MIME types, according to the WHATWG MIME Sniffing Standard"
+    },
+    {
+      "name": "when-exit",
+      "versions": [
+        "2.1.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\when-exit@2.1.5\\node_modules\\when-exit"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/fabiospampinato/when-exit#readme",
+      "description": "Execute a function right before the process, or the browser's tab, is about to exit."
+    },
+    {
+      "name": "wrap-ansi",
+      "versions": [
+        "9.0.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\wrap-ansi@9.0.2\\node_modules\\wrap-ansi"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/chalk/wrap-ansi#readme",
+      "description": "Wordwrap a string with ANSI escape codes"
+    },
+    {
+      "name": "ws",
+      "versions": [
+        "8.22.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\ws@8.22.2\\node_modules\\ws"
+      ],
+      "license": "MIT",
+      "author": "Einar Otto Stangvik",
+      "homepage": "https://github.com/websockets/ws",
+      "description": "Simple to use, blazing fast and thoroughly tested websocket client and server for Node.js"
+    },
+    {
+      "name": "wsl-utils",
+      "versions": [
+        "1.0.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\wsl-utils@1.0.1\\node_modules\\wsl-utils"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/wsl-utils#readme",
+      "description": "Utilities for working with Windows Subsystem for Linux (WSL)"
+    },
+    {
+      "name": "xdg-basedir",
+      "versions": [
+        "5.1.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\xdg-basedir@5.1.0\\node_modules\\xdg-basedir"
+      ],
+      "license": "MIT",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/xdg-basedir#readme",
+      "description": "Get XDG Base Directory paths"
+    },
+    {
+      "name": "yargs",
+      "versions": [
+        "18.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\yargs@18.2.0\\node_modules\\yargs"
+      ],
+      "license": "MIT",
+      "homepage": "https://yargs.js.org/",
+      "description": "yargs the modern, pirate-themed, successor to optimist."
+    },
+    {
+      "name": "yet-another-react-lightbox",
+      "versions": [
+        "3.33.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\yet-another-react-lightbox@_8c3b7edd7754c2423619123b354c6328\\node_modules\\yet-another-react-lightbox"
+      ],
+      "license": "MIT",
+      "author": "Igor Danchenko",
+      "homepage": "https://yet-another-react-lightbox.com",
+      "description": "Modern React lightbox component"
+    },
+    {
+      "name": "zod",
+      "versions": [
+        "4.6.7"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\zod@4.6.7\\node_modules\\zod"
+      ],
+      "license": "MIT",
+      "author": "Colin McDonnell",
+      "homepage": "https://zod.dev",
+      "description": "TypeScript-first schema declaration and validation library with static type inference"
+    }
+  ],
+  "Apache-2.0 AND LGPL-3.0-or-later": [
+    {
+      "name": "@img/sharp-win32-x64",
+      "versions": [
+        "0.35.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@img+sharp-win32-x64@0.35.5\\node_modules\\@img\\sharp-win32-x64"
+      ],
+      "license": "Apache-2.0 AND LGPL-3.0-or-later",
+      "author": "Lovell Fuller",
+      "homepage": "https://sharp.pixelplumbing.com",
+      "description": "Prebuilt sharp for use with Windows x64"
+    }
+  ],
+  "BlueOak-1.0.0": [
+    {
+      "name": "@isaacs/nonrecursive-glob-match",
+      "versions": [
+        "1.1.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@isaacs+nonrecursive-glob-match@1.1.0\\node_modules\\@isaacs\\nonrecursive-glob-match"
+      ],
+      "license": "BlueOak-1.0.0",
+      "description": "a single-path-portion glob matcher not subject to recursive backtracking ReDoS"
+    },
+    {
+      "name": "glob",
+      "versions": [
+        "14.0.4"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\glob@14.0.4\\node_modules\\glob"
+      ],
+      "license": "BlueOak-1.0.0",
+      "author": "Isaac Z. Schlueter",
+      "homepage": "https://github.com/isaacs/node-glob#readme",
+      "description": "the most correct and second fastest glob implementation in JavaScript"
+    },
+    {
+      "name": "lru-cache",
+      "versions": [
+        "11.5.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\lru-cache@11.5.3\\node_modules\\lru-cache"
+      ],
+      "license": "BlueOak-1.0.0",
+      "author": "Isaac Z. Schlueter",
+      "homepage": "https://github.com/isaacs/node-lru-cache#readme",
+      "description": "A cache object that deletes the least-recently-used items."
+    },
+    {
+      "name": "minimatch",
+      "versions": [
+        "11.0.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\minimatch@11.0.5\\node_modules\\minimatch"
+      ],
+      "license": "BlueOak-1.0.0",
+      "author": "Isaac Z. Schlueter",
+      "homepage": "https://github.com/isaacs/minimatch#readme",
+      "description": "a glob matcher in javascript"
+    },
+    {
+      "name": "minipass",
+      "versions": [
+        "7.1.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\minipass@7.1.3\\node_modules\\minipass"
+      ],
+      "license": "BlueOak-1.0.0",
+      "author": "Isaac Z. Schlueter",
+      "homepage": "https://github.com/isaacs/minipass#readme",
+      "description": "minimal implementation of a PassThrough stream"
+    },
+    {
+      "name": "path-scurry",
+      "versions": [
+        "3.0.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\path-scurry@3.0.0\\node_modules\\path-scurry"
+      ],
+      "license": "BlueOak-1.0.0",
+      "author": "Isaac Z. Schlueter",
+      "homepage": "https://github.com/isaacs/path-scurry#readme",
+      "description": "walk paths fast and efficiently"
+    }
+  ],
+  "Apache-2.0": [
+    {
+      "name": "@opentelemetry/api",
+      "versions": [
+        "1.10.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@opentelemetry+api@1.10.0\\node_modules\\@opentelemetry\\api"
+      ],
+      "license": "Apache-2.0",
+      "author": "OpenTelemetry Authors",
+      "homepage": "https://github.com/open-telemetry/opentelemetry-js/tree/main/api",
+      "description": "Public API for OpenTelemetry"
+    },
+    {
+      "name": "@playwright/test",
+      "versions": [
+        "1.65.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@playwright+test@1.65.0\\node_modules\\@playwright\\test"
+      ],
+      "license": "Apache-2.0",
+      "author": "Microsoft Corporation",
+      "homepage": "https://playwright.dev",
+      "description": "A high-level API to automate web browsers"
+    },
+    {
+      "name": "@puppeteer/browsers",
+      "versions": [
+        "3.2.6"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@puppeteer+browsers@3.2.6\\node_modules\\@puppeteer\\browsers"
+      ],
+      "license": "Apache-2.0",
+      "author": "The Chromium Authors",
+      "homepage": "https://github.com/puppeteer/puppeteer/tree/main#readme",
+      "description": "Download and launch browsers"
+    },
+    {
+      "name": "@swc/helpers",
+      "versions": [
+        "0.5.23"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@swc+helpers@0.5.23\\node_modules\\@swc\\helpers"
+      ],
+      "license": "Apache-2.0",
+      "author": "강동윤",
+      "homepage": "https://swc.rs",
+      "description": "External helpers for the swc project."
+    },
+    {
+      "name": "@typescript/typescript-win32-x64",
+      "versions": [
+        "7.0.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@typescript+typescript-win32-x64@7.0.2\\node_modules\\@typescript\\typescript-win32-x64"
+      ],
+      "license": "Apache-2.0",
+      "author": "Microsoft Corp.",
+      "homepage": "https://www.typescriptlang.org/",
+      "description": "TypeScript is a language for application scale JavaScript development"
+    },
+    {
+      "name": "baseline-browser-mapping",
+      "versions": [
+        "2.11.35"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\baseline-browser-mapping@2.11.35\\node_modules\\baseline-browser-mapping"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/web-platform-dx/baseline-browser-mapping#readme",
+      "description": "A library for obtaining browser versions with their maximum supported Baseline feature set and Widely Available status."
+    },
+    {
+      "name": "chrome-launcher",
+      "versions": [
+        "1.2.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\chrome-launcher@1.2.3\\node_modules\\chrome-launcher"
+      ],
+      "license": "Apache-2.0",
+      "author": "The Chromium Authors",
+      "homepage": "https://github.com/GoogleChrome/chrome-launcher#readme",
+      "description": "Launch latest Chrome with the Devtools Protocol port open"
+    },
+    {
+      "name": "chromium-bidi",
+      "versions": [
+        "157.0.8090-0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\chromium-bidi@157.0.8090-0_devtools-protocol@0.0.1704951\\node_modules\\chromium-bidi"
+      ],
+      "license": "Apache-2.0",
+      "author": "The Chromium Authors",
+      "homepage": "https://github.com/GoogleChromeLabs/chromium-bidi#readme",
+      "description": "An implementation of the WebDriver BiDi protocol for Chromium implemented as a JavaScript layer translating between BiDi and CDP, running inside a Chrome tab."
+    },
+    {
+      "name": "class-variance-authority",
+      "versions": [
+        "0.7.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\class-variance-authority@0.7.1\\node_modules\\class-variance-authority"
+      ],
+      "license": "Apache-2.0",
+      "author": "Joe Bell",
+      "homepage": "https://github.com/joe-bell/cva#readme",
+      "description": "Class Variance Authority 🧬"
+    },
+    {
+      "name": "csp_evaluator",
+      "versions": [
+        "1.1.8"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\csp_evaluator@1.1.8\\node_modules\\csp_evaluator"
+      ],
+      "license": "Apache-2.0",
+      "author": "Lukas Weichselbaum",
+      "homepage": "https://csp-evaluator.withgoogle.com/",
+      "description": "Evaluate Content Security Policies for a wide range of bypasses and weaknesses"
+    },
+    {
+      "name": "detect-libc",
+      "versions": [
+        "2.1.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\detect-libc@2.1.2\\node_modules\\detect-libc"
+      ],
+      "license": "Apache-2.0",
+      "author": "Lovell Fuller",
+      "homepage": "https://github.com/lovell/detect-libc#readme",
+      "description": "Node.js module to detect the C standard library (libc) implementation family and version"
+    },
+    {
+      "name": "lighthouse",
+      "versions": [
+        "13.6.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\lighthouse@13.6.0_ajv@8.20.0\\node_modules\\lighthouse"
+      ],
+      "license": "Apache-2.0",
+      "author": "Google LLC",
+      "homepage": "https://github.com/GoogleChrome/lighthouse#readme",
+      "description": "Automated auditing, performance metrics, and best practices for the web."
+    },
+    {
+      "name": "lighthouse-logger",
+      "versions": [
+        "2.0.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\lighthouse-logger@2.0.2\\node_modules\\lighthouse-logger"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://github.com/GoogleChrome/lighthouse#readme"
+    },
+    {
+      "name": "lighthouse-stack-packs",
+      "versions": [
+        "1.12.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\lighthouse-stack-packs@1.12.3\\node_modules\\lighthouse-stack-packs"
+      ],
+      "license": "Apache-2.0",
+      "author": "The Chromium Authors",
+      "homepage": "https://github.com/GoogleChrome/lighthouse-stack-packs#readme",
+      "description": "Lighthouse Stack Packs"
+    },
+    {
+      "name": "marky",
+      "versions": [
+        "1.3.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\marky@1.3.0\\node_modules\\marky"
+      ],
+      "license": "Apache-2.0",
+      "author": "Nolan Lawson",
+      "homepage": "https://github.com/nolanlawson/marky#readme",
+      "description": "Performance timer based on performance.mark() and measure()"
+    },
+    {
+      "name": "playwright",
+      "versions": [
+        "1.65.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\playwright@1.65.0\\node_modules\\playwright"
+      ],
+      "license": "Apache-2.0",
+      "author": "Microsoft Corporation",
+      "homepage": "https://playwright.dev",
+      "description": "A high-level API to automate web browsers"
+    },
+    {
+      "name": "playwright-core",
+      "versions": [
+        "1.65.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\playwright-core@1.65.0\\node_modules\\playwright-core"
+      ],
+      "license": "Apache-2.0",
+      "author": "Microsoft Corporation",
+      "homepage": "https://playwright.dev",
+      "description": "A high-level API to automate web browsers"
+    },
+    {
+      "name": "puppeteer-core",
+      "versions": [
+        "25.16.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\puppeteer-core@25.16.0\\node_modules\\puppeteer-core"
+      ],
+      "license": "Apache-2.0",
+      "author": "The Chromium Authors",
+      "homepage": "https://github.com/puppeteer/puppeteer/tree/main#readme",
+      "description": "A high-level API to control headless Chrome over the DevTools Protocol"
+    },
+    {
+      "name": "sharp",
+      "versions": [
+        "0.35.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\sharp@0.35.5_@types+node@22.20.5\\node_modules\\sharp"
+      ],
+      "license": "Apache-2.0",
+      "author": "Lovell Fuller",
+      "homepage": "https://sharp.pixelplumbing.com",
+      "description": "High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP, GIF, AVIF and TIFF images"
+    },
+    {
+      "name": "typescript",
+      "versions": [
+        "7.0.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\typescript@7.0.2\\node_modules\\typescript"
+      ],
+      "license": "Apache-2.0",
+      "author": "Microsoft Corp.",
+      "homepage": "https://www.typescriptlang.org/",
+      "description": "TypeScript is a language for application scale JavaScript development"
+    },
+    {
+      "name": "webdriver-bidi-protocol",
+      "versions": [
+        "1.0.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\webdriver-bidi-protocol@1.0.1\\node_modules\\webdriver-bidi-protocol"
+      ],
+      "license": "Apache-2.0",
+      "author": "The Chromium Authors",
+      "homepage": "https://github.com/GoogleChromeLabs/webdriver-bidi-protocol#readme",
+      "description": ""
+    }
+  ],
+  "BSD-3-Clause": [
+    {
+      "name": "@paulirish/trace_engine",
+      "versions": [
+        "0.0.67"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\@paulirish+trace_engine@0.0.67\\node_modules\\@paulirish\\trace_engine"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "",
+      "description": ""
+    },
+    {
+      "name": "devtools-protocol",
+      "versions": [
+        "0.0.1704951",
+        "0.0.1727723"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\devtools-protocol@0.0.1704951\\node_modules\\devtools-protocol",
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\devtools-protocol@0.0.1727723\\node_modules\\devtools-protocol"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "The Chromium Authors",
+      "homepage": "https://github.com/ChromeDevTools/devtools-protocol#readme",
+      "description": "The Chrome DevTools Protocol JSON"
+    },
+    {
+      "name": "fast-uri",
+      "versions": [
+        "3.1.9",
+        "4.2.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\fast-uri@3.1.9\\node_modules\\fast-uri",
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\fast-uri@4.2.3\\node_modules\\fast-uri"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "Vincent Le Goff",
+      "homepage": "https://github.com/fastify/fast-uri",
+      "description": "Dependency-free RFC 3986 URI toolbox"
+    },
+    {
+      "name": "ieee754",
+      "versions": [
+        "1.2.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\ieee754@1.2.1\\node_modules\\ieee754"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "Feross Aboukhadijeh",
+      "homepage": "https://github.com/feross/ieee754#readme",
+      "description": "Read/write IEEE754 floating point numbers from/to a Buffer or array-like object"
+    },
+    {
+      "name": "intl-messageformat",
+      "versions": [
+        "10.7.18"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\intl-messageformat@10.7.18\\node_modules\\intl-messageformat"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "Eric Ferraiuolo",
+      "homepage": "https://github.com/formatjs/formatjs",
+      "description": "Formats ICU Message strings with number, date, plural, and select placeholders to create localized messages."
+    },
+    {
+      "name": "jpeg-js",
+      "versions": [
+        "0.4.4"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\jpeg-js@0.4.4\\node_modules\\jpeg-js"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "Eugene Ware",
+      "homepage": "https://github.com/eugeneware/jpeg-js#readme",
+      "description": "A pure javascript JPEG encoder and decoder"
+    },
+    {
+      "name": "light-my-request",
+      "versions": [
+        "6.8.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\light-my-request@6.8.0\\node_modules\\light-my-request"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "Tomas Della Vedova - @delvedor",
+      "homepage": "https://github.com/fastify/light-my-request#readme",
+      "description": "Fake HTTP injection library"
+    },
+    {
+      "name": "secure-json-parse",
+      "versions": [
+        "4.1.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\secure-json-parse@4.1.1\\node_modules\\secure-json-parse"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "Eran Hammer",
+      "homepage": "https://github.com/fastify/secure-json-parse#readme",
+      "description": "JSON parse with prototype poisoning protection"
+    },
+    {
+      "name": "source-map-js",
+      "versions": [
+        "1.2.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\source-map-js@1.2.2\\node_modules\\source-map-js"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "Valentin 7rulnik Semirulnik",
+      "homepage": "https://github.com/7rulnik/source-map-js",
+      "description": "Generates and consumes source maps"
+    },
+    {
+      "name": "tough-cookie",
+      "versions": [
+        "6.1.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\tough-cookie@6.1.0\\node_modules\\tough-cookie"
+      ],
+      "license": "BSD-3-Clause",
+      "author": "Jeremy Stashewsky",
+      "homepage": "https://github.com/salesforce/tough-cookie",
+      "description": "RFC6265 Cookies and Cookie Jar for node.js"
+    }
+  ],
+  "MPL-2.0": [
+    {
+      "name": "axe-core",
+      "versions": [
+        "4.14.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\axe-core@4.14.0\\node_modules\\axe-core"
+      ],
+      "license": "MPL-2.0",
+      "homepage": "https://www.deque.com/axe/",
+      "description": "Accessibility engine for automated Web UI testing"
+    },
+    {
+      "name": "lightningcss",
+      "versions": [
+        "1.33.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\lightningcss@1.33.0\\node_modules\\lightningcss"
+      ],
+      "license": "MPL-2.0",
+      "homepage": "https://github.com/parcel-bundler/lightningcss#readme",
+      "description": "A CSS parser, transformer, and minifier written in Rust"
+    },
+    {
+      "name": "lightningcss-win32-x64-msvc",
+      "versions": [
+        "1.33.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\lightningcss-win32-x64-msvc@1.33.0\\node_modules\\lightningcss-win32-x64-msvc"
+      ],
+      "license": "MPL-2.0",
+      "homepage": "https://github.com/parcel-bundler/lightningcss#readme",
+      "description": "A CSS parser, transformer, and minifier written in Rust"
+    }
+  ],
+  "ISC": [
+    {
+      "name": "boolbase",
+      "versions": [
+        "1.0.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\boolbase@1.0.0\\node_modules\\boolbase"
+      ],
+      "license": "ISC",
+      "author": "Felix Boehm",
+      "homepage": "https://github.com/fb55/boolbase",
+      "description": "two functions: One that returns true, one that returns false"
+    },
+    {
+      "name": "cliui",
+      "versions": [
+        "9.0.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\cliui@9.0.1\\node_modules\\cliui"
+      ],
+      "license": "ISC",
+      "author": "Ben Coe",
+      "homepage": "https://github.com/yargs/cliui#readme",
+      "description": "easily create complex multi-column command-line-interfaces"
+    },
+    {
+      "name": "fastq",
+      "versions": [
+        "1.20.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\fastq@1.20.3\\node_modules\\fastq"
+      ],
+      "license": "ISC",
+      "author": "Matteo Collina",
+      "homepage": "https://github.com/mcollina/fastq#readme",
+      "description": "Fast, in memory work queue"
+    },
+    {
+      "name": "get-caller-file",
+      "versions": [
+        "2.0.5"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\get-caller-file@2.0.5\\node_modules\\get-caller-file"
+      ],
+      "license": "ISC",
+      "author": "Stefan Penner",
+      "homepage": "https://github.com/stefanpenner/get-caller-file#readme",
+      "description": ""
+    },
+    {
+      "name": "graceful-fs",
+      "versions": [
+        "4.2.11"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\graceful-fs@4.2.11\\node_modules\\graceful-fs"
+      ],
+      "license": "ISC",
+      "homepage": "https://github.com/isaacs/node-graceful-fs#readme",
+      "description": "A drop-in replacement for fs, making various improvements."
+    },
+    {
+      "name": "lucide-react",
+      "versions": [
+        "1.70.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\lucide-react@1.70.0_@types+react@19.3.0_react@19.3.1\\node_modules\\lucide-react"
+      ],
+      "license": "ISC",
+      "author": "Eric Fennis",
+      "homepage": "https://lucide.dev",
+      "description": "A Lucide icon library package for React applications."
+    },
+    {
+      "name": "picocolors",
+      "versions": [
+        "1.1.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\picocolors@1.1.1\\node_modules\\picocolors"
+      ],
+      "license": "ISC",
+      "author": "Alexey Raspopov",
+      "homepage": "https://github.com/alexeyraspopov/picocolors#readme",
+      "description": "The tiniest and the fastest library for terminal output formatting with ANSI colors"
+    },
+    {
+      "name": "qrcode.react",
+      "versions": [
+        "4.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\qrcode.react@4.2.0_react@19.3.1\\node_modules\\qrcode.react"
+      ],
+      "license": "ISC",
+      "author": "Paul O’Shannessy",
+      "homepage": "http://zpao.github.io/qrcode.react",
+      "description": "React component to generate QR codes"
+    },
+    {
+      "name": "semver",
+      "versions": [
+        "7.8.6"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\semver@7.8.6\\node_modules\\semver"
+      ],
+      "license": "ISC",
+      "author": "GitHub Inc.",
+      "homepage": "https://github.com/npm/node-semver#readme",
+      "description": "The semantic version parser used by npm."
+    },
+    {
+      "name": "split2",
+      "versions": [
+        "4.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\split2@4.2.0\\node_modules\\split2"
+      ],
+      "license": "ISC",
+      "author": "Matteo Collina",
+      "homepage": "https://github.com/mcollina/split2#readme",
+      "description": "split a Text Stream into a Line Stream, using Stream 3"
+    },
+    {
+      "name": "y18n",
+      "versions": [
+        "5.0.8"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\y18n@5.0.8\\node_modules\\y18n"
+      ],
+      "license": "ISC",
+      "author": "Ben Coe",
+      "homepage": "https://github.com/yargs/y18n",
+      "description": "the bare-bones internationalization library used by yargs"
+    },
+    {
+      "name": "yargs-parser",
+      "versions": [
+        "22.0.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\yargs-parser@22.0.0\\node_modules\\yargs-parser"
+      ],
+      "license": "ISC",
+      "author": "Ben Coe",
+      "homepage": "https://github.com/yargs/yargs-parser#readme",
+      "description": "the mighty option parser used by yargs"
+    }
+  ],
+  "CC-BY-4.0": [
+    {
+      "name": "caniuse-lite",
+      "versions": [
+        "1.0.30001823"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\caniuse-lite@1.0.30001823\\node_modules\\caniuse-lite"
+      ],
+      "license": "CC-BY-4.0",
+      "author": "Ben Briggs",
+      "homepage": "https://github.com/browserslist/caniuse-lite#readme",
+      "description": "A smaller version of caniuse-db, with only the essentials!"
+    }
+  ],
+  "BSD-2-Clause": [
+    {
+      "name": "cheerio-select",
+      "versions": [
+        "2.1.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\cheerio-select@2.1.0\\node_modules\\cheerio-select"
+      ],
+      "license": "BSD-2-Clause",
+      "author": "Felix Boehm",
+      "homepage": "https://github.com/cheeriojs/cheerio-select#readme",
+      "description": "CSS selector engine supporting jQuery selectors"
+    },
+    {
+      "name": "configstore",
+      "versions": [
+        "8.0.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\configstore@8.0.0\\node_modules\\configstore"
+      ],
+      "license": "BSD-2-Clause",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/configstore#readme",
+      "description": "Easily load and save config without having to think about where and how"
+    },
+    {
+      "name": "css-select",
+      "versions": [
+        "5.2.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\css-select@5.2.2\\node_modules\\css-select"
+      ],
+      "license": "BSD-2-Clause",
+      "author": "Felix Boehm",
+      "homepage": "https://github.com/fb55/css-select#readme",
+      "description": "a CSS selector compiler/engine"
+    },
+    {
+      "name": "css-what",
+      "versions": [
+        "6.2.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\css-what@6.2.2\\node_modules\\css-what"
+      ],
+      "license": "BSD-2-Clause",
+      "author": "Felix Böhm",
+      "homepage": "https://github.com/fb55/css-what#readme",
+      "description": "a CSS selector parser"
+    },
+    {
+      "name": "domelementtype",
+      "versions": [
+        "2.3.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\domelementtype@2.3.0\\node_modules\\domelementtype"
+      ],
+      "license": "BSD-2-Clause",
+      "author": "Felix Boehm",
+      "homepage": "https://github.com/fb55/domelementtype#readme",
+      "description": "all the types of nodes in htmlparser2's dom"
+    },
+    {
+      "name": "domhandler",
+      "versions": [
+        "5.0.3"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\domhandler@5.0.3\\node_modules\\domhandler"
+      ],
+      "license": "BSD-2-Clause",
+      "author": "Felix Boehm",
+      "homepage": "https://github.com/fb55/domhandler#readme",
+      "description": "Handler for htmlparser2 that turns pages into a dom"
+    },
+    {
+      "name": "domutils",
+      "versions": [
+        "3.2.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\domutils@3.2.2\\node_modules\\domutils"
+      ],
+      "license": "BSD-2-Clause",
+      "author": "Felix Boehm",
+      "homepage": "https://github.com/fb55/domutils#readme",
+      "description": "Utilities for working with htmlparser2's dom"
+    },
+    {
+      "name": "dotenv",
+      "versions": [
+        "17.4.2"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\dotenv@17.4.2\\node_modules\\dotenv"
+      ],
+      "license": "BSD-2-Clause",
+      "homepage": "https://github.com/motdotla/dotenv#readme",
+      "description": "Loads environment variables from .env file"
+    },
+    {
+      "name": "entities",
+      "versions": [
+        "4.5.0",
+        "6.0.1",
+        "7.0.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\entities@4.5.0\\node_modules\\entities",
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\entities@6.0.1\\node_modules\\entities",
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\entities@7.0.1\\node_modules\\entities"
+      ],
+      "license": "BSD-2-Clause",
+      "author": "Felix Boehm",
+      "homepage": "https://github.com/fb55/entities#readme",
+      "description": "Encode & decode XML and HTML entities with ease & speed"
+    },
+    {
+      "name": "nth-check",
+      "versions": [
+        "2.1.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\nth-check@2.1.1\\node_modules\\nth-check"
+      ],
+      "license": "BSD-2-Clause",
+      "author": "Felix Boehm",
+      "homepage": "https://github.com/fb55/nth-check",
+      "description": "Parses and compiles CSS nth-checks to highly optimized functions."
+    }
+  ],
+  "Unlicense": [
+    {
+      "name": "fetch-cookie",
+      "versions": [
+        "3.2.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\fetch-cookie@3.2.0\\node_modules\\fetch-cookie"
+      ],
+      "license": "Unlicense",
+      "author": "Val",
+      "homepage": "https://github.com/valeriangalliat/fetch-cookie#readme",
+      "description": "Decorator for a `fetch` function to support automatic cookies."
+    }
+  ],
+  "FSL-1.1-Apache-2.0": [
+    {
+      "name": "sentry",
+      "versions": [
+        "0.45.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\sentry@0.45.0\\node_modules\\sentry"
+      ],
+      "license": "FSL-1.1-Apache-2.0",
+      "homepage": "https://github.com/getsentry/cli#readme",
+      "description": "Sentry CLI - A command-line interface for using Sentry built by robots and humans for robots and humans"
+    }
+  ],
+  "0BSD": [
+    {
+      "name": "tslib",
+      "versions": [
+        "2.9.1"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\tslib@2.9.1\\node_modules\\tslib"
+      ],
+      "license": "0BSD",
+      "author": "Microsoft Corp.",
+      "homepage": "https://www.typescriptlang.org/",
+      "description": "Runtime library for TypeScript helper functions"
+    }
+  ],
+  "(MIT OR CC0-1.0)": [
+    {
+      "name": "type-fest",
+      "versions": [
+        "5.10.0"
+      ],
+      "paths": [
+        "C:\\Users\\Luke\\AIA-Media\\node_modules\\.pnpm\\type-fest@5.10.0\\node_modules\\type-fest"
+      ],
+      "license": "(MIT OR CC0-1.0)",
+      "author": "Sindre Sorhus",
+      "homepage": "https://github.com/sindresorhus/type-fest#readme",
+      "description": "A collection of essential TypeScript types"
+    }
+  ]
+}

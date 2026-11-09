@@ -1,0 +1,263 @@
+{
+  "checkedAt": "2026-11-07T17:41:22.138Z",
+  "release": "v2.2.4",
+  "releasePublishedAt": "2026-03-10T15:44:19Z",
+  "releaseUrl": "https://github.com/Forceu/Gokapi/releases/tag/v2.2.4",
+  "commit": "9a4b289c604198c05589e34314e889d2c25386d8",
+  "sourceUrl": "https://raw.githubusercontent.com/Forceu/Gokapi/9a4b289c604198c05589e34314e889d2c25386d8/openapi.json",
+  "schemaSha256": "ed4531d4a24f6abd92638e9f7f3ac7de4a89101984261e4b8eadad0d536efea4",
+  "schemaInfoVersion": "1.0",
+  "schemaPathCount": 36,
+  "operations": [
+    {
+      "path": "/api/info/version",
+      "method": "GET",
+      "operationId": "version",
+      "security": [
+        {
+          "apikey": [
+            "VIEW",
+            "UPLOAD",
+            "DELETE",
+            "API_MANAGE"
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "path": "/api/files/add",
+      "method": "POST",
+      "operationId": "add",
+      "security": [
+        {
+          "apikey": [
+            "UPLOAD"
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "path": "/api/chunk/add",
+      "method": "POST",
+      "operationId": "chunkadd",
+      "security": [
+        {
+          "apikey": [
+            "UPLOAD"
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "path": "/api/chunk/complete",
+      "method": "POST",
+      "operationId": "chunkcomplete",
+      "security": [
+        {
+          "apikey": [
+            "UPLOAD"
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "name": "uuid",
+          "in": "header",
+          "required": true
+        },
+        {
+          "name": "filename",
+          "in": "header",
+          "required": true
+        },
+        {
+          "name": "filesize",
+          "in": "header",
+          "required": true
+        },
+        {
+          "name": "contenttype",
+          "in": "header",
+          "required": false
+        },
+        {
+          "name": "allowedDownloads",
+          "in": "header",
+          "required": false
+        },
+        {
+          "name": "expiryDays",
+          "in": "header",
+          "required": false
+        },
+        {
+          "name": "password",
+          "in": "header",
+          "required": false
+        },
+        {
+          "name": "nonblocking",
+          "in": "header",
+          "required": false
+        }
+      ]
+    },
+    {
+      "path": "/api/files/list",
+      "method": "GET",
+      "operationId": "list",
+      "security": [
+        {
+          "apikey": [
+            "VIEW"
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "name": "showFileRequests",
+          "in": "header",
+          "required": false
+        }
+      ]
+    },
+    {
+      "path": "/api/files/list/{id}",
+      "method": "GET",
+      "operationId": "listbyid",
+      "security": [
+        {
+          "apikey": [
+            "VIEW"
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true
+        }
+      ]
+    },
+    {
+      "path": "/api/files/modify",
+      "method": "PUT",
+      "operationId": "modifyfile",
+      "security": [
+        {
+          "apikey": [
+            "EDIT"
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "header",
+          "required": true
+        },
+        {
+          "name": "allowedDownloads",
+          "in": "header",
+          "required": false
+        },
+        {
+          "name": "expiryTimestamp",
+          "in": "header",
+          "required": false
+        },
+        {
+          "name": "password",
+          "in": "header",
+          "required": false
+        },
+        {
+          "name": "originalPassword",
+          "in": "header",
+          "required": false
+        }
+      ]
+    },
+    {
+      "path": "/api/files/delete",
+      "method": "DELETE",
+      "operationId": "delete",
+      "security": [
+        {
+          "apikey": [
+            "DELETE"
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "header",
+          "required": true
+        },
+        {
+          "name": "delay",
+          "in": "header",
+          "required": false
+        }
+      ]
+    },
+    {
+      "path": "/api/files/downloadzip",
+      "method": "GET",
+      "operationId": "downloadzip",
+      "security": [
+        {
+          "apikey": [
+            "DOWNLOAD"
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "name": "ids",
+          "in": "header",
+          "required": true
+        },
+        {
+          "name": "filename",
+          "in": "header",
+          "required": false
+        },
+        {
+          "name": "increaseCounter",
+          "in": "header",
+          "required": false
+        },
+        {
+          "name": "presignUrl",
+          "in": "header",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "excludedV1Paths": [
+    "/uploadrequest/chunk/reserve",
+    "/uploadrequest/chunk/unreserve",
+    "/uploadrequest/chunk/add",
+    "/uploadrequest/chunk/complete",
+    "/uploadrequest/list",
+    "/uploadrequest/list/{id}",
+    "/uploadrequest/save",
+    "/uploadrequest/delete"
+  ],
+  "assertions": {
+    "requiredOperationsPresent": true,
+    "basicUploadNotChunked": true,
+    "basicAndChunkApiNotE2E": true,
+    "presignedZipRequiresStaffLogin": true
+  },
+  "installedVersionVerified": false,
+  "runtimeTestsExecuted": false,
+  "f2GatePassed": false
+}
