@@ -11,7 +11,7 @@ Browser WebGL support remains necessary. A website cannot enable a GPU disabled 
 
 Browser coverage verifies default moving rows, saved off/reload/on behavior, no public cursor, real password/MFA-to-workspace cursor transition, toggle disable/enable, logout removal, and the same live 3D canvas remaining mounted while animations toggle. Genuine no-WebGL fallback and chosen-photo texture coverage are retained. The deployed-component verification script exercises the same behaviors against actual deployed HTML/CSP/JS, with a separate synthetic API overlay for authenticated flows; no real staff sessions or account writes are used.
 
-No identity, backend or original-media changes are included. Deployment must preserve all current accounts, security/profile records, valid sessions, configuration/key and permanent file hashes. Use an encrypted recoverable checkpoint and isolated registry-copy rehearsal; image rollback retains the live registry. Baseline before this correction: `lan-20261109-300a1131`. 
+No identity, backend or original-media changes are included. Deployment must preserve all current accounts, security/profile records, valid sessions, configuration/key and permanent file hashes. Use an encrypted recoverable checkpoint and isolated registry-copy rehearsal; image rollback retains the live registry. Baseline before this correction: `lan-20261109-300a1131`.
 
 ## Verified deployment
 
