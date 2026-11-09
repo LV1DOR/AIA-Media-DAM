@@ -26,7 +26,15 @@ protected={c['Name']:(c['Id'],c['Image'],c['State']['StartedAt']) for c in conta
 connection=sqlite3.connect('file:'+str(registry)+'?mode=ro',uri=True)
 if connection.execute("SELECT count(*) FROM transfers WHERE state='draft'").fetchone()[0] or connection.execute('SELECT count(*) FROM files WHERE finalizing=1').fetchone()[0]:raise SystemExit('An upload/finalization is in progress; defer rollout')
 schema=connection.execute('SELECT version FROM schema_version').fetchone()[0]
-users_before=connection.execute('SELECT id,username,role,disabled,session_version,rs_credentials,totp_secret,source_managed,source_disabled FROM users ORDER BY id').fetchall()
+expected_schema=p.get('expectedRegistrySchema',schema)
+if type(expected_schema) is not int or not schema<=expected_schema<=6:raise SystemExit('Unapproved registry migration')
+def capture_table(db,table,where='1',params=()):
+ columns=[row[1] for row in db.execute('PRAGMA table_info('+table+')')]
+ quoted=','.join('"'+name.replace('"','""')+'"' for name in columns)
+ return {'columns':columns,'select':quoted,'rows':db.execute('SELECT '+quoted+' FROM '+table+' WHERE '+where+' ORDER BY rowid',params).fetchall()}
+preserved={name:capture_table(connection,name) for name in ['users','invitations','profile_photos','background_photos'] if connection.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name=?",(name,)).fetchone()}
+sessions_before=capture_table(connection,'sessions')
+account_count=len(preserved['users']['rows'])
 checkpoint=private/(p['release']+'-registry-checkpoint.tar.cms')
 with tempfile.TemporaryDirectory(prefix=p['release']+'-checkpoint-',dir=private) as temporary:
  stage=pathlib.Path(temporary);database=stage/'registry.sqlite';destination=sqlite3.connect(database);connection.backup(destination)
@@ -61,8 +69,13 @@ try:
  if any((c['Id'],c['Image'],c['State']['StartedAt'])!=protected[c['Name']] for c in after):raise RuntimeError('A protected engine was changed')
  check=sqlite3.connect('file:'+str(registry)+'?mode=ro',uri=True)
  try:
-  if check.execute('SELECT version FROM schema_version').fetchone()[0]!=schema:raise RuntimeError('Registry schema changed')
-  if check.execute('SELECT id,username,role,disabled,session_version,rs_credentials,totp_secret,source_managed,source_disabled FROM users ORDER BY id').fetchall()!=users_before:raise RuntimeError('Staff/security records changed during rollout')
+  if check.execute('SELECT version FROM schema_version').fetchone()[0]!=expected_schema:raise RuntimeError('Registry migration differs from the approved schema')
+  for table,snapshot in preserved.items():
+   actual=check.execute('SELECT '+snapshot['select']+' FROM '+table+' ORDER BY rowid').fetchall()
+   if actual!=snapshot['rows']:raise RuntimeError('Existing '+table+' records changed during rollout')
+  expiry_index=sessions_before['columns'].index('expires');now_ms=int(time.time()*1000)
+  live_sessions=set(check.execute('SELECT '+sessions_before['select']+' FROM sessions WHERE expires>?',(now_ms,)).fetchall())
+  if any(row not in live_sessions for row in sessions_before['rows'] if row[expiry_index]>now_ms):raise RuntimeError('An existing valid session was lost')
  finally:check.close()
  permanent={};filestore=pathlib.Path(state['filestoreRoot'])
  for f in filestore.rglob('*'):
@@ -73,7 +86,7 @@ try:
  new_env=re.sub(rb'(?m)^AIA_RELEASE=.*$',('AIA_RELEASE='+p['release']).encode(),old_env)
  if new_env==old_env:raise RuntimeError('Compose release reference was not changed')
  replace_environment(new_env);set_link(release)
- report={'deployed':True,'release':p['release'],'sourceSha256':receipt,'rollbackRelease':state['baselineRelease'],'registrySchema':schema,'staffSecurityRecordsUnchanged':True,'privateRuntimeConfigUnchanged':True,'protectedEnginesUnchanged':True,'permanentFilesUnchanged':True,'permanentFilesChecked':len(permanent),'encryptedRegistryCheckpointSha256':checkpoint_sha,'containers':[{'name':c['Name'][1:],'imageId':c['Image'],'health':c['State']['Health']['Status']} for c in running]}
+ report={'deployed':True,'release':p['release'],'sourceSha256':receipt,'rollbackRelease':state['baselineRelease'],'registrySchemaBefore':schema,'registrySchema':expected_schema,'accountsPreserved':account_count,'existingAccountDataUnchanged':True,'validSessionsPreserved':True,'staffSecurityRecordsUnchanged':True,'privateRuntimeConfigUnchanged':True,'protectedEnginesUnchanged':True,'permanentFilesUnchanged':True,'permanentFilesChecked':len(permanent),'encryptedRegistryCheckpointSha256':checkpoint_sha,'containers':[{'name':c['Name'][1:],'imageId':c['Image'],'health':c['State']['Health']['Status']} for c in running]}
  (private/(p['release']+'-deployment.json')).write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report))
 except BaseException:
  compose(old,state['baselineRelease']);wait_healthy();replace_environment(old_env);set_link(old);raise
