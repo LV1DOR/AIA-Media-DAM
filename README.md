@@ -23,7 +23,9 @@ _Screenshots use synthetic demonstration media and approved public artwork. They
 
 Library cards load the same sharp, existing preview rendition as the enlarged viewer, with lazy loading and bounded infinite scrolling. Downloads still contain the untouched originals.
 
-The **Animations: on/off** control in the bottom-right corner switches the moving photo wall, mouse follower and 3D welcome badge together. It starts with your operating system preference, and saves your choice for this browser and site. Turn animations on if your system has reduced motion enabled but you want these effects. The cursor needs a mouse; the 3D badge needs WebGL graphics acceleration. When 3D is unavailable, the page explains how to enable it and offers a retry. Private library photos are never used on signed-out pages.
+The **Animations: on/off** control in the bottom-right corner controls the moving photo wall and the signed-in mouse follower. Background motion starts **on** by default; your explicit on/off choice is saved for this browser and site. Login, signup and recipient pages always use the normal cursor. The custom cursor appears only in the signed-in workspace with animations on and a mouse connected.
+
+The **3D welcome lanyard is always enabled**, independently of that toggle and OS motion preferences. It needs browser WebGL graphics acceleration; genuine graphics failures show guidance and a retry. Private library photos are never used on signed-out pages.
 
 ## A search that follows your thinking
 

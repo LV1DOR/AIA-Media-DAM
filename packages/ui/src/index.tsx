@@ -51,6 +51,7 @@ import {
 } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
 import * as Dialog from "@radix-ui/react-dialog";
+import SmoothFollower from "./components/smooth-follower";
 import { BulkTags } from "./components/tag-editor";
 import { FilesSidebar } from "./components/files/sidebar";
 import { FilesHeader } from "./components/files/header";
@@ -782,6 +783,7 @@ export function Workspace({ product }: { product: Product }) {
       className="media-workspace"
       style={{ "--sidebar-width-icon": "4.5rem" } as React.CSSProperties}
     >
+      <SmoothFollower />
       <FilesSidebar
         user={user}
         product={product}

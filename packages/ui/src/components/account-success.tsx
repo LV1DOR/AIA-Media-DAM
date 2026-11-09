@@ -1,6 +1,5 @@
 "use client";
 import React, { lazy, Suspense, useEffect, useState } from "react";
-import { useMotionPreference } from "../lib/motion-preference";
 import { generateBadgeImages, type BadgeImages } from "../lib/badge-images";
 const Lanyard = lazy(() => import("./react-bits/Lanyard"));
 class GraphicsBoundary extends React.Component<
@@ -31,7 +30,6 @@ export function AccountSuccess({
   photo: File | null;
   onContinue: () => void;
 }) {
-  const reduced = useMotionPreference();
   const [attempt, setAttempt] = useState(0);
   const [images, setImages] = useState<BadgeImages | null>(null),
     [fallback, setFallback] = useState(false),
@@ -88,7 +86,7 @@ export function AccountSuccess({
       <h1>Account created successfully</h1>
       <p>{name}, your password and authenticator are ready.</p>
       <div className="badge-stage">
-        {!images || fallback || reduced ? (
+        {!images || fallback ? (
           still
         ) : (
           <GraphicsBoundary
@@ -119,7 +117,7 @@ export function AccountSuccess({
           </GraphicsBoundary>
         )}
       </div>
-      {images && !fallback && !reduced && (
+      {images && !fallback && (
         <p className="lanyard-instructions">
           Drag to swing. Click the badge to flip.
         </p>

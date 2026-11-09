@@ -12,17 +12,12 @@ export function motionPreference() {
   } catch {
     if (temporaryChoice) return temporaryChoice;
   }
-  return matchMedia("(prefers-reduced-motion: reduce)").matches
-    ? "reduced"
-    : "full";
+  return "full";
 }
 export function subscribeMotionPreference(listener: () => void) {
-  const media = matchMedia("(prefers-reduced-motion: reduce)");
-  media.addEventListener("change", listener);
   window.addEventListener(changed, listener);
   window.addEventListener("storage", listener);
   return () => {
-    media.removeEventListener("change", listener);
     window.removeEventListener(changed, listener);
     window.removeEventListener("storage", listener);
   };
@@ -32,7 +27,7 @@ export function useMotionPreference() {
     useSyncExternalStore(
       subscribeMotionPreference,
       motionPreference,
-      () => "reduced",
+      () => "full",
     ) === "reduced"
   );
 }

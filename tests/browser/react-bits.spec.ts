@@ -198,6 +198,16 @@ test("recipient completes password and MFA, real chosen photo composes badge, st
   page,
   request,
 }) => {
+  await page.addInitScript(() => {
+    const original = HTMLCanvasElement.prototype.getContext;
+    HTMLCanvasElement.prototype.getContext = function (
+      type: any,
+      ...rest: any[]
+    ) {
+      if (String(type).includes("webgl")) return null;
+      return (original as any).call(this, type, ...rest);
+    } as any;
+  });
   await startSetup(page, request, "João Luís de Albuquerque", true);
   await page
     .getByRole("textbox", { name: "One-time code", exact: true })
@@ -286,29 +296,37 @@ test("WebGL lanyard loads generated faces and supports pointer interaction", asy
   });
 });
 
-test("enabling animations restores the real 3D badge under OS reduced motion", async ({
+test("3D lanyard is always enabled and independent of the background and cursor toggle", async ({
   page,
   request,
 }) => {
   await startSetup(page, request, "Motion preference QA");
   await page
+    .getByRole("button", { name: "Reduce animations", exact: true })
+    .click();
+  await page
     .getByRole("textbox", { name: "One-time code", exact: true })
     .pressSequentially("123456");
-  await expect(page.locator(".static-badge")).toBeVisible();
+  const canvas = page.locator("canvas.lanyard-canvas");
+  await expect(canvas).toBeVisible();
+  await expect(page.locator(".badge-pending")).toHaveCount(0);
+  await canvas.evaluate((el) => el.setAttribute("data-instance", "retained"));
+  await expect(page.locator(".smooth-follower")).toHaveCount(0);
   await page
     .getByRole("button", { name: "Enable animations", exact: true })
     .click();
-  await expect(page.locator("canvas.lanyard-canvas")).toBeVisible();
-  await expect(page.locator(".badge-pending")).toHaveCount(0);
-  await expect(
-    page.getByText("Drag to swing. Click the badge to flip.", { exact: true }),
-  ).toBeVisible();
+  await expect(canvas).toHaveAttribute("data-instance", "retained");
   await page
     .getByRole("button", { name: "Reduce animations", exact: true })
     .click();
-  await expect(page.locator("canvas.lanyard-canvas")).toHaveCount(0);
-  await expect(page.locator(".static-badge")).toBeVisible();
+  await expect(canvas).toBeVisible();
+  await expect(canvas).toHaveAttribute("data-instance", "retained");
+  await expect(
+    page.getByText("Drag to swing. Click the badge to flip.", { exact: true }),
+  ).toBeVisible();
+  await expect(page.locator(".smooth-follower")).toHaveCount(0);
 });
+
 test("no WebGL, unavailable gallery, mobile and inactive invitation fall back cleanly", async ({
   page,
   request,

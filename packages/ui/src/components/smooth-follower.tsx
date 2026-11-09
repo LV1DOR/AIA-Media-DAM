@@ -130,26 +130,30 @@ export default function SmoothFollower() {
   }, []);
 
   return (
-    <>
-      <button
-        type="button"
-        className="motion-preference"
-        aria-label={reduced ? "Enable animations" : "Reduce animations"}
-        aria-pressed={!reduced}
-        onClick={() => setReducedMotion(!reduced)}
-        title="Photo wall, cursor and 3D welcome badge. Saved for this browser."
-      >
-        Animations: {reduced ? "off" : "on"}
-      </button>
-      <div
-        ref={rootRef}
-        className="smooth-follower"
-        data-motion={reduced ? "reduced" : "full"}
-        aria-hidden="true"
-      >
-        <span ref={dotRef} className="smooth-follower-dot" />
-        <span ref={ringRef} className="smooth-follower-ring" />
-      </div>
-    </>
+    <div
+      ref={rootRef}
+      className="smooth-follower"
+      data-motion={reduced ? "reduced" : "full"}
+      aria-hidden="true"
+    >
+      <span ref={dotRef} className="smooth-follower-dot" />
+      <span ref={ringRef} className="smooth-follower-ring" />
+    </div>
+  );
+}
+
+export function AnimationControls() {
+  const reduced = useMotionPreference();
+  return (
+    <button
+      type="button"
+      className="motion-preference"
+      aria-label={reduced ? "Enable animations" : "Reduce animations"}
+      aria-pressed={!reduced}
+      onClick={() => setReducedMotion(!reduced)}
+      title="Photo wall and signed-in cursor. Saved for this browser."
+    >
+      Animations: {reduced ? "off" : "on"}
+    </button>
   );
 }

@@ -5,7 +5,6 @@ import type { CSSProperties } from "react";
 import * as THREE from "three";
 
 import "./Lanyard.css";
-import { useMotionPreference } from "../../lib/motion-preference";
 
 type Orientation = "portrait" | "landscape";
 type Finish = "glossy" | "matte" | "holographic" | "metallic";
@@ -1071,7 +1070,6 @@ const Lanyard = ({
   className = "",
   style,
 }: LanyardProps) => {
-  const reducedMotion = useMotionPreference();
   const containerRef = useRef<HTMLDivElement>(null);
   const settingsRef = useRef<Settings | null>(null);
   const applyRef = useRef<(() => void) | null>(null);
@@ -1352,7 +1350,7 @@ const Lanyard = ({
       if (framingKey !== applied.framingKey) {
         frameView();
         if (!placed) {
-          placeHanging(sim, layout, s.intro && !reducedMotion);
+          placeHanging(sim, layout, s.intro);
           placed = true;
         } else if (layoutKey !== applied.layoutKey) {
           placeHanging(sim, layout, false);
@@ -1563,7 +1561,7 @@ const Lanyard = ({
         twistDamping: 3,
         grip: 40,
         gripDamping: 6,
-        breeze: reducedMotion ? 0 : clamp(s.breeze, 0, 1),
+        breeze: clamp(s.breeze, 0, 1),
       };
     };
 
@@ -1768,7 +1766,7 @@ const Lanyard = ({
       renderer.dispose();
       if (canvas.parentNode) canvas.parentNode.removeChild(canvas);
     };
-  }, [reducedMotion]);
+  }, []);
 
   return (
     <div

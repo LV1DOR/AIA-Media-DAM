@@ -32,27 +32,32 @@ try {
     p.on("pageerror", (e) => errors.push(e.message));
     await p.goto("https://192.168.250.80:" + port);
     await expect(
-      p.getByRole("button", { name: "Enable animations", exact: true }),
+      p.getByRole("button", { name: "Reduce animations", exact: true }),
     ).toBeVisible();
-    await p
-      .getByRole("button", { name: "Enable animations", exact: true })
-      .click();
     const row = p.locator(".grid-motion__row").first();
     await expect(row).toHaveAttribute("style", /translate3d/);
     const before = await row.getAttribute("style");
     await expect.poll(() => row.getAttribute("style")).not.toBe(before);
     await p.mouse.move(150, 150);
-    await expect(p.locator(".smooth-follower")).toHaveCSS("opacity", "1");
+    await expect(p.locator(".smooth-follower")).toHaveCount(0);
+    await p
+      .getByRole("button", { name: "Reduce animations", exact: true })
+      .click();
+    await p.waitForTimeout(100);
+    const stopped = await row.getAttribute("style");
+    await p.waitForTimeout(250);
+    expect(await row.getAttribute("style")).toBe(stopped);
     await p.reload();
     await expect(
-      p.getByRole("button", { name: "Reduce animations", exact: true }),
+      p.getByRole("button", { name: "Enable animations", exact: true }),
     ).toBeVisible();
     checks.push({
       port,
       scope: "Real deployed public API and frontend",
       motionOverrideAndPersistence: true,
-      photoWallMoves: true,
-      cursorVisible: true,
+      photoWallMovesByDefault: true,
+      noPublicCursor: true,
+      explicitOffPersists: true,
     });
     await c.close();
   }
@@ -108,6 +113,12 @@ try {
       ),
     )
     .toBe(true);
+  await p.mouse.move(150, 150);
+  await expect(p.locator(".smooth-follower")).toHaveCSS("opacity", "1");
+  await p
+    .getByRole("button", { name: "Reduce animations", exact: true })
+    .click();
+  await expect(p.locator(".smooth-follower")).toHaveCSS("display", "none");
   await p.screenshot({
     path: ".local/nas-deploy/live-sharp-gallery-synthetic.png",
   });
@@ -134,25 +145,33 @@ try {
     ctx.fillRect(0, 0, 80, 80);
     return c.toDataURL("image/png").split(",")[1];
   });
-  await p
-    .locator("input[type=file]")
-    .setInputFiles({
-      name: "synthetic-portrait.png",
-      mimeType: "image/png",
-      buffer: Buffer.from(portrait, "base64"),
-    });
+  await p.locator("input[type=file]").setInputFiles({
+    name: "synthetic-portrait.png",
+    mimeType: "image/png",
+    buffer: Buffer.from(portrait, "base64"),
+  });
   await p
     .getByRole("button", { name: "Continue to authenticator", exact: true })
     .click();
   await p
     .getByRole("textbox", { name: "One-time code", exact: true })
     .pressSequentially("123456");
-  await expect(p.locator(".static-badge")).toBeVisible();
+  await expect(p.locator("canvas.lanyard-canvas")).toBeVisible();
+  await expect(p.locator(".badge-pending")).toHaveCount(0);
+  await expect(p.locator(".smooth-follower")).toHaveCount(0);
+  await p
+    .locator("canvas.lanyard-canvas")
+    .evaluate((el) => el.setAttribute("data-instance", "retained"));
   await p
     .getByRole("button", { name: "Enable animations", exact: true })
     .click();
-  await expect(p.locator("canvas.lanyard-canvas")).toBeVisible();
-  await expect(p.locator(".badge-pending")).toHaveCount(0);
+  await p
+    .getByRole("button", { name: "Reduce animations", exact: true })
+    .click();
+  await expect(p.locator("canvas.lanyard-canvas")).toHaveAttribute(
+    "data-instance",
+    "retained",
+  );
   const canvas = p.locator("canvas.lanyard-canvas"),
     rect = await canvas.boundingBox();
   await p.mouse.move(rect.x + rect.width * 0.5, rect.y + rect.height * 0.6);
@@ -172,6 +191,8 @@ try {
     sharpGalleryAt2x: true,
     syntheticApiCalls: apiCalls,
     realWebglLanyard: true,
+    lanyardUnaffectedByAnimationsOff: true,
+    cursorOnlyInSignedInWorkspace: true,
     dragAndFlip: true,
     productionAccountWrites: false,
   });

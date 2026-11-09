@@ -1,5 +1,5 @@
 import { connection } from "next/server";
-import SmoothFollower from "@aia/ui/components/smooth-follower";
+import { AnimationControls } from "@aia/ui/components/smooth-follower";
 import "./globals.css";
 export const metadata = {
   title: "AIA Transfer",
@@ -15,7 +15,7 @@ export default async function Layout({
     <html lang="en">
       <body>
         {children}
-        <SmoothFollower />
+        <AnimationControls />
       </body>
     </html>
   );
