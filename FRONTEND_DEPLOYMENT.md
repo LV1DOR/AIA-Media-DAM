@@ -1,6 +1,17 @@
 # Frontend deployment and rollback review
 
-Current rollout, 9 November 2026: **lan-20261109-3a1d86a2**, application commit `14173fd`, is deployed and healthy at the existing Media/Transfer HTTPS addresses. Registry migrated additively from schema 3 to 6. All 11 account records and valid sessions were preserved during promotion; the separate owner-authorized cleanup then removed 10 test accounts and 9 retired test sharing records, retaining only `admin` with its existing credentials and authenticator unchanged. All 127 permanent files, private runtime configuration and protected source-engine containers were preserved.
+## 9 November - preview quality and motion fix
+
+Current live release: **`lan-20261109-300a1131`**, application source **`18f97c721798ca17fa721f69bddcda6ec8a15e23`** on GitHub `main`. Both existing HTTPS origins are healthy. Gallery cards now receive the same existing native preview bytes as the detail viewer, instead of enlarged thumbnails. Use **Animations: on** at the bottom right to explicitly enable the photo wall, mouse follower and 3D welcome badge when the OS requests reduced motion. Each origin saves its own browser preference. WebGL remains necessary for 3D.
+
+Validation: 48 API/model tests and 40 optimized browser workflows pass; native comparison covers all five assets; deployed public API/photo-wall/cursor checks pass on both ports; actual NAS frontend/CSP/3D rendering and 2x gallery resolution pass using an isolated synthetic API overlay. This did not create a real account or live staff session. TLS was independently verified with the retained CA. All 3 existing accounts, credentials/MFA, profile/security records, valid sessions, runtime config and 127 permanent file hashes were preserved. An encrypted checkpoint was decrypted and SQLite-checked, and a private isolated rehearsal retained all accounts.
+
+Rollback application images to **`lan-20261109-3a1d86a2`**, retaining the registry volume and master key. Do not restore an older registry or run account cleanup for this release. [Detailed evidence](docs/preview-motion/evidence/receipt.json), [review and operating limits](docs/preview-motion/REVIEW.md).
+
+The following entries describe earlier deployments.
+
+
+Previous rollout, 9 November 2026: **lan-20261109-3a1d86a2**, application commit `14173fd`, is deployed and healthy at the existing Media/Transfer HTTPS addresses. Registry migrated additively from schema 3 to 6. All 11 account records and valid sessions were preserved during promotion; the separate owner-authorized cleanup then removed 10 test accounts and 9 retired test sharing records, retaining only `admin` with its existing credentials and authenticator unchanged. All 127 permanent files, private runtime configuration and protected source-engine containers were preserved.
 
 NAS build/typecheck and 48 API/model tests passed. An isolated registry-copy rehearsal, native preview/collection checks, independent encrypted-checkpoint decryption/SQLite validation, CA-verified HTTPS/static-asset/security checks and Chromium sign-in hydration passed. No authenticated owner browser walkthrough is claimed by the agent in this rollout. See [sanitized receipt](docs/nas-deployment/evidence/receipt.json) and [procedure and scope](docs/nas-deployment/REVIEW.md).
 
