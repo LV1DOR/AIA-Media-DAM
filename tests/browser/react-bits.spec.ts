@@ -285,6 +285,30 @@ test("WebGL lanyard loads generated faces and supports pointer interaction", asy
     path: "docs/react-bits/evidence/welcome-badge-webgl.png",
   });
 });
+
+test("enabling animations restores the real 3D badge under OS reduced motion", async ({
+  page,
+  request,
+}) => {
+  await startSetup(page, request, "Motion preference QA");
+  await page
+    .getByRole("textbox", { name: "One-time code", exact: true })
+    .pressSequentially("123456");
+  await expect(page.locator(".static-badge")).toBeVisible();
+  await page
+    .getByRole("button", { name: "Enable animations", exact: true })
+    .click();
+  await expect(page.locator("canvas.lanyard-canvas")).toBeVisible();
+  await expect(page.locator(".badge-pending")).toHaveCount(0);
+  await expect(
+    page.getByText("Drag to swing. Click the badge to flip.", { exact: true }),
+  ).toBeVisible();
+  await page
+    .getByRole("button", { name: "Reduce animations", exact: true })
+    .click();
+  await expect(page.locator("canvas.lanyard-canvas")).toHaveCount(0);
+  await expect(page.locator(".static-badge")).toBeVisible();
+});
 test("no WebGL, unavailable gallery, mobile and inactive invitation fall back cleanly", async ({
   page,
   request,
@@ -312,6 +336,14 @@ test("no WebGL, unavailable gallery, mobile and inactive invitation fall back cl
     .pressSequentially("123456");
   await expect(page.locator(".static-badge")).toBeVisible();
   await expect(page.locator("canvas.lanyard-canvas")).toHaveCount(0);
+  await expect(
+    page.getByText("3D graphics are unavailable in this browser.", {
+      exact: false,
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Retry 3D badge", exact: true }),
+  ).toBeVisible();
   expect(
     await page.evaluate(
       () => document.documentElement.scrollWidth <= innerWidth,

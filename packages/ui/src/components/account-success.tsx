@@ -1,14 +1,22 @@
 "use client";
 import React, { lazy, Suspense, useEffect, useState } from "react";
+import { useMotionPreference } from "../lib/motion-preference";
 import { generateBadgeImages, type BadgeImages } from "../lib/badge-images";
 const Lanyard = lazy(() => import("./react-bits/Lanyard"));
 class GraphicsBoundary extends React.Component<
-  { children: React.ReactNode; fallback: React.ReactNode },
+  {
+    children: React.ReactNode;
+    fallback: React.ReactNode;
+    onUnavailable: () => void;
+  },
   { failed: boolean }
 > {
   state = { failed: false };
   static getDerivedStateFromError() {
     return { failed: true };
+  }
+  componentDidCatch() {
+    this.props.onUnavailable();
   }
   render() {
     return this.state.failed ? this.props.fallback : this.props.children;
@@ -23,6 +31,8 @@ export function AccountSuccess({
   photo: File | null;
   onContinue: () => void;
 }) {
+  const reduced = useMotionPreference();
+  const [attempt, setAttempt] = useState(0);
   const [images, setImages] = useState<BadgeImages | null>(null),
     [fallback, setFallback] = useState(false),
     [ready, setReady] = useState(false),
@@ -30,7 +40,6 @@ export function AccountSuccess({
   useEffect(() => {
     const controller = new AbortController();
     let result: BadgeImages | undefined;
-    setFallback(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
     (async () => {
       let portrait = photo;
       try {
@@ -79,10 +88,14 @@ export function AccountSuccess({
       <h1>Account created successfully</h1>
       <p>{name}, your password and authenticator are ready.</p>
       <div className="badge-stage">
-        {!images || fallback ? (
+        {!images || fallback || reduced ? (
           still
         ) : (
-          <GraphicsBoundary fallback={still}>
+          <GraphicsBoundary
+            key={attempt}
+            fallback={still}
+            onUnavailable={() => setFallback(true)}
+          >
             <Suspense fallback={still}>
               <Lanyard
                 frontImage={images.front}
@@ -106,9 +119,26 @@ export function AccountSuccess({
           </GraphicsBoundary>
         )}
       </div>
-      {images && !fallback && (
+      {images && !fallback && !reduced && (
         <p className="lanyard-instructions">
           Drag to swing. Click the badge to flip.
+        </p>
+      )}
+      {fallback && (
+        <p role="status">
+          3D graphics are unavailable in this browser. Enable graphics
+          acceleration in your browser settings, then{" "}
+          <button
+            type="button"
+            className="button secondary"
+            onClick={() => {
+              setReady(false);
+              setFallback(false);
+              setAttempt((value) => value + 1);
+            }}
+          >
+            Retry 3D badge
+          </button>
         </p>
       )}
       <button className="button primary" onClick={onContinue}>

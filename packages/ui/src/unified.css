@@ -1624,8 +1624,34 @@
   width: 44px;
   height: 44px;
 }
-@media (prefers-reduced-motion: reduce), (any-hover: none), print {
+@media (any-hover: none), print {
   .smooth-follower {
+    display: none;
+  }
+}
+
+.smooth-follower[data-motion="reduced"] {
+  display: none;
+}
+.motion-preference {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  z-index: 1200;
+  border: 1px solid #747474;
+  border-radius: 18px;
+  padding: 7px 12px;
+  background: #292b2e;
+  color: #fff;
+  font: 500 12px/1.4 sans-serif;
+  cursor: pointer;
+}
+.motion-preference:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+@media print {
+  .motion-preference {
     display: none;
   }
 }

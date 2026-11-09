@@ -42,7 +42,7 @@ export const AnimatedImage = memo(function AnimatedImage({
     reduced = useReducedMotion();
   const [loaded, setLoaded] = useState(false),
     [failed, setFailed] = useState(false);
-  const src = "/api/library/" + asset.id + "/preview?size=thm",
+  const src = "/api/library/" + asset.id + "/preview?size=scr",
     dimensions = previewDimensions(asset);
   useEffect(() => {
     setLoaded(false);
@@ -117,7 +117,7 @@ export function ImageGallery({
     () =>
       assets.map((asset) => ({
         key: String(asset.id),
-        src: "/api/library/" + asset.id + "/preview?size=thm",
+        src: "/api/library/" + asset.id + "/preview?size=scr",
         alt: asset.title,
         ...previewDimensions(asset),
         asset,

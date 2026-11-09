@@ -19,6 +19,12 @@ _Screenshots use synthetic demonstration media and approved public artwork. They
 - **Invite the team.** An administrator creates an invitation link and sends it to the new member. They choose a password, add a profile photo and set up an authenticator before gaining access. Their photo then appears throughout the workspace.
 - **Make the workspace yours.** Use light or charcoal dark mode. Administrators can manage the separate public photos shown behind the login and signup pages; private library images stay private.
 
+## Animations and image quality
+
+Library cards load the same sharp, existing preview rendition as the enlarged viewer, with lazy loading and bounded infinite scrolling. Downloads still contain the untouched originals.
+
+The **Animations: on/off** control in the bottom-right corner switches the moving photo wall, mouse follower and 3D welcome badge together. It starts with your operating system preference, and saves your choice for this browser and site. Turn animations on if your system has reduced motion enabled but you want these effects. The cursor needs a mouse; the 3D badge needs WebGL graphics acceleration. When 3D is unavailable, the page explains how to enable it and offers a retry. Private library photos are never used on signed-out pages.
+
 ## A search that follows your thinking
 
 Type a few words and press Enter to keep them as a pill. Add more words whenever you need to narrow the results. Splitting a query into pills doesn't change its meaning: `Racing Circuit`, for example, looks for both terms across the searchable metadata.

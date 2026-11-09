@@ -5,6 +5,7 @@ import type { CSSProperties } from "react";
 import * as THREE from "three";
 
 import "./Lanyard.css";
+import { useMotionPreference } from "../../lib/motion-preference";
 
 type Orientation = "portrait" | "landscape";
 type Finish = "glossy" | "matte" | "holographic" | "metallic";
@@ -1070,6 +1071,7 @@ const Lanyard = ({
   className = "",
   style,
 }: LanyardProps) => {
+  const reducedMotion = useMotionPreference();
   const containerRef = useRef<HTMLDivElement>(null);
   const settingsRef = useRef<Settings | null>(null);
   const applyRef = useRef<(() => void) | null>(null);
@@ -1253,8 +1255,6 @@ const Lanyard = ({
     let hovering = false;
     let press: Press | null = null;
     let imageToken = 0;
-    const reducedMotion =
-      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
 
     const paintFaces = () => {
       const s = settingsRef.current!;
@@ -1768,7 +1768,7 @@ const Lanyard = ({
       renderer.dispose();
       if (canvas.parentNode) canvas.parentNode.removeChild(canvas);
     };
-  }, []);
+  }, [reducedMotion]);
 
   return (
     <div

@@ -61,6 +61,34 @@ async function library(page: any) {
     page.getByRole("button", { name: "View Race weekend 0002", exact: true }),
   ).toBeVisible();
 }
+
+test.describe("sharp library cards", () => {
+  test.use({ deviceScaleFactor: 2 });
+  test("high-density gallery uses screen previews without requesting originals", async ({
+    page,
+  }) => {
+    const downloads: string[] = [];
+    page.on("request", (request) => {
+      if (/\/api\/library\/\d+\/download/.test(request.url()))
+        downloads.push(request.url());
+    });
+    await library(page);
+    const image = page.locator(".gallery-photograph").first();
+    await expect(image).toHaveAttribute("src", /preview\?size=scr$/);
+    await expect
+      .poll(() =>
+        image.evaluate(
+          (img: HTMLImageElement) =>
+            img.complete &&
+            img.naturalWidth >=
+              img.getBoundingClientRect().width * devicePixelRatio,
+        ),
+      )
+      .toBe(true);
+    await expect(image).toHaveAttribute("loading", "lazy");
+    expect(downloads).toEqual([]);
+  });
+});
 test("gallery modes, native filters, range selection, paging and details", async ({
   page,
 }) => {

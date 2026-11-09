@@ -1,10 +1,17 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import {
+  useMotionPreference,
+  setReducedMotion,
+  motionPreference,
+  subscribeMotionPreference,
+} from "../lib/motion-preference";
 
 /** Adapted from the owner's SmoothFollower. Decorative: native pointer and
  * text caret remain available; no React renders are scheduled per frame. */
 export default function SmoothFollower() {
+  const reduced = useMotionPreference();
   const rootRef = useRef<HTMLDivElement>(null);
   const dotRef = useRef<HTMLSpanElement>(null);
   const ringRef = useRef<HTMLSpanElement>(null);
@@ -15,7 +22,7 @@ export default function SmoothFollower() {
       ring = ringRef.current;
     if (!root || !dot || !ring) return;
     const fine = matchMedia("(any-hover: hover) and (any-pointer: fine)");
-    const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+    let motionReduced = motionPreference() === "reduced";
     const target = { x: 0, y: 0 },
       inner = { x: 0, y: 0 },
       outer = { x: 0, y: 0 };
@@ -29,7 +36,7 @@ export default function SmoothFollower() {
       root.classList.remove("is-active");
       root.dataset.hovering = "false";
     };
-    const enabled = () => fine.matches && !reduced.matches && !document.hidden;
+    const enabled = () => fine.matches && !motionReduced && !document.hidden;
     const hover = (element: Element | null) => {
       const interactive = element?.closest(
         'a,button,img,input,textarea,select,label,summary,[role="button"],[role="menuitem"],[contenteditable="true"],canvas.lanyard-canvas,[data-cursor-interactive]',
@@ -66,6 +73,7 @@ export default function SmoothFollower() {
       if (moving) frame = requestAnimationFrame(paint);
     };
     const move = (event: PointerEvent) => {
+      motionReduced = motionPreference() === "reduced";
       if (event.pointerType !== "mouse" || !enabled()) {
         stop();
         return;
@@ -95,6 +103,7 @@ export default function SmoothFollower() {
       if (initialized) hover(document.elementFromPoint(target.x, target.y));
     };
     const preference = () => {
+      motionReduced = motionPreference() === "reduced";
       if (!enabled()) stop();
     };
     window.addEventListener("pointermove", move, { passive: true });
@@ -105,7 +114,7 @@ export default function SmoothFollower() {
     window.addEventListener("scroll", scroll, { passive: true, capture: true });
     document.addEventListener("visibilitychange", preference);
     fine.addEventListener("change", preference);
-    reduced.addEventListener("change", preference);
+    const unsubscribeMotion = subscribeMotionPreference(preference);
     return () => {
       stop();
       window.removeEventListener("pointermove", move);
@@ -116,14 +125,31 @@ export default function SmoothFollower() {
       window.removeEventListener("scroll", scroll, true);
       document.removeEventListener("visibilitychange", preference);
       fine.removeEventListener("change", preference);
-      reduced.removeEventListener("change", preference);
+      unsubscribeMotion();
     };
   }, []);
 
   return (
-    <div ref={rootRef} className="smooth-follower" aria-hidden="true">
-      <span ref={dotRef} className="smooth-follower-dot" />
-      <span ref={ringRef} className="smooth-follower-ring" />
-    </div>
+    <>
+      <button
+        type="button"
+        className="motion-preference"
+        aria-label={reduced ? "Enable animations" : "Reduce animations"}
+        aria-pressed={!reduced}
+        onClick={() => setReducedMotion(!reduced)}
+        title="Photo wall, cursor and 3D welcome badge. Saved for this browser."
+      >
+        Animations: {reduced ? "off" : "on"}
+      </button>
+      <div
+        ref={rootRef}
+        className="smooth-follower"
+        data-motion={reduced ? "reduced" : "full"}
+        aria-hidden="true"
+      >
+        <span ref={dotRef} className="smooth-follower-dot" />
+        <span ref={ringRef} className="smooth-follower-ring" />
+      </div>
+    </>
   );
 }

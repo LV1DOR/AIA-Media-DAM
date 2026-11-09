@@ -1,5 +1,39 @@
 import { test, expect } from "@playwright/test";
 const fixture = "http://127.0.0.1:4522";
+
+test("saved animation choice restores photo wall and cursor under OS reduced motion", async ({
+  page,
+  request,
+}) => {
+  await request.post(fixture + "/__qa/config", { data: { signedIn: false } });
+  await page.goto("/");
+  const row = page.locator(".grid-motion__row").first();
+  await expect(row).toBeVisible();
+  await expect(row).toHaveAttribute("style", /translate3d/);
+  const still = await row.getAttribute("style");
+  await page.waitForTimeout(300);
+  expect(await row.getAttribute("style")).toBe(still);
+  await page
+    .getByRole("button", { name: "Enable animations", exact: true })
+    .click();
+  await expect.poll(() => row.getAttribute("style")).not.toBe(still);
+  await page.mouse.move(100, 100);
+  await expect(page.locator(".smooth-follower")).toHaveCSS("opacity", "1");
+  await page.reload();
+  await expect(
+    page.getByRole("button", { name: "Reduce animations", exact: true }),
+  ).toBeVisible();
+  const before = await row.getAttribute("style");
+  await expect.poll(() => row.getAttribute("style")).not.toBe(before);
+  await page
+    .getByRole("button", { name: "Reduce animations", exact: true })
+    .click();
+  await expect(page.locator(".smooth-follower")).toHaveCSS("display", "none");
+  await page.waitForTimeout(100);
+  const stopped = await row.getAttribute("style");
+  await page.waitForTimeout(300);
+  expect(await row.getAttribute("style")).toBe(stopped);
+});
 test.beforeEach(async ({ request }) => {
   await request.post(fixture + "/__qa/config", {
     data: {

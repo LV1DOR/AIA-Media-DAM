@@ -9,6 +9,7 @@ import React, {
 } from "react";
 
 import "./GridMotion.css";
+import { useMotionPreference } from "../../lib/motion-preference";
 
 export type GridMotionItem = React.ReactNode | { src: string; alt?: string };
 
@@ -152,6 +153,7 @@ const GridMotion = ({
   className = "",
   style,
 }: GridMotionProps) => {
+  const reduce = useMotionPreference();
   const rootRef = useRef<HTMLDivElement>(null);
   const planeRef = useRef<HTMLDivElement>(null);
   const motionRef = useRef<Motion>({
@@ -269,8 +271,6 @@ const GridMotion = ({
     const plane = planeRef.current;
     if (!root || !plane || !layout) return undefined;
 
-    const reduce =
-      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
     const motion = motionRef.current;
     const rowEls = Array.from(plane.children) as HTMLElement[];
     const tileEls = rowEls.map(
@@ -408,7 +408,7 @@ const GridMotion = ({
       visibility.disconnect();
       document.removeEventListener("visibilitychange", wake);
     };
-  }, [layout, tiles]);
+  }, [layout, tiles, reduce]);
 
   const rowTiles = layout
     ? Array.from({ length: settings.rows }, (_, r) =>

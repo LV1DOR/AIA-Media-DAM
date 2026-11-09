@@ -91,6 +91,12 @@ try {
     assert.ok(rendition);
     const preview = await send("GET", `/api/library/${item.id}/preview`);
     assert.equal(preview.statusCode, 200);
+    const galleryPreview = await send(
+      "GET",
+      `/api/library/${item.id}/preview?size=scr`,
+    );
+    assert.equal(galleryPreview.statusCode, 200);
+    assert.deepEqual(galleryPreview.rawPayload, preview.rawPayload);
     const nativeUrl = await source.call<string>(identity, "get_resource_path", {
       ref: String(item.id),
       size: rendition.size_code,
@@ -104,6 +110,7 @@ try {
       id: item.id,
       rendition: rendition.size_code,
       bytes: preview.rawPayload.length,
+      galleryMatchesDetailPreview: true,
     });
   }
   report.previewInventory = previewInventory;
