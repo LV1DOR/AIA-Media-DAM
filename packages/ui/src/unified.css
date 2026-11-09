@@ -1584,3 +1584,48 @@
   border-radius: 12px;
   color: var(--foreground);
 }
+
+/* Owner-supplied smooth follower; contrast is maintained over photos and both
+   themes. It never intercepts input or replaces the native pointer/caret. */
+.smooth-follower {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  opacity: 0;
+}
+.smooth-follower.is-active {
+  opacity: 1;
+}
+.smooth-follower-dot,
+.smooth-follower-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+}
+.smooth-follower-dot {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+}
+.smooth-follower-ring {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #fff;
+  transition:
+    width 0.3s,
+    height 0.3s;
+}
+.smooth-follower[data-hovering="true"] .smooth-follower-ring {
+  width: 44px;
+  height: 44px;
+}
+@media (prefers-reduced-motion: reduce), (any-hover: none), print {
+  .smooth-follower {
+    display: none;
+  }
+}

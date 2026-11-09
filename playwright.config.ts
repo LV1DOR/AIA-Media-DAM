@@ -3,7 +3,12 @@ export default defineConfig({
   testDir: "./tests/browser",
   testMatch: process.env.AIA_BROWSER_PERFORMANCE
     ? "performance.spec.ts"
-    : ["workflows.spec.ts", "react-bits.spec.ts", "component-polish.spec.ts"],
+    : [
+        "workflows.spec.ts",
+        "react-bits.spec.ts",
+        "component-polish.spec.ts",
+        "cursor.spec.ts",
+      ],
   workers: 1,
   fullyParallel: false,
   timeout: 30000,

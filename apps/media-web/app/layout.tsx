@@ -1,4 +1,5 @@
 import { connection } from "next/server";
+import SmoothFollower from "@aia/ui/components/smooth-follower";
 import "./globals.css";
 export const metadata = {
   title: "AIA Media",
@@ -12,7 +13,10 @@ export default async function Layout({
   await connection();
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <SmoothFollower />
+      </body>
     </html>
   );
 }

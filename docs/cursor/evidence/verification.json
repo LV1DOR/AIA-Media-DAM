@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-11-09T16:11:16.993Z",
+  "branch": "feat/smooth-follower-cursor",
+  "apiModelTests": {
+    "passed": 48,
+    "failed": 0
+  },
+  "browser": {
+    "startTime": "2026-11-09T16:08:24.153Z",
+    "duration": 87589.794,
+    "expected": 37,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "typecheck": true,
+  "formatting": true,
+  "optimizedBuilds": ["media-web", "transfer-web"],
+  "dependencyAudit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0
+  },
+  "secretScan": {
+    "passed": true,
+    "knownPrivateValuesChecked": 11
+  },
+  "component": {
+    "path": "packages/ui/src/components/smooth-follower.tsx",
+    "sha256": "9a4e80de044a049b2d6be5e0c56a9816217aac2b0cd81b49fc0ca609613d182c",
+    "source": "Owner-supplied SmoothFollower adapted to shared root layouts"
+  },
+  "newDependencies": false,
+  "productionWrites": false,
+  "gitIntegration": "Feature push and integration to main tracked by Git history; no production deployment"
+}
