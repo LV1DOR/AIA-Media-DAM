@@ -867,6 +867,10 @@ button:disabled {
 .dark .dropzone.drag {
   background: var(--accent);
 }
+.dark .share-selection .large-icon {
+  background: #333;
+  color: #eee;
+}
 .dark .dropzone u {
   color: #b5d1bc;
 }

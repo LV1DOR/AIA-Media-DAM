@@ -1364,8 +1364,8 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   gap: 13px;
-  background: #f5f5ef;
-  border: 1px solid #e6e7dd;
+  background: #f2f2f2;
+  border: 1px solid #e1e1e1;
   border-radius: 9px;
   padding: 15px;
 }
@@ -1381,8 +1381,8 @@ input[type="checkbox"] {
   flex-shrink: 0;
 }
 .share-selection .large-icon {
-  background: #e8e6d9;
-  color: #928262;
+  background: #e3e3e3;
+  color: #606060;
 }
 .share-selection strong {
   display: block;

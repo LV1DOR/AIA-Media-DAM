@@ -49,8 +49,8 @@ export default function SmoothFollower() {
         position.x += (target.x - position.x) * factor;
         position.y += (target.y - position.y) * factor;
       };
-      move(inner, 0.2);
-      move(outer, 0.1);
+      move(inner, 0.3);
+      move(outer, 0.18);
       const moving =
         Math.abs(target.x - inner.x) +
           Math.abs(target.y - inner.y) +

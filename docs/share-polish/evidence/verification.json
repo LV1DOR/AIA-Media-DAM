@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-11-09T16:39:37.835Z",
+  "optimizedBuilds": [
+    "media-web",
+    "transfer-web"
+  ],
+  "typecheck": true,
+  "shareSummary": "3 library assets",
+  "removedOriginalsSentence": true,
+  "downloadsAllowedLabel": true,
+  "lightCard": "rgb(242, 242, 242)",
+  "darkCard": "rgb(36, 36, 36)",
+  "darkIcon": "rgb(51, 51, 51)",
+  "runtimeErrors": [],
+  "productionWrites": false
+}

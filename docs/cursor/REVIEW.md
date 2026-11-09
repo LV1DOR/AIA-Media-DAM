@@ -4,7 +4,7 @@ Prepared 9 November 2026 on `feat/smooth-follower-cursor`, based on `feat/infini
 
 The owner-supplied dot and expanding-ring follower is mounted once in each application's root layout. It covers the Media and Transfer workspaces, login, invitation signup, settings/dialog portals and public receiver routes. The native pointer and text caret remain available, matching the supplied decorative component's behavior.
 
-The dot is 8 pixels; the ring is 28 pixels and expands to 44 over interactive elements. Position smoothing retains the two supplied speeds with elapsed-time compensation. White difference blending keeps the marks contrasting over light/dark surfaces and photos. Neither mark intercepts clicks or participates in the accessibility tree.
+The dot is 8 pixels; the ring is 28 pixels and expands to 44 over interactive elements. Following uses elapsed-time compensation, with smoothing factors of 0.30 for the dot and 0.18 for the ring, tuned slightly faster at the owner's request. White difference blending keeps the marks contrasting over light/dark surfaces and photos. Neither mark intercepts clicks or participates in the accessibility tree.
 
 Adaptations avoid the sample's per-frame React state updates and its incomplete animation cancellation. Ref-driven transforms update only the two spans. Animation settles and stops when idle. Mouse-only activation respects fine-pointer/hover capability and reduced-motion preferences; touch/pen input, Tab navigation, window exit/blur and hidden tabs hide or suspend it. The current scheduled frame and all listeners are cleaned up. Delegated pointer targeting supports newly loaded thumbnails, controls and dialogs without attaching a listener to each element.
 

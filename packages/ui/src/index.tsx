@@ -1915,7 +1915,7 @@ function TransferFields({
             />
           </label>
           <label>
-            Download starts allowed
+            Downloads allowed
             <input
               type="number"
               value={limit}
@@ -1968,7 +1968,7 @@ function TransferFields({
           </select>
         </label>
         <label>
-          Download starts allowed
+          Downloads allowed
           <input
             type="number"
             min={1}
@@ -2046,7 +2046,7 @@ function ShareDialog({
             <strong>
               {assets.length} library {assets.length === 1 ? "asset" : "assets"}
             </strong>
-            <span>From Library · originals stay in your library</span>
+            <span>From Library</span>
           </div>
         </div>
         <TransferFields
