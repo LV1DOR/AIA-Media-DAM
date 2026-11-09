@@ -99,7 +99,9 @@ These checks support a review; they do not prove that a particular NAS deploymen
 
 ## Deployment and operating notes
 
-This branch contains the frontend review candidate. Preparing or pushing a commit does **not** deploy it. Production changes require a separate deployment step and verification of the native engines, HTTPS configuration and recovery path.
+The current application is deployed on the NAS as `lan-20261109-3a1d86a2`. On the AIA network, open [Media](https://192.168.250.80:8443) or [Transfer](https://192.168.250.80:8444). The retained NAS `admin` account uses its existing password and authenticator; local demonstration credentials are separate. Create your permanent administrator through Settings > Staff.
+
+Committing or pushing source does **not** deploy it. Further production changes require a separate deployment step and verification of the native engines, HTTPS configuration and recovery path.
 
 - [Current status and evidence](STATUS.md)
 - [Staff guide](docs/operations/STAFF_GUIDE.md)

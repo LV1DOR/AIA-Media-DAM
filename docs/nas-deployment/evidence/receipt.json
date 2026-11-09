@@ -1,0 +1,86 @@
+{
+  "checkedAt": "2026-11-09T17:03:46.806Z",
+  "deployed": true,
+  "release": "lan-20261109-3a1d86a2",
+  "sourceCommit": "14173fdc1111e05e63a251ad7a762be345a10dcb",
+  "sourceSha256": "3a1d86a22b8315cbcfaee88446a3fba8d092c7258226294743bece23a6dd9266",
+  "rollbackRelease": "lan-20261108-16a7b99c",
+  "nasBuild": {
+    "apiModelTestsPassed": 48,
+    "typecheck": true,
+    "optimizedFrontendsBuilt": 2
+  },
+  "migration": {
+    "before": 3,
+    "after": 6,
+    "existingAccountFieldsPreserved": true,
+    "validSessionsPreservedDuringRollout": true,
+    "rehearsedOnPrivateCopy": true,
+    "administratorCanInviteAdminInIsolatedCheck": true
+  },
+  "accounts": {
+    "removedTestAccounts": 10,
+    "remaining": 1,
+    "retainedUsername": "admin",
+    "existingPasswordAndAuthenticatorUnchanged": true,
+    "ownerRequestedKeepCurrentCredentials": true,
+    "retiredTestSharingRecords": 9
+  },
+  "media": {
+    "permanentFilesChecked": 127,
+    "unchanged": true,
+    "managedNativeTestIdentitiesDisabled": true,
+    "permanentMediaDeleted": false
+  },
+  "recovery": {
+    "encryptedCheckpointDecryptionVerified": true,
+    "sqliteQuickCheck": "ok",
+    "recoverablePreCleanupAccounts": 11,
+    "postMigrationCleanupCheckpointCaptured": true
+  },
+  "protectedSourceEnginesUnchanged": true,
+  "applicationContainersHealthy": true,
+  "https": [
+    {
+      "port": 8443,
+      "pageStatus": 200,
+      "tlsVerifiedWithRetainedCA": true,
+      "staticAssetsVerified": 17,
+      "apiHealth": true,
+      "anonymousStaffLibraryAndPhotoDenied": true,
+      "crossOriginMutationDenied": true,
+      "nonceCsp": true
+    },
+    {
+      "port": 8444,
+      "pageStatus": 200,
+      "tlsVerifiedWithRetainedCA": true,
+      "staticAssetsVerified": 17,
+      "apiHealth": true,
+      "anonymousStaffLibraryAndPhotoDenied": true,
+      "crossOriginMutationDenied": true,
+      "nonceCsp": true
+    }
+  ],
+  "browser": [
+    {
+      "port": 8443,
+      "clientHydrated": true,
+      "signInFormVisible": true,
+      "publicPhotoWall": true,
+      "cursorMounted": true,
+      "noSignedOutLibraryRequests": true
+    },
+    {
+      "port": 8444,
+      "clientHydrated": true,
+      "signInFormVisible": true,
+      "publicPhotoWall": true,
+      "cursorMounted": true,
+      "noSignedOutLibraryRequests": true
+    }
+  ],
+  "browserRuntimeErrors": [],
+  "authenticatedOwnerBrowserWalkthrough": false,
+  "privateRuntimeConfigurationUnchanged": true
+}

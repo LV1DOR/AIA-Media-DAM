@@ -16,3 +16,11 @@ The owner separately authorized removing all test accounts except the original `
 The promotion helper requires an explicit expected schema for an additive migration. It compares all pre-existing account columns, including passwords and names, and preserves valid session rows. New tables/columns do not constitute an account reset. Rollback reuses the existing registry; it never deletes a volume or restores an older database automatically.
 
 Private rollout receipts and encrypted checkpoints remain under the NAS `.private` directory and ignored local task storage. Sanitized final evidence is published after verification. The actual deployment result is recorded separately from this prepared procedure.
+
+## Completed result
+
+Release `lan-20261109-3a1d86a2` from application commit `14173fd` is installed and all three application containers are healthy. Registry schema is 6. The 10 test accounts and 9 retired test sharing records are removed; only `admin` remains, with its password, authenticator and native mapping unchanged. The owner confirmed they can use the current credentials. The old first-login handoff password is historical and was not used to reset the account. All 127 permanent files and source-engine identities/start times match the pre-rollout checkpoint.
+
+Both HTTPS entry points and referenced assets passed verification with the retained private CA. Anonymous staff/library/photo access and cross-origin mutations are denied. Isolated Chromium verified hydrated sign-in forms, the public photo wall, mounted cursor and no signed-out private-library requests, with zero page errors. TLS was verified separately; the isolated browser context used its own certificate exception. Native authenticated preview/collection verification used an in-memory test registry and disposable collection; production-authenticated owner UI acceptance remains separate.
+
+See the [final receipt](evidence/receipt.json). Private encrypted backups and full receipts remain on the NAS and under ignored local operator storage.
