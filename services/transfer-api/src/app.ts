@@ -98,6 +98,43 @@ export async function createApp(
     libraryAccess: !!u.rs_credentials,
   });
   const box = new SecretBox(config.masterKey);
+  try {
+    const marker = store.get<{ value: string }>(
+      "SELECT value FROM auth_metadata WHERE name='key-check'",
+    );
+    if (!marker) {
+      // Validate legacy ciphertext before binding an existing registry to a key.
+      for (const column of ["rs_credentials", "totp_secret"]) {
+        const sample = store.get<{ value: string }>(
+          `SELECT ${column} AS value FROM users WHERE ${column} IS NOT NULL LIMIT 1`,
+        );
+        if (sample) box.open(sample.value);
+      }
+      for (const column of ["source_secret", "native_share"]) {
+        const sample = store.get<{ value: string }>(
+          `SELECT ${column} AS value FROM transfers WHERE ${column} IS NOT NULL AND ${column}!='' LIMIT 1`,
+        );
+        if (sample) box.open(sample.value);
+      }
+      store.run(
+        "INSERT OR IGNORE INTO auth_metadata(name,value) VALUES('key-check',?)",
+        box.seal("aia-registry-key"),
+      );
+    }
+    if (
+      box.open(
+        store.get<{ value: string }>(
+          "SELECT value FROM auth_metadata WHERE name='key-check'",
+        )!.value,
+      ) !== "aia-registry-key"
+    )
+      throw new Error("Key mismatch");
+  } catch {
+    store.close();
+    throw new Error(
+      "The registry encryption key does not match. Restore the original key; existing accounts were not reset.",
+    );
+  }
   const rs = dependencies?.rs || new ResourceSpace(config.rsUrl);
   const gokapi =
     dependencies?.gokapi || new Gokapi(config.gokapiUrl, config.gokapiKey);
@@ -346,15 +383,27 @@ export async function createApp(
         !u.totp_secret,
     };
   };
-  const validTotp = (u: UserRow, code: string) =>
-    new OTPAuth.TOTP({
+  const validTotp = (u: UserRow, code: string) => {
+    const totp = new OTPAuth.TOTP({
       issuer: "AIA",
       label: u.username,
       secret: box.open<string>(u.totp_secret!),
       algorithm: "SHA1",
       digits: 6,
       period: 30,
-    }).validate({ token: code, window: 1 }) !== null;
+    });
+    const timestamp = Date.now(),
+      delta = totp.validate({ token: code, window: 1, timestamp });
+    if (delta === null) return false;
+    const step = totp.counter({ timestamp }) + delta;
+    return (
+      store.run(
+        "INSERT INTO totp_steps(user_id,step) VALUES(?,?) ON CONFLICT(user_id) DO UPDATE SET step=excluded.step WHERE excluded.step>totp_steps.step",
+        u.id,
+        step,
+      ).changes === 1
+    );
+  };
   app.post(
     "/api/auth/login",
     { config: { rateLimit: { max: 6, timeWindow: "1 minute" } } },
@@ -393,7 +442,10 @@ export async function createApp(
           };
         }
         if (!validTotp(u, input.code))
-          fail(401, "Enter a current authenticator code");
+          fail(
+            401,
+            "Enter a new authenticator code. If you just used one, wait for it to change.",
+          );
       }
       return finishLogin(u, reply);
     },
@@ -412,7 +464,10 @@ export async function createApp(
         fail(410, "This sign-in challenge has expired. Return to sign in.");
       }
       if (!validTotp(u, code))
-        fail(401, "That code is incorrect. Try a current authenticator code.");
+        fail(
+          401,
+          "That code is incorrect or already used. Wait for a new authenticator code and try again.",
+        );
       challenges.remove(raw);
       reply.clearCookie("aia_mfa", cookieOptions);
       return finishLogin(u, reply);
@@ -743,7 +798,10 @@ export async function createApp(
         !row!.totp_secret ||
         !validTotp({ ...u, totp_secret: row!.totp_secret }, code)
       )
-        fail(401, "That code is incorrect. Try a current authenticator code.");
+        fail(
+          401,
+          "That code is incorrect or already used. Wait for a new authenticator code and try again.",
+        );
       store.db.exec("BEGIN IMMEDIATE");
       try {
         store.run(

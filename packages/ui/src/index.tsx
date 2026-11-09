@@ -73,6 +73,7 @@ import {
   type Transfer,
 } from "@aia/contracts";
 type Product = "media" | "transfer";
+import { InfiniteGallery } from "./components/infinite-gallery";
 import { api, post } from "./lib/api";
 import { MfaChallenge } from "./components/mfa-challenge";
 import { PASSWORD_HINT, PASSWORD_PATTERN } from "@aia/contracts";
@@ -428,7 +429,8 @@ export function Workspace({ product }: { product: Product }) {
     [searchChips, setSearchChips] = useState<string[]>([]),
     [query, setQuery] = useState(""),
     [kind, setKind] = useState("all"),
-    [page, setPage] = useState(0),
+    [libraryVersion, setLibraryVersion] = useState(0),
+    [visibleAssets, setVisibleAssets] = useState<Asset[]>([]),
     [assets, setAssets] = useState<Asset[]>([]),
     [total, setTotal] = useState(0),
     [selected, setSelected] = useState<Set<number>>(new Set()),
@@ -466,12 +468,22 @@ export function Workspace({ product }: { product: Product }) {
   const assetPool = useRef(new Map<number, Asset>()),
     selectionAnchor = useRef<number | null>(null),
     requestEpoch = useRef(0),
+    libraryRequest = useRef<AbortController | null>(null),
     selectedRef = useRef(selected);
   selectedRef.current = selected;
   const displayAssets = useMemo(
-    () => orderAssets(assets, sort),
-    [assets, sort],
+    () => (visibleAssets.length ? visibleAssets : orderAssets(assets, sort)),
+    [assets, visibleAssets, sort],
   );
+  const receiveVisibleAssets = useCallback((items: Asset[]) => {
+    const unique = [...new Map(items.map((a) => [a.id, a])).values()];
+    const visible = new Set(unique.map((a) => a.id));
+    for (const id of assetPool.current.keys())
+      if (!visible.has(id) && !selectedRef.current.has(id))
+        assetPool.current.delete(id);
+    for (const asset of unique) assetPool.current.set(asset.id, asset);
+    setVisibleAssets(unique);
+  }, []);
   const refreshUser = useCallback(async () => {
     try {
       const data = await api("/auth/me");
@@ -492,7 +504,6 @@ export function Workspace({ product }: { product: Product }) {
       const next = buildNativeSearch([...searchChips, search], metadataFilter);
       if (next !== query) {
         setQuery(next);
-        setPage(0);
       }
     }, 300);
     return () => clearTimeout(timeout);
@@ -505,6 +516,9 @@ export function Workspace({ product }: { product: Product }) {
   const loadData = useCallback(async () => {
     if (!user || needsMfa) return;
     const epoch = ++requestEpoch.current;
+    libraryRequest.current?.abort();
+    const controller = new AbortController();
+    libraryRequest.current = controller;
     setBusy(true);
     setError("");
     try {
@@ -522,10 +536,11 @@ export function Workspace({ product }: { product: Product }) {
           "/library?" +
             new URLSearchParams({
               search: query,
-              page: String(page),
+              page: "0",
               state: "0",
               kind,
             }),
+          { signal: controller.signal },
         );
         if (epoch !== requestEpoch.current) return;
         const visibleIds = new Set<number>(data.items.map((a: Asset) => a.id));
@@ -533,7 +548,9 @@ export function Workspace({ product }: { product: Product }) {
           if (!visibleIds.has(id) && !selectedRef.current.has(id))
             assetPool.current.delete(id);
         for (const asset of data.items) assetPool.current.set(asset.id, asset);
+        setVisibleAssets([]);
         setAssets(data.items);
+        setLibraryVersion((v) => v + 1);
         setTotal(data.total);
       } else if (section === "collections") {
         const data = await api("/collections");
@@ -543,21 +560,24 @@ export function Workspace({ product }: { product: Product }) {
         if (epoch === requestEpoch.current) setTransfers(data.transfers);
       }
     } catch (e) {
-      if (epoch === requestEpoch.current) setError((e as Error).message);
+      if (epoch === requestEpoch.current && !controller.signal.aborted)
+        setError((e as Error).message);
     } finally {
       if (epoch === requestEpoch.current) setBusy(false);
     }
-  }, [user, needsMfa, section, query, page, kind]);
+  }, [user, needsMfa, section, query, kind]);
   useEffect(() => {
     void loadData();
     return () => {
       ++requestEpoch.current;
+      libraryRequest.current?.abort();
     };
   }, [loadData]);
   useEffect(() => {
     assetPool.current.clear();
     setSelected(new Set());
     setAssets([]);
+    setVisibleAssets([]);
     setShareAssets(null);
     setDetail(null);
     setViewerId(null);
@@ -770,7 +790,6 @@ export function Workspace({ product }: { product: Product }) {
           setSection(value);
           setSearch("");
           setMetadataFilter({ year: "", event: "", championship: "" });
-          setPage(0);
         }}
         onCreate={() => {
           if (section === "collections") setCollectionDialog(true);
@@ -870,7 +889,6 @@ export function Workspace({ product }: { product: Product }) {
                       className={kind === key ? "selected" : ""}
                       onClick={() => {
                         setKind(key);
-                        setPage(0);
                       }}
                     >
                       {key === "photo" ? (
@@ -894,13 +912,13 @@ export function Workspace({ product }: { product: Product }) {
                     Filters
                   </button>
                   <select
-                    aria-label="Sort current page"
+                    aria-label="Sort each media group"
                     value={sort}
                     onChange={(e) => setSort(e.target.value as GallerySort)}
                   >
                     <option value="recent">Newest first</option>
-                    <option value="oldest">Oldest on page</option>
-                    <option value="name">Name on page</option>
+                    <option value="oldest">Oldest in each group</option>
+                    <option value="name">Name in each group</option>
                   </select>
                   <div className="view-toggle">
                     {(["grid", "masonry", "list"] as const).map((mode) => (
@@ -935,7 +953,6 @@ export function Workspace({ product }: { product: Product }) {
                             ...current,
                             [field]: e.target.value,
                           }));
-                          setPage(0);
                         }}
                         placeholder={
                           field === "year" ? "e.g. 2026" : "Search " + field
@@ -989,8 +1006,8 @@ export function Workspace({ product }: { product: Product }) {
                 >
                   {displayAssets.length &&
                   displayAssets.every((a) => selected.has(a.id))
-                    ? "Deselect page"
-                    : `Select page (${displayAssets.length})`}
+                    ? "Deselect visible"
+                    : `Select visible (${displayAssets.length})`}
                 </button>
               </div>
               {selected.size > 0 && (
@@ -1110,8 +1127,16 @@ export function Workspace({ product }: { product: Product }) {
                   )}
                 </div>
               ) : (
-                <ImageGallery
-                  assets={displayAssets}
+                <InfiniteGallery
+                  key={
+                    user.id + ":" + query + ":" + kind + ":" + libraryVersion
+                  }
+                  initialAssets={assets}
+                  total={total}
+                  query={query}
+                  kind={kind}
+                  sort={sort}
+                  onVisibleAssets={receiveVisibleAssets}
                   mode={viewMode}
                   selected={selected}
                   onSelect={choose}
@@ -1122,33 +1147,6 @@ export function Workspace({ product }: { product: Product }) {
                   canEditTags={user.role !== "marketer"}
                   onTagsSaved={() => void loadData()}
                 />
-              )}
-              {total > 48 && (
-                <div className="pagination">
-                  <span>
-                    Page {page + 1} of {Math.ceil(total / 48)}
-                  </span>
-                  <button
-                    className="button secondary small"
-                    disabled={page === 0 || busy}
-                    onClick={() => {
-                      setPage(page - 1);
-                    }}
-                  >
-                    <ArrowLeft size={15} />
-                    Previous
-                  </button>
-                  <button
-                    className="button secondary small"
-                    disabled={(page + 1) * 48 >= total || busy}
-                    onClick={() => {
-                      setPage(page + 1);
-                    }}
-                  >
-                    Next
-                    <ArrowRight size={15} />
-                  </button>
-                </div>
               )}
             </>
           )}
@@ -1187,7 +1185,6 @@ export function Workspace({ product }: { product: Product }) {
                           onClick={() => {
                             setSection("library");
                             setSearch("!collection" + c.ref);
-                            setPage(0);
                           }}
                         >
                           <div className="collection-art">
@@ -1297,7 +1294,6 @@ export function Workspace({ product }: { product: Product }) {
             setSection("library");
             setSearch("!collection" + ref);
             setMetadataFilter({ year: "", event: "", championship: "" });
-            setPage(0);
           }}
           onChanged={() => {
             void loadData();
@@ -1339,7 +1335,7 @@ export function Workspace({ product }: { product: Product }) {
           onLibraryDone={() => {
             setUploadOpen(false);
             setSection("library");
-            setPage(0);
+
             void loadData();
             setToast("Media added to the library");
           }}

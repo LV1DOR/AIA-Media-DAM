@@ -1,4 +1,7 @@
-import { readFile } from "node:fs/promises";
+import { readFile, mkdtemp, rm, unlink } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import path from "node:path";
+import { reviewIdentity } from "../scripts/dev/review-identity.mts";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { randomBytes } from "node:crypto";
@@ -23,6 +26,163 @@ import {
 } from "../services/transfer-api/src/adapters.js";
 const password = "Synthetic-test-password-only1!";
 const origin = "http://localhost:3101";
+
+test("review identities keep accounts, photos, invitations, sessions and MFA across API restarts", async () => {
+  const directory = await mkdtemp(path.join(tmpdir(), "aia-identity-test-"));
+  let current: Awaited<ReturnType<typeof createApp>> | undefined;
+  try {
+    const identity = await reviewIdentity(directory);
+    const config: Config = {
+      ...identity,
+      mediaOrigin: "http://localhost:3100",
+      transferOrigin: origin,
+      secureCookies: false,
+      rsUrl: "http://127.0.0.1:1",
+      gokapiUrl: "http://127.0.0.1:1",
+      gokapiKey: "synthetic-only",
+      bootstrapPassword: password,
+      requireAdminMfa: false,
+    };
+    current = await createApp(config);
+    const originalAdminHash = current.store.get<{ password_hash: string }>(
+      "SELECT password_hash FROM users WHERE username='admin'",
+    )!.password_hash;
+    const send = (url: string, body: unknown, cookie = "") =>
+      current!.app.inject({
+        method: "POST",
+        url,
+        payload: body,
+        headers: { origin, cookie },
+      });
+    const logged = await send("/api/auth/login", {
+      username: "admin",
+      password,
+    });
+    const admin = logged.cookies.map((c) => c.name + "=" + c.value).join("; ");
+    const created = await send(
+      "/api/admin/users",
+      {
+        username: "lasting-staff",
+        name: "Persistent Staff",
+        role: "marketer",
+        libraryAccess: false,
+      },
+      admin,
+    );
+    assert.equal(created.statusCode, 200, created.body);
+    const raw = created.json().invitationUrl.split("#")[1];
+    await uploadInvitationPhoto(current, raw);
+    const started = await send("/api/auth/invitation/start", {
+      token: raw,
+      password: "Abcd123!",
+    });
+    assert.equal(started.statusCode, 200, started.body);
+    const totp = new OTPAuth.TOTP({ secret: started.json().secret });
+    // Enrollment itself must also survive a service restart.
+    await current.app.close();
+    current = await createApp(config);
+    const finished = await send(
+      "/api/auth/invitation/complete",
+      {
+        code: totp.generate(),
+      },
+      started.cookies.map((c) => c.name + "=" + c.value).join("; "),
+    );
+    assert.equal(finished.statusCode, 200, finished.body);
+    const staffCookie = finished.cookies
+      .map((c) => c.name + "=" + c.value)
+      .join("; ");
+    const pending = await send(
+      "/api/admin/users",
+      {
+        username: "pending-staff",
+        name: "Pending Staff",
+        role: "marketer",
+        libraryAccess: false,
+      },
+      admin,
+    );
+    const pendingToken = pending.json().invitationUrl.split("#")[1];
+    await current.app.close();
+    current = undefined;
+    const reopened = await reviewIdentity(directory);
+    assert.equal(reopened.masterKey, identity.masterKey);
+    current = await createApp({
+      ...config,
+      ...reopened,
+      bootstrapPassword: "Replacement-bootstrap-must-not-reset1!",
+    });
+    assert.equal(
+      current.store.get<{ password_hash: string }>(
+        "SELECT password_hash FROM users WHERE username='admin'",
+      )!.password_hash,
+      originalAdminHash,
+    );
+    const me = await current.app.inject({
+      url: "/api/auth/me",
+      headers: { cookie: staffCookie },
+    });
+    assert.equal(me.statusCode, 200);
+    assert.equal(me.json().user.username, "lasting-staff");
+    assert.equal(me.json().user.mfaEnabled, true);
+    assert.equal(
+      (
+        await current.app.inject({
+          url: "/api/auth/profile-photo",
+          headers: { cookie: staffCookie },
+        })
+      ).statusCode,
+      200,
+    );
+    assert.equal(
+      (await send("/api/auth/invitation/read", { token: pendingToken }))
+        .statusCode,
+      200,
+    );
+    const code = totp.generate({ timestamp: Date.now() + 30000 });
+    assert.equal(
+      (
+        await send("/api/auth/login", {
+          username: "lasting-staff",
+          password: "Abcd123!",
+          code,
+        })
+      ).statusCode,
+      200,
+    );
+    await current.app.close();
+    current = undefined;
+    await assert.rejects(
+      () =>
+        createApp({ ...config, masterKey: randomBytes(32).toString("base64") }),
+      /encryption key does not match/,
+    );
+    current = await createApp(config);
+    assert.equal(
+      (
+        await send("/api/auth/login", {
+          username: "lasting-staff",
+          password: "Abcd123!",
+          code,
+        })
+      ).statusCode,
+      401,
+      "MFA codes cannot be replayed after restart",
+    );
+    assert.equal(current.store.all("SELECT id FROM users").length, 3);
+    await current.app.close();
+    current = undefined;
+    await unlink(path.join(directory, "master-key"));
+    await assert.rejects(() => reviewIdentity(directory), /key is missing/);
+    const unchanged = new Store(directory);
+    assert.equal(unchanged.all("SELECT id FROM users").length, 3);
+    unchanged.close();
+  } finally {
+    await current?.app.close();
+    assert.equal(path.dirname(path.resolve(directory)), path.resolve(tmpdir()));
+    await rm(directory, { recursive: true, force: true });
+  }
+});
 test("native multipart upload accepts its documented empty 204 success response", async () => {
   const server = createServer((_req, res) => {
     res.writeHead(204);
@@ -199,7 +359,7 @@ async function fixture(mfa = false, rs?: ResourceSpace) {
   return { ...instance, config, upstream, cookie, send, close };
 }
 async function uploadInvitationPhoto(
-  f: Awaited<ReturnType<typeof fixture>>,
+  f: Pick<Awaited<ReturnType<typeof fixture>>, "app">,
   raw: string,
 ) {
   const bytes = await readFile(

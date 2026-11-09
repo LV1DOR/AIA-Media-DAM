@@ -131,7 +131,7 @@ test("public background and private profile images survive a registry reopen wit
     assert.equal(
       store.get<{ version: number }>("SELECT version FROM schema_version")!
         .version,
-      5,
+      6,
     );
   } finally {
     store?.close();

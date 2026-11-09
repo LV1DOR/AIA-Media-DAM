@@ -12,7 +12,7 @@ _Screenshots use synthetic demonstration media and approved public artwork. They
 
 - **Find media quickly.** Search names, keywords, events and years, then narrow the results with filters. `MotoGP 2026` works in one search pill or as separate pills; capitalisation doesn't matter. Results must match all entered terms.
 - **Organise the library.** Add or remove tags directly from thumbnails, edit several selected items together and build collections for a project or event.
-- **Work with the originals.** Browse grid, masonry or list views, open a fullscreen preview and upload media through the same workspace. Preview images stay separate from original downloads.
+- **Work with the originals.** Browse an infinitely scrolling grid, masonry or list, open a fullscreen preview and upload media through the same workspace. Offscreen thumbnails are released; a manual Load more option is available. Preview images stay separate from original downloads.
 - **Share a selection.** Create an expiring link from library assets, add a password or download limit, and revoke it when needed.
 - **Send temporary files.** Upload a separate transfer without adding those files to the permanent library. Larger uploads support pause and resume.
 - **Download everything together.** Recipients can download individual files or one ZIP containing the full-quality originals. Files are never resized or recompressed as images. Duplicate filenames are kept with numbered suffixes.
@@ -50,9 +50,11 @@ The command builds both interfaces and starts an isolated review environment:
 | Media workspace    | http://127.0.0.1:3310 |
 | Transfer workspace | http://127.0.0.1:3311 |
 
-Sign in with **`admin` / `synthetic-review-admin-only`**. These are demonstration credentials only. The console also prints a seeded recipient link. Use **Settings → Staff** to try the invitation flow with an authenticator app.
+On the first start, sign in with **`admin` / `synthetic-review-admin-only`**. These are demonstration credentials only. Existing credentials are reused on later starts; the bootstrap does not reset them. The console also prints a seeded recipient link. Use **Settings → Staff** to try the invitation flow with an authenticator app.
 
-The preview runs on this computer only. Its media, collections and transfers are synthetic; its authentication and invitation handlers use an ephemeral registry. It never connects to the NAS or uses production credentials. Restarting clears its data. Stop it with Ctrl+C, or type `stop` in its console.
+The preview runs on this computer only. Its media, collections and transfers are synthetic and reset on restart. **Staff accounts, invitations, authenticator setup and profile photos persist separately**, through a dedicated authentication API and a file-backed registry. On Windows their default location is `%LOCALAPPDATA%\AIA-Media\review-identity`; on Linux it is `$XDG_DATA_HOME/AIA-Media/review-identity`, falling back to `~/.local/share/AIA-Media/review-identity`. It never connects to the NAS or uses production credentials. Stop it with Ctrl+C, or type `stop` in its console.
+
+Preserve the identity directory and its original key when moving or backing up the preview. Rebuilding the interface, switching branches or restarting the service does not reset accounts. Tests use separate isolated identity directories. See [account persistence and security](docs/infinite-auth/REVIEW.md) for the lifecycle, backup and recovery boundaries.
 
 ## How it is put together
 
@@ -105,6 +107,7 @@ This branch contains the frontend review candidate. Preparing or pushing a commi
 - [Deployment and rollback](FRONTEND_DEPLOYMENT.md)
 - [Known limitations](docs/KNOWN_LIMITATIONS.md)
 - [Latest search and Git handoff](docs/github-handoff/REVIEW.md)
+- [Infinite gallery, account persistence and security](docs/infinite-auth/REVIEW.md)
 
 The current milestone uses local accounts and LAN HTTPS. Corporate single sign-on, automatic invitation email and public Internet ingress are not configured. Administrators send invitation links themselves. Private gallery photos are never automatically published as login backgrounds.
 

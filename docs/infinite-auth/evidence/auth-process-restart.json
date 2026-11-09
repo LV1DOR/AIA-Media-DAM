@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-11-09T15:53:47.577Z",
+  "actualReviewEntryPoint": true,
+  "processRestarts": 1,
+  "accountRetained": true,
+  "pendingInvitationRetained": true,
+  "existingSessionRetained": true,
+  "isolatedIdentityDirectory": true,
+  "productionWrites": false
+}
