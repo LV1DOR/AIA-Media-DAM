@@ -1,8 +1,17 @@
 # Frontend deployment and rollback review
 
+## 9 November - animation scope correction
+
+Current live release **`lan-20261109-e3791678`**, application source **`9ab34be839c8911dd9e2f0f88ce447b3a0fa55d6`**, on GitHub `main`. Background motion defaults on and remembers manual off. The custom cursor exists only inside the fully signed-in workspace, with animations on; it is absent from login, signup/welcome and recipient pages. The real 3D lanyard is always enabled independently of that setting and OS motion preference; browser WebGL remains required.
+
+48 NAS API/model tests, 40 browser workflows, optimized builds/typechecks, native verification, encrypted recovery and live HTTPS/component checks pass. All 3 accounts and credentials/MFA, valid sessions, profiles/config and 127 permanent file hashes remain unchanged. No account cleanup or reset. [Evidence](docs/motion-scope/evidence/receipt.json), [review](docs/motion-scope/REVIEW.md). Roll back images to **`lan-20261109-300a1131`** while retaining the current registry volume and master key.
+
+The following entries describe earlier releases and their behavior at the time.
+
+
 ## 9 November - preview quality and motion fix
 
-Current live release: **`lan-20261109-300a1131`**, application source **`18f97c721798ca17fa721f69bddcda6ec8a15e23`** on GitHub `main`. Both existing HTTPS origins are healthy. Gallery cards now receive the same existing native preview bytes as the detail viewer, instead of enlarged thumbnails. Use **Animations: on** at the bottom right to explicitly enable the photo wall, mouse follower and 3D welcome badge when the OS requests reduced motion. Each origin saves its own browser preference. WebGL remains necessary for 3D.
+Previous live release: **`lan-20261109-300a1131`**, application source **`18f97c721798ca17fa721f69bddcda6ec8a15e23`** on GitHub `main`. Both existing HTTPS origins are healthy. Gallery cards now receive the same existing native preview bytes as the detail viewer, instead of enlarged thumbnails. Use **Animations: on** at the bottom right to explicitly enable the photo wall, mouse follower and 3D welcome badge when the OS requests reduced motion. Each origin saves its own browser preference. WebGL remains necessary for 3D.
 
 Validation: 48 API/model tests and 40 optimized browser workflows pass; native comparison covers all five assets; deployed public API/photo-wall/cursor checks pass on both ports; actual NAS frontend/CSP/3D rendering and 2x gallery resolution pass using an isolated synthetic API overlay. This did not create a real account or live staff session. TLS was independently verified with the retained CA. All 3 existing accounts, credentials/MFA, profile/security records, valid sessions, runtime config and 127 permanent file hashes were preserved. An encrypted checkpoint was decrypted and SQLite-checked, and a private isolated rehearsal retained all accounts.
 

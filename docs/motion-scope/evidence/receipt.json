@@ -1,0 +1,113 @@
+{
+  "checkedAt": "2026-11-09T17:35:49.263Z",
+  "release": "lan-20261109-e3791678",
+  "sourceCommit": "9ab34be839c8911dd9e2f0f88ce447b3a0fa55d6",
+  "sourceSha256": "e3791678975006431f63e59e0306de1feb155178ece0c643aa2749d615519e56",
+  "rollbackRelease": "lan-20261109-300a1131",
+  "deployed": true,
+  "behavior": {
+    "backgroundOnByDefault": true,
+    "explicitOffSaved": true,
+    "cursorOnlyInAuthenticatedWorkspace": true,
+    "noPublicCursor": true,
+    "toggleOnlyControlsBackgroundAndCursor": true,
+    "lanyardAlwaysOnAndIndependent": true,
+    "webglRequired": true
+  },
+  "tests": {
+    "apiModelTests": 48,
+    "browserWorkflows": 40,
+    "browserFailures": 0,
+    "optimizedBuilds": 2,
+    "typecheck": true,
+    "formatCheck": true,
+    "secretScan": true
+  },
+  "preservation": {
+    "accounts": 3,
+    "existingAccountFieldsUnchanged": true,
+    "validSessionsPreserved": true,
+    "staffSecurityRecordsUnchanged": true,
+    "runtimeConfigUnchanged": true,
+    "protectedEnginesUnchanged": true,
+    "permanentFiles": 127,
+    "permanentFileHashesUnchanged": true,
+    "noAccountCleanup": true,
+    "noCredentialReset": true
+  },
+  "nativePreviews": {
+    "assets": 5,
+    "allGalleryPreviewsMatchDetailAndNativeBytes": true,
+    "sampleThumbnailBytes": 6880,
+    "sampleScreenBytes": 31703,
+    "isolatedInMemoryRegistry": true,
+    "noProductionStaffSessionCreated": true,
+    "disposableCollectionRemoved": true
+  },
+  "recovery": {
+    "encryptedCheckpointDecrypted": true,
+    "sqliteQuickCheck": "ok",
+    "recoverableAccounts": 3,
+    "registrySchema": 6,
+    "configurationIncluded": true,
+    "plaintextDatabaseRemoved": true,
+    "checkpointSha256": "8b6f9c3b0b451fc26e5689d961e74784413be2b604309d925e24fd633be57b84",
+    "isolatedRehearsalPreservedAccounts": true
+  },
+  "https": [
+    {
+      "port": 8443,
+      "pageStatus": 200,
+      "tlsVerifiedWithRetainedCA": true,
+      "staticAssetsVerified": 17,
+      "apiHealth": true,
+      "anonymousStaffLibraryAndPhotoDenied": true,
+      "crossOriginMutationDenied": true,
+      "nonceCsp": true
+    },
+    {
+      "port": 8444,
+      "pageStatus": 200,
+      "tlsVerifiedWithRetainedCA": true,
+      "staticAssetsVerified": 17,
+      "apiHealth": true,
+      "anonymousStaffLibraryAndPhotoDenied": true,
+      "crossOriginMutationDenied": true,
+      "nonceCsp": true
+    }
+  ],
+  "liveBrowser": {
+    "checkedAt": "2026-11-09T17:35:23.344Z",
+    "checks": [
+      {
+        "port": 8443,
+        "scope": "Real deployed public API and frontend",
+        "motionOverrideAndPersistence": true,
+        "photoWallMovesByDefault": true,
+        "noPublicCursor": true,
+        "explicitOffPersists": true
+      },
+      {
+        "port": 8444,
+        "scope": "Real deployed public API and frontend",
+        "motionOverrideAndPersistence": true,
+        "photoWallMovesByDefault": true,
+        "noPublicCursor": true,
+        "explicitOffPersists": true
+      },
+      {
+        "scope": "Real deployed frontend and CSP, isolated synthetic API interception only",
+        "sharpGalleryAt2x": true,
+        "syntheticApiCalls": 14,
+        "realWebglLanyard": true,
+        "lanyardUnaffectedByAnimationsOff": true,
+        "cursorOnlyInSignedInWorkspace": true,
+        "dragAndFlip": true,
+        "productionAccountWrites": false
+      }
+    ],
+    "errors": [],
+    "authenticatedOwnerWalkthrough": false,
+    "tls": "CA verification separate; isolated browser certificate exception"
+  }
+}
